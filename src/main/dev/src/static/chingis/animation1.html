@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/root.min.css">
+    <link rel="stylesheet" href="css/adelon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/root.min.js"></script>
+    <title>Chingis animation</title>
+</head>
+<style></style>
+<body>
+<div>
+    <div class="scene scene1"  uk-scrollspy="target: .anim1; delay: 500; repeat: true;">
+        <img class="scene1_sand" src="images/sand1.png" alt="">
+        <img id="anim1 anim1_top" class="sky" src="images/sky1.png" alt="">
+        <div class="grid-collapse uk-width-1-1 uk-child-width-1-2">
+            <div class="scene1_left anim1" uk-scrollspy-class="uk-animation-slide-left-medium">
+                <img class="" src="images/animLeft.png" alt="">
+            </div>
+            <div class="scene1_right anim1" uk-scrollspy-class="uk-animation-slide-right-medium">
+                <img class="" src="images/animRight.png" alt="">
+            </div>
+        </div>
+        <div id="main_object" class="scene1_main">
+            <img class="" src="images/chinggis.png" alt="">
+        </div>
+        <img id="anim1_bot" class="scene1_bot" src="images/botTexture.png" alt="">
+    </div>
+    <div class="scene scene2" uk-scrollspy="target: > img; delay: 500; repeat: true">
+        <img class="scene2_left" src="images/scene2_left.png" alt="" uk-scrollspy-class="uk-animation-slide-left-medium">
+        <img class="scene2_right1" src="images/scene2_right1.png" alt=""  uk-scrollspy-class="uk-animation-slide-right-medium">
+        <img class="scene2_right2" src="images/scene2_right2.png" alt=""  uk-scrollspy-class="uk-animation-slide-right-medium">
+        <img class="scene2_right3" src="images/scene2_right3.png" alt=""  uk-scrollspy-class="uk-animation-slide-right-medium">
+        <img class="scene2_right4" src="images/scene2_right4.png" alt=""  uk-scrollspy-class="uk-animation-slide-right-medium">
+        <div class="scene2_context">
+            <div class="grid-30">
+                <div class="name">Legend</div>
+                <div class="description">
+                    The mission of Women’s Global Empowerment Fund is to support women through economic, social and political programs, creating opportunities while addressing inequality; strengthening families and communities.  Learn more about our team, and join our work to empower women globally!
+                </div>
+                <div class="uk-width">
+                    <button class="button button-gold-o button-medium uk-margin-auto uk-text-capitalize">More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

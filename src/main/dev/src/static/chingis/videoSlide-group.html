@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="css/root.min.css">
+  <link rel="stylesheet" href="css/adelon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/global.css">
+  <script src="js/root.min.js"></script>
+  <title>Chingis video slider component</title>
+  <style id="videoSL"></style>
+</head>
+<body>
+<main>
+  <div class="swiper-container video-swiper uk-overflow-hidden">
+    <div class="swiper-wrapper videoSlider-wrapper">
+      <div class="swiper-slide">
+        <video preload="metadata" muted class="video stock0" style="width: 100vw; height: 100vh; object-fit: cover">
+          <source src="videos/stock1.mp4">
+        </video>
+        <div class="slide-text">
+          <div class="name">CHINGGIS KHAN</div>
+          <div class="description">The mission of Women’s Global Empowerment Fund is to support women through economic, social and political programs, creating opportunities while addressing inequality; strengthening families and communities.</div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <video preload="metadata" muted class="video stock1" style="width: 100vw; height: 100vh; object-fit: cover">
+          <source src="videos/stock2.mp4">
+        </video>
+        <div class="slide-text">
+          <div class="name">Genghis Khan</div>
+          <div class="description">power by uniting many of the nomadic tribes of Northeast Asia. After founding the Empire and being proclaimed the universal ruler of the Mongols, or Genghis Khan, he launched the Mongol invasions, which ultimately conquered most of Eurasia</div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <video preload="metadata" muted class="video stock2" style="width: 100vw; height: 100vh; object-fit: cover">
+          <source src="videos/stock2.mp4">
+        </video>
+        <div class="slide-text">
+          <div class="name">Genghis Khan</div>
+          <div class="description">Beyond his military accomplishments, Genghis Khan also advanced the Mongol Empire in other ways. He decreed the adoption of the Uyghur script as the Mongol Empire's writing system. He also practised meritocracy and encouraged religious tolerance in the Mongol Empire</div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <script>
+    var videoSlide = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      speed: 600,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      effect: 'fade',
+      loop: true
+    });
+
+    const videos = document.querySelectorAll('.video');
+    const videoSlides = document.querySelectorAll('.videoSlider-wrapper .swiper-slide');
+    videos.forEach((el,i)=>{
+      el.onloadeddata = (e) =>{
+        document.querySelector('#videoSL').innerHTML = '' +
+                '.video-swiper .swiper-pagination-bullet::before {transition: width '+ el.duration+'s}';
+      }
+    })
+    document.addEventListener("DOMContentLoaded", function(event) {
+      videoSlides.forEach((el,i)=>{
+        document.querySelectorAll('.video')[videoSlide.activeIndex].play()
+      })
+      videos.forEach((el, i)=>{
+        el.oncanplay = (e) => {
+
+        }
+        el.onended = (e) => {
+          videoSlide.slideNext()
+
+        }
+      })
+      videoSlide.on('slideChangeTransitionEnd', function () {
+        document.querySelectorAll('.video')[videoSlide.activeIndex].play()
+      })
+
+    });
+
+    videoSlide.on('reachEnd', function () {
+
+    })
+  </script>
+</main>
+</body>
+</html>
