@@ -24,8 +24,8 @@ function css() {
     return gulp.src([
         '/Users/eku/IdeaProjects/Web projects builds/src/main/dev/node_modules/uikit/dist/css/uikit.min.css',
         '/Users/eku/IdeaProjects/Web projects builds/src/main/dev/node_modules/swiper/swiper-bundle.min.css',
-        // '/Users/eku/IdeaProjects/Web projects builds/src/main/dev/node_modules/@fortawesome/fontawesome-free/css/all.css',
-        // 'css/*.css',
+        '/Users/eku/IdeaProjects/Web projects builds/src/main/dev/node_modules/@fortawesome/fontawesome-free/css/all.css',
+        'css/*.css',
     ])
         .pipe(concat('root.min.css'))
         .pipe(postcss([autoprefixer(), cleancss()]))
