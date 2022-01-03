@@ -69,8 +69,10 @@ footer {padding-top: 90px; background-color: rgba(0,0,0,0.2)}
 .hd-logo {
     display: flex;
     align-self: center;
+    box-sizing: border-box;
     padding: 5px;
-    transition: height .6s;
+    width: 180px;
+    transition: height .6s, width .5s;
 }
 
 .hd-logo-main {}
@@ -111,8 +113,13 @@ footer {padding-top: 90px; background-color: rgba(0,0,0,0.2)}
 }
 .heading-alternative {border-bottom: 1px solid #091259; background-color: #000846}
 .heading:hover {
-    background-color: #000846
+    background-color: #00084656
 }
+.heading.uk-active {background-color: #000846}
+.heading.uk-active .hd-logo {max-width: 110px}
+.uk-sticky-placeholder {height: 0 !important;}
+
+
 .hd-drop {
     border: 1px solid #091259;
     background-color: #000846;
@@ -390,7 +397,7 @@ footer {padding-top: 90px; background-color: rgba(0,0,0,0.2)}
     position: relative;
     overflow: hidden;
     z-index: 2;
-    height: 64vh;
+    height: calc(100vh / 1.5);
     display: flex;
     justify-content: left;
     align-items: flex-end;
@@ -406,7 +413,7 @@ footer {padding-top: 90px; background-color: rgba(0,0,0,0.2)}
     position: relative;
     overflow: hidden;
     z-index: 2;
-    height: 64vh;
+    height: calc(100vh / 1.5);
     display: flex;
     justify-content: right;
     align-items: flex-end;
@@ -433,7 +440,7 @@ footer {padding-top: 90px; background-color: rgba(0,0,0,0.2)}
 
 .scene1_main img {
     width: calc(100% - 5vw);
-    height: calc(100% - 5vh);
+    height: calc(100% - 2.8);
     object-fit: cover;
     transform: translateY(500px) scale(1.5);
     transition: transform .7s;
@@ -452,7 +459,7 @@ footer {padding-top: 90px; background-color: rgba(0,0,0,0.2)}
 @media (max-width: 680px) {
     .scene1_main {
         width: calc(100% - 20vw);
-        transform: translate(-50%, -60px);
+        transform: translate(-50%, -30px);
     }
     .scene1 .scene1_right img,
     .scene1 .scene1_left img {
