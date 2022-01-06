@@ -1,0 +1,250 @@
+body {
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    background-color: #151515;
+    overflow-x: hidden;
+}
+
+.main {overflow: hidden}
+
+.section {
+    position: relative;
+    /*min-height: 100vh;*/
+}
+
+.page-section__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+/*uk-flex uk-flex-middle uk-flex-center uk-flex-column uk-width-1-1 uk-height-1-1*/
+
+.floating-moon {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+}
+
+.shine-1 {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.shine-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 70%);
+    z-index: 0;
+}
+
+.card {
+    display: block;
+    overflow: hidden;
+}
+
+.card .img-wrapper {
+    position: relative;
+    border-radius: 20px;
+    padding-bottom: 68.82%;
+    overflow: hidden;
+    width: 100%;
+}
+.card .img-wrapper img {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+.card .img-wrapper .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    opacity: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    transition: opacity .4s;
+}
+.card .title {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+.card .description {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+}
+
+.card:hover .img-wrapper .overlay {
+    opacity: 1;
+}
+.card:hover .img-wrapper img {
+    transform: translate(50%, -50%) scale(1.1);
+}
+
+.card-article {
+    display: block;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.card-article .info-wrapper {
+    padding: 24px;
+}
+
+.card-article .img-wrapper {
+    position: relative;
+    padding-bottom: 55.87%;
+    overflow: hidden;
+    width: 100%;
+}
+.card-article .img-wrapper img {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+.card-article .img-wrapper .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    opacity: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    transition: opacity .4s;
+}
+.card-article .title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #353535;
+}
+
+.card-article:hover .img-wrapper .overlay {
+    opacity: 1;
+}
+.card-article:hover .img-wrapper img {
+    transform: translate(50%, -50%) scale(1.1);
+}
+
+
+.section-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff
+}
+
+.about-text {
+    margin-top: 100px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+}
+.about-text > :nth-child(2) {
+    padding: 0 15px;
+}
+.about-text > :nth-child(3) {
+    padding: 0 25px;
+}
+
+.text-card {
+
+}
+.text-card .icon {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    min-height: 80px;
+}
+.text-card .title {
+    margin: 0 auto 30px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
+    color: #fff;
+    max-width: 325px;
+    text-align: center;
+}
+.text-card .text {
+    font-size: 18px;
+    text-align: center;
+    line-height: 21px;
+    font-weight: 400;
+    color: rgba(255,255,255,.5);
+}
+
+.vision .text-card {
+    transition: transform 1.5s;
+}
+.vision > :nth-child(3) .text-card {
+    transition-delay: .5s;
+}
+.vision > :nth-child(2) .text-card {
+    transition-delay: 1s;
+}
+.vision > :nth-child(1) .text-card {
+    transition-delay: 1.5s;
+}
+.vision.vision-hidden .text-card {
+    transition: transform .3s;
+    transform: translateY(200%);
+}
+.vision.vision-shown .text-card {
+    transform: translateY(0);
+}
+
+.preload-logo__wrapper {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    width: max-content;
+    transition: leave-dcetter;
+}
+.preload-logo__wrapper {
+
+}
+
+#motionPath {
+    overflow: visible;
+    height: 100%;
+    max-width: 100%;
+}
+#motionPath path {
+    stroke-width: 2;
+    stroke: transparent;
+}
+#motionPath .astronaut {
+    visibility: hidden;
+}
