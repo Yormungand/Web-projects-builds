@@ -159,7 +159,8 @@ body {
 .section-title {
     font-size: 50px;
     font-weight: bold;
-    color: #fff
+    color: #fff;
+    font-family: 'Noto Sans';
 }
 
 .about-text {
