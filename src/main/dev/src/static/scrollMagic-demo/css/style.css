@@ -54,10 +54,20 @@ body {
 }
 /*uk-flex uk-flex-middle uk-flex-center uk-flex-column uk-width-1-1 uk-height-1-1*/
 
-.floating-moon {
+.floating-planet-1 {
     position: absolute;
     bottom: 0;
     right: 5%;
+}
+.floating-planet-2 {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+.floating-planet-3 {
+    position: absolute;
+    top: 5%;
+    left: 25%;
 }
 
 .shine-1 {
@@ -297,4 +307,60 @@ body {
 }
 #motionPath .astronaut {
     visibility: hidden;
+}
+
+.employee {
+    position: relative;
+    display: block;
+    padding-bottom: 106.20%;
+    height: 0;
+}
+.employee__info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #141414 100%);
+}
+.employee img {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.superior .employee__info .name {
+    width: max-content;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+.superior .employee__info .post {
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+}
+.employee__info .name {
+    width: max-content;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+}
+.employee__info .post {
+    font-size: 8px;
+    font-weight: 400;
+    color: #fff;
+}
+.employee:hover {
+
 }
