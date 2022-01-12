@@ -1,18 +1,20 @@
-.grid-5 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -5px; margin-left: -5px}
+.grid-collapse {display: flex; flex-wrap: wrap; box-sizing: border-box; overflow: hidden;}
+.grid-collapse > * {box-sizing: border-box}
+.grid-5 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -5px; margin-left: -5px; overflow: hidden;}
 .grid-5 > * {box-sizing: border-box; padding-top: 5px; padding-left: 5px}
-.grid-5_10 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -5px; margin-left: -10px}
+.grid-5_10 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -5px; margin-left: -10px; overflow: hidden;}
 .grid-5_10 > * {box-sizing: border-box; padding-top: 5px; padding-left: 10px}
-.grid-10 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -10px; margin-left: -10px}
+.grid-10 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -10px; margin-left: -10px; overflow: hidden;}
 .grid-10 > * {box-sizing: border-box; padding-top: 10px; padding-left: 10px}
-.grid-15 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -15px; margin-left: -15px}
+.grid-15 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -15px; margin-left: -15px; overflow: hidden;}
 .grid-15 > * {box-sizing: border-box; padding-top: 15px; padding-left: 15px}
-.grid-10_20 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -10px; margin-left: -20px}
+.grid-10_20 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -10px; margin-left: -20px; overflow: hidden;}
 .grid-10_20 > * {box-sizing: border-box; padding-top: 10px; padding-left: 20px}
-.grid-20 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -20px; margin-left: -20px}
+.grid-20 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -20px; margin-left: -20px; overflow: hidden;}
 .grid-20 > * {box-sizing: border-box; padding-top: 20px; padding-left: 20px}
-.grid-20_10 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -20px; margin-left: -10px}
+.grid-20_10 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -20px; margin-left: -10px; overflow: hidden;}
 .grid-20_10 > * {box-sizing: border-box; padding-top: 20px; padding-left: 10px}
-.grid-30 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -30px; margin-left: -30px}
+.grid-30 {display: flex; flex-wrap: wrap; box-sizing: border-box; margin-top: -30px; margin-left: -30px; overflow: hidden;}
 .grid-30 > * {box-sizing: border-box; padding-top: 30px; padding-left: 30px}
 
 
@@ -188,3 +190,40 @@ a:hover {text-decoration: none}
 .hidden {opacity: 0;}
 .fadeOut {opacity: 0 !important;}
 .fadeIn {opacity: 1 !important;}
+
+
+.button {
+    display: flex;
+    align-items: center;
+    border-style: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 13px 10px;
+    font-size: 16px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 18.75px;
+    height: 40px;
+    transition: box-shadow .4s, border .4s, color .4s, background-color .4s;
+}
+.button:not(:disabled) {
+    cursor: pointer;
+}
+.button:disabled {
+    border: 2px solid #999;
+    background-color: #999;
+    color: #666;
+}
+.button-transparent {
+    border: 2px solid #0075FF;
+    background-color: transparent;
+}
+.button-transparent:hover {
+    box-shadow: 0 0 25px 0 #0797FD;
+}
+.button-fill {
+    background-color: #0075FF;
+}
+.button-fill:hover {
+    box-shadow: 0 0 25px 0 #0797FD;
+}
