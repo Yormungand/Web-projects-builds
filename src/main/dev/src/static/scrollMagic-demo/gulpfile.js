@@ -22,9 +22,12 @@ function refresh() {
  * */
 function css() {
     return gulp.src([
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
         'css/*.css',
     ])
         .pipe(concat('root.min.css'))
@@ -43,12 +46,16 @@ function css() {
  * */
 function js() {
     return gulp.src([
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
-        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.min.js',
+        /*'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
         'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.extensions.min.js',
         'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/vendors/scrolloverflow.min.js',
         'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
+        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/!*.js',*/
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.extensions.min.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/vendors/scrolloverflow.min.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
         'js/*.js',
     ])
         .pipe(concat('root.min.js'))

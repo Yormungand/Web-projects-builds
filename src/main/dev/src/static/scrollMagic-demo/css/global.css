@@ -186,6 +186,20 @@ a:hover {text-decoration: none}
     box-sizing: content-box;
     max-width: 1320px;
 }
+.container {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: content-box;
+    max-width: 1200px;
+}
+.container-small {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: content-box;
+    max-width: 710px;
+}
 
 .transition-fade {opacity: 1; transition: .9s opacity .9s, visibility .4s; }
 .hidden {opacity: 0;}
@@ -205,8 +219,9 @@ a:hover {text-decoration: none}
     color: #fff;
     line-height: 18.75px;
     height: 40px;
-    transition: box-shadow .4s, border .4s, color .4s, background-color .4s;
+    transition: box-shadow .2s, border .4s, color .4s, background-color .4s;
 }
+button:not(:disabled),
 .button:not(:disabled) {
     cursor: pointer;
 }
@@ -220,11 +235,115 @@ a:hover {text-decoration: none}
     background-color: transparent;
 }
 .button-transparent:hover {
+    box-shadow: 0 0 10px 0 #0797FD;
+}
+.button-transparent:active {
     box-shadow: 0 0 25px 0 #0797FD;
 }
 .button-fill {
     background-color: #0075FF;
 }
 .button-fill:hover {
+    box-shadow: 0 0 10px 0 #0797FD;
+}
+.button-fill:active {
     box-shadow: 0 0 25px 0 #0797FD;
+}
+
+
+.button-submit {
+    display: flex;
+    border-style: none;
+    border-radius: 8px;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.25);
+    opacity: .5;
+    transition: background-color .4s, opacity .4s, color .4s;
+}
+.button-submit:hover {
+    opacity: 1;
+}
+.button-submit:active {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+input:not(input[type=checkbox], input[type=radio]) {
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    height: 40px;
+    min-height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    color: rgba(0,0,0,1);
+    background-color: transparent;
+    transition: border .4s, background-color .4s, color .4s;
+}
+input:not(input[type=checkbox], input[type=radio])::placeholder {
+    color: rgba(255,255,255,.5);
+    font-size: 14px;
+    font-weight: 400;
+    transition: color .4s;
+}
+input:not(input[type=checkbox], input[type=radio]):hover {
+    border: 1px solid rgba(255,255,255,.8);
+}
+input:not(input[type=checkbox], input[type=radio]):focus {
+    border: 1px solid rgba(255,255,255,1);
+    background-color: rgba(255,255,255,.8);
+}
+input:not(input[value=""]):not(:focus){
+    border: 1px solid rgba(255,255,255,.8);
+    color: rgba(255,255,255,1);
+}
+input:not(input[type=checkbox], input[type=radio]):focus::placeholder {
+    color: #363636;
+}
+textarea {
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 7px 20px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 40px;
+    line-height: 130%;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    color: rgba(0,0,0,1);
+    background-color: transparent;
+    transition: border .4s, background-color .4s, color .4s;
+}
+textarea::placeholder {
+    color: rgba(255,255,255,.5);
+    font-size: 14px;
+    font-weight: 400;
+    transition: color .4s;
+}
+textarea:hover {
+    border: 1px solid rgba(255,255,255,.8);
+}
+textarea:not(:placeholder-shown){
+    border: 1px solid rgba(255,255,255,.8);
+    color: rgba(255,255,255,1);
+}
+textarea:focus {
+    border: 1px solid rgba(255,255,255,1);
+    background-color: rgba(255,255,255,.8);
+    color: rgba(0,0,0,1);
+}
+textarea:focus::placeholder {
+    color: #363636;
 }

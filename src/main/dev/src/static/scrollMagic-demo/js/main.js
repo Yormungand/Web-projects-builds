@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // console.clear();
     planet_1();
     planet_2();
-    planet_3()
+    planet_3();
+    planet_4();
     shine_1();
     shine_2();
     // Preloading_icon();
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         licenseKey: '6BA69EBB-E0184DC2-89065061-0C6FE6F6',
         normalScrollElements: '.our-team',
         scrollOverflow: false,
+        responsiveWidth: 1200,
         afterLoad: function(origin, destination, direction){
             var params = {
                 origin: origin,
@@ -24,14 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("--- afterLoad ---");
             console.log(params);
             console.log('===============');
-            if (destination.anchor === 'vision'){
+            if (destination.anchor === 'vision' && window.innerWidth >= 960){
                 document.getElementsByClassName("vision")[0].classList.add("vision-shown")
                 document.getElementsByClassName("vision")[0].classList.remove("vision-hidden")
             } else {
-                document.getElementsByClassName("vision")[0].classList.add("vision-hidden")
-                document.getElementsByClassName("vision")[0].classList.remove("vision-shown")
+                document.getElementsByClassName("vision")[0].classList.add("vision-shown")
+                document.getElementsByClassName("vision")[0].classList.remove("vision-hidden")
             }
-            // deleteLog = true;
+            console.clear();
         }
     })
 })
@@ -338,6 +340,65 @@ planet_3 = function () {
             onComplete: rotate,
             onCompleteParams: [target, direction * -1]
         });
+    }
+
+    function moveX(target, direction) {
+        TweenLite.to(target, randomTime(), {
+            x: randomX(direction),
+            ease: Sine.easeInOut,
+            onComplete: moveX,
+            onCompleteParams: [target, direction * -1]
+        });
+    }
+
+    function moveY(target, direction) {
+
+        TweenLite.to(target, randomTime(), {
+            y: randomY(direction),
+            ease: Sine.easeInOut,
+            onComplete: moveY,
+            onCompleteParams: [target, direction * -1]
+        });
+    }
+
+    function random(min, max) {
+        const delta = max - min;
+        return (direction = 1) => (min + delta * Math.random()) * direction;
+    }
+}
+
+
+planet_4 = function () {
+
+    const randomX = random(5, 0); // x coordinates
+    const randomY = random(-170, 170); // y coordinates
+    const randomDelay = random(0, 1); // delays
+    const randomTime = random(3, 5); // random times
+    const randomTime2 = random(5, 10); // random times
+    const randomAngle = random(12, 95); // random angle
+
+    const planet = document.querySelector("#planet-4");
+
+    TweenLite.set(planet, {
+        x: randomX(-1),
+        y: randomX(1),
+        rotation: randomAngle(-1)
+    });
+
+    moveX(planet, 1);
+    moveY(planet, -1);
+    rotate(planet, 1);
+
+    function rotate(target, direction) {
+
+        TweenLite.to(target, randomTime2(), {
+            rotation: randomAngle(direction),
+            // delay: randomDelay(),
+            ease: Sine.easeInOut,
+            onComplete: rotate,
+            onCompleteParams: [target, direction * -1]
+        });
+
     }
 
     function moveX(target, direction) {
