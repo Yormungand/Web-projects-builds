@@ -201,7 +201,7 @@ a:hover {text-decoration: none}
     max-width: 710px;
 }
 
-.transition-fade {opacity: 1; transition: .9s opacity .9s, visibility .4s; }
+.transition-fade {transition: opacity 1s, visibility .4s; }
 .hidden {opacity: 0;}
 .fadeOut {opacity: 0 !important;}
 .fadeIn {opacity: 1 !important;}
