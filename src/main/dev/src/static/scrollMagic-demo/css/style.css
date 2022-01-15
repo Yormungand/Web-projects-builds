@@ -52,8 +52,12 @@ body {
 
 .section {
     position: relative;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
 }
+@media (max-width: 960px) {
+
+}
+
 .section-custom__wrap {
     display: flex;
     flex-wrap: wrap;
@@ -234,6 +238,7 @@ body {
     line-height: 23px;
     color: rgba(255,255,255,.5);
     transition: color .5s;
+    user-select: none;
 }
 .card-article .summary {
     font-size: 16px;
@@ -242,6 +247,7 @@ body {
     color: #929292;
     transition: color .3s ease;
     transition-delay: .3s;
+    user-select: none;
 }
 .card-article:hover .title {
     color: #fff;
@@ -795,7 +801,6 @@ body {
 }
 
 @media (max-width: 960px){
-
     .ft-items {
         margin-top: -20px;
         margin-left: -20px;
@@ -804,4 +809,16 @@ body {
         padding-top: 20px;
         padding-left: 20px;
     }
+}
+
+.article-swiper .swiper-pagination {
+    position: unset;
+    margin-top: 20px;
+}
+.article-swiper .swiper-pagination-bullet {
+    border: 1px solid rgba(255,255,255,.5);
+    transition: background-color .5s, border .5s;
+}
+.article-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: rgba(255,255,255,.5);
 }
