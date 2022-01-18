@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     // console.clear();
+    let planet1 = document.querySelector("#planet-1");
+    let planet2 = document.querySelector("#planet-2");
+    let planet3 = document.querySelector("#planet-3");
+    let planet4 = document.querySelector("#planet-4");
+    let shine1 = document.querySelector(".sphere-1");
+    let shine2 = document.querySelector(".sphere-2");
+
+
     planet_1();
     planet_2();
     planet_3();
@@ -7,34 +15,35 @@ document.addEventListener("DOMContentLoaded", () => {
     shine_1();
     shine_2();
     Preloading_icon();
-    Rocket_launch();
 
-
-    new fullpage("#fullpage", {
-        autoScrolling: true,
-        scrollHorizontally: false,
-        licenseKey: '6BA69EBB-E0184DC2-89065061-0C6FE6F6',
-        normalScrollElements: '.our-team',
-        scrollOverflow: false,
-        responsiveWidth: 1200,
-        afterLoad: function(origin, destination, direction){
-            var params = {
-                origin: origin,
-                destination: destination,
-                direction: direction,
-                speed: 900,
-            };
-
-            if (destination.anchor === 'vision' && window.innerWidth >= 960){
-                document.getElementsByClassName("vision")[0].classList.add("vision-shown")
-                document.getElementsByClassName("vision")[0].classList.remove("vision-hidden")
-            } else {
-                document.getElementsByClassName("vision")[0].classList.add("vision-shown")
-                document.getElementsByClassName("vision")[0].classList.remove("vision-hidden")
+    new Swiper(".article-swiper", {
+        speed: 800,
+        autoplay:{
+            delay: 3500,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        pauseOnMouseEnter: true,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 30
+            },
+            // when window width is >= 640px
+            960: {
+                slidesPerView: 2,
+                spaceBetween: 40
             }
-            console.clear();
-        }
+        },
     })
+
 })
 
 
@@ -158,7 +167,7 @@ shine_2 = function () {
 //ease: Back.easeOut.config(2),
 
 Preloading_icon = function () {
-    var preloader = new TimelineMax({repeat: -1})
+    let preloader = new TimelineMax({repeat: -1})
         .to("#rocket-body", .4, {delay: .5, scale: 1.1, ease: Sine.easeInOut, yoyo: true}, "=.2s")
         .to("#rocket-body", .4, {scale: .9, ease: Sine.easeInOut,})
         .to("#rocket-body", .3, {scale: 1, ease: Sine.easeInOut,})
@@ -171,7 +180,7 @@ Preloading_icon = function () {
 planet_1 = function () {
 
     const randomX = random(5, 0); // x coordinates
-    const randomY = random(-170, 170); // y coordinates
+    const randomY = random(0, 50); // y coordinates
     const randomDelay = random(0, 1); // delays
     const randomTime = random(3, 5); // random times
     const randomTime2 = random(5, 10); // random times
@@ -288,11 +297,11 @@ planet_2 = function () {
 planet_3 = function () {
 
     const randomX = random(5, 0); // x coordinates
-    const randomY = random(30, 75); // y coordinates
+    const randomY = random(30, -50); // y coordinates
     const randomDelay = random(0, 0); // delays
     const randomTime = random(30, 15); // random times
     const randomTime2 = random(15, 30); // random times
-    const randomAngle = random(-360, 360); // random angle
+    const randomAngle = random(-210, 210); // random angle
 
     const planet = document.querySelector("#planet-3");
 
@@ -345,12 +354,12 @@ planet_3 = function () {
 
 planet_4 = function () {
 
-    const randomX = random(-70, 50); // x coordinates
+    const randomX = random(-120, 50); // x coordinates
     const randomY = random(-50, 120); // y coordinates
     const randomDelay = random(3, 1); // delays
     const randomTime = random(12, 21); // random times
-    const randomTime2 = random(39, 32); // random times
-    const randomAngle = random(-2700, 3600); // random angle
+    const randomTime2 = random(15, 32); // random times
+    const randomAngle = random(-360, 360); // random angle
 
     const planet = document.querySelector("#planet-4");
 
@@ -426,11 +435,13 @@ Rocket_launch = function () {
             }, 1000)
             setTimeout(()=>{
                 fadeOut(document.querySelectorAll(".preloader")[0], 100)
+                rocket_launched = true;
+                rocketProxy.hello = "test";
             }, 2500)
         },
-
     });
 
+    return Promise.resolve();
     // MotionPathHelper.create(".astronaut");
 }
 

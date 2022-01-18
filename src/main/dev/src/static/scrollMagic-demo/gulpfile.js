@@ -1,9 +1,10 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var cleancss = require('postcss-clean');
-var browserSync = require('browser-sync').create();
+let gulp = require('gulp');
+let concat = require('gulp-concat');
+let postcss = require('gulp-postcss');
+let autoprefixer = require('autoprefixer');
+let cleancss = require('postcss-clean');
+let browserSync = require('browser-sync').create();
+let cssnext = require("postcss-cssnext")
 
 function refresh() {
     return gulp.src(['css/*.css'])
@@ -31,7 +32,7 @@ function css() {
         'css/*.css',
     ])
         .pipe(concat('root.min.css'))
-        .pipe(postcss([autoprefixer(), cleancss()]))
+        .pipe(postcss([], [autoprefixer(), cleancss]))
         .pipe(gulp.dest('dist/css/'));
 }
 
@@ -52,9 +53,11 @@ function js() {
         'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
         'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/!*.js',*/
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/js/uikit.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.extensions.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/vendors/scrolloverflow.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/axios/dist/axios.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
         'js/*.js',
     ])

@@ -183,24 +183,27 @@ a:hover {text-decoration: none}
     overflow: hidden;
     margin: 0 auto;
     padding: 0 20px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     max-width: 1320px;
 }
 .container {
     overflow: hidden;
     margin: 0 auto;
     padding: 0 20px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     max-width: 1200px;
+    width: 100%;
 }
 .container-small {
     overflow: hidden;
     margin: 0 auto;
     padding: 0 20px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     max-width: 710px;
 }
-
+.container-padding__remove {
+    padding: 0;
+}
 .transition-fade {transition: opacity 1s, visibility .4s; }
 .hidden {opacity: 0;}
 .fadeOut {opacity: 0 !important;}
@@ -219,7 +222,11 @@ a:hover {text-decoration: none}
     color: #fff;
     line-height: 18.75px;
     height: 40px;
-    transition: box-shadow .2s, border .4s, color .4s, background-color .4s;
+    transition: box-shadow .3s, border .7s, color .7s, background-color .7s;
+}
+.button-medium {
+    padding: 15px;
+    height: 50px;
 }
 button:not(:disabled),
 .button:not(:disabled) {
@@ -273,6 +280,23 @@ button:not(:disabled),
 .button-submit:active {
     opacity: 1;
     background: rgba(255, 255, 255, 0.5);
+}
+
+.button-text {
+    border: 1px solid transparent;
+    color: rgba(255,255,255,.5);
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+    transition: color .5s;
+    background-color: transparent;
+    text-align: left;
+}
+.button-text__active {
+    color: rgba(255,255,255,1);
+}
+.button-text:hover {
+    color:  rgba(255,255,255,.8);
 }
 
 
@@ -346,4 +370,8 @@ textarea:focus {
 }
 textarea:focus::placeholder {
     color: #363636;
+}
+
+.max-height {
+    height: max-content;
 }
