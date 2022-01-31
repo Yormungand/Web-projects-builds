@@ -7,14 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let shine1 = document.querySelector(".sphere-1");
     let shine2 = document.querySelector(".sphere-2");
 
-
-    planet_1();
-    planet_2();
-    planet_3();
-    planet_4();
-    shine_1();
-    shine_2();
-    Preloading_icon();
+    if (home !== undefined && home) {
+        planet_1();
+        planet_2();
+        planet_3();
+        planet_4();
+        shine_1();
+        shine_2();
+        Preloading_icon();
+    }
 
     new Swiper(".article-swiper", {
         speed: 800,
