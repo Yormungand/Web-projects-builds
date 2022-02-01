@@ -2,9 +2,10 @@ let gulp = require('gulp');
 let concat = require('gulp-concat');
 let postcss = require('gulp-postcss');
 let autoprefixer = require('autoprefixer');
-let cleancss = require('postcss-clean');
+let cleancss = require('gulp-clean-css');
 let browserSync = require('browser-sync').create();
 let cssnext = require("postcss-cssnext")
+let uglify = require("gulp-uglify")
 
 function refresh() {
     return gulp.src(['css/*.css'])
@@ -23,16 +24,18 @@ function refresh() {
  * */
 function css() {
     return gulp.src([
-        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
-        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
-        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
-        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
-        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
-        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
+        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
+        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
+        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
+        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
+        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
+        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
         'css/*.css',
     ])
+        .pipe(cleancss())
         .pipe(concat('root.min.css'))
         .pipe(postcss([], [autoprefixer(), cleancss]))
+        .pipe(browserSync.stream())
         .pipe(gulp.dest('dist/css/'));
 }
 
@@ -47,20 +50,23 @@ function css() {
  * */
 function js() {
     return gulp.src([
-        /*'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
+        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
+        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/js/uikit.min.js',
         'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.extensions.min.js',
         'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/vendors/scrolloverflow.min.js',
         'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/!*.js',*/
-        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
-        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/js/uikit.min.js',
-        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.extensions.min.js',
-        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/vendors/scrolloverflow.min.js',
-        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/axios/dist/axios.min.js',
-        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
+        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/axios/dist/axios.min.js',
+        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
+        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
+        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/js/uikit.min.js',
+        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.extensions.min.js',
+        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/vendors/scrolloverflow.min.js',
+        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/axios/dist/axios.min.js',
+        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
         'js/*.js',
     ])
+        .pipe(uglify())
         .pipe(concat('root.min.js'))
         .pipe(gulp.dest('dist/js/'))
 }
