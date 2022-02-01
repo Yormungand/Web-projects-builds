@@ -19,17 +19,17 @@ function refresh() {
  * @name css
  *  1. Idea project үүсэн хавтасны хажууд package.json үүсгэнэ
  *  2. npm install хийнэ.
- *  3.Сангаа дуудаж оруулахдаа "absolute path" -ыг зааж өгнө
+ *  3. Сангаа дуудаж оруулахдаа "absolute path" -ыг зааж өгнө
  * @function
  * */
 function css() {
     return gulp.src([
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
-        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
-        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
-        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
         'css/*.css',
     ])
         .pipe(cleancss())
@@ -50,20 +50,20 @@ function css() {
  * */
 function js() {
     return gulp.src([
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/js/uikit.min.js',
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.extensions.min.js',
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/vendors/scrolloverflow.min.js',
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/axios/dist/axios.min.js',
-        'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
-        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
-        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/js/uikit.min.js',
-        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.extensions.min.js',
-        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/vendors/scrolloverflow.min.js',
-        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/axios/dist/axios.min.js',
-        // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/js/uikit.min.js',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.extensions.min.js',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/vendors/scrolloverflow.min.js',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/axios/dist/axios.min.js',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/js/uikit.min.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.extensions.min.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/vendors/scrolloverflow.min.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/axios/dist/axios.min.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
         'js/*.js',
     ])
         .pipe(uglify())

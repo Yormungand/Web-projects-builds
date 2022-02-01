@@ -92,7 +92,7 @@ body {
     flex-wrap: wrap;
     flex-flow: column;
     align-items: center;
-    justify-self: center;
+    justify-content: center;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -139,8 +139,9 @@ body {
     font-family: 'Noto Sans';
     text-align: center;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1600px) {
     .section-title {
+        padding-bottom: 10px;
         font-size: 34px;
     }
 }
@@ -355,7 +356,7 @@ body {
     min-height: 80px;
 }
 .text-card .title {
-    margin: 0 auto 30px;
+    margin: 0 auto 20px;
     font-size: 20px;
     font-weight: 500;
     line-height: 27px;
@@ -364,11 +365,15 @@ body {
     text-align: center;
 }
 .text-card .text {
+    display: -webkit-box!important;
+    -webkit-line-clamp: 11;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-size: 18px;
     text-align: center;
     line-height: 21px;
     font-weight: 400;
-    color: rgba(0,0,0,.5);
+    color: rgba(0,0,0,.7);
 }
 .text-card svg {
     transition: filter .4s;
@@ -819,16 +824,16 @@ body {
     object-fit: cover;
     user-select: none;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1440px) {
     .leader-wrapper {
         width: 100px;
     }
     .team-info__card .wrapper {
         padding: 10px;
     }
-    .team-info__card .name {
-        font-size: 16px;
-        line-height: 18px;
+    .leader-info .name {
+        font-size: 10px;
+        line-height: 12px;
     }
 }
 
@@ -893,7 +898,20 @@ body {
     font-weight: 500;
     color: rgba(255,255,255,.5);
 }
-
+@media (max-width: 1440px) {
+    .ft-items .item .icon {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        min-height: 30px;
+    }
+    .ft-items .item .heading {
+        font-size: 18px;
+    }
+    .ft-items .item :not(.heading) {
+        font-size: 14px;
+    }
+}
 @media (max-width: 960px){
     .ft-items {
         margin-top: -20px;
@@ -1181,7 +1199,7 @@ body {
     padding-right: 30px;
 }
 .job-information .title {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-size: 26px;
     font-weight: 500;
     color: #0075FF;
