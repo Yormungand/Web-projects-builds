@@ -481,3 +481,111 @@ function fadeIn(element) {
         target.remove();
     })*/
 }
+
+JobAd = {
+    currentId: null,
+    formReady: false,
+    infoLoaded: false,
+    init: () => {
+        const _this = JobAd;
+        _this.beginRequests();
+    },
+    beginRequests:(id)=>{
+        let firstId = document.querySelectorAll('.jobs')[0].getAttribute("data-id");
+        if (id) {
+            jobInfo(id);
+        } else {
+            jobInfo(firstId);
+        }
+    },
+    triggerCV:(el)=>{
+        el.click();
+        return false;
+    },
+    post:()=>{
+        axios.post('/jobad/cv', new FormData(document.getElementById('cvForm')),{
+            headers: {
+                'Content-Type': 'multipart/form-data',
+                accept: 'text/html; charset=UTF-8'
+            },
+            method: "POST",
+            responseType: 'document',
+        }).then(function (res){
+            UIkit.notification('Амжилттай', {status:'success'})
+        }).catch((error)=>{
+            UIkit.notification('Амжилтгүй' + error, {status:'danger'})
+        })
+    }
+}
+jobInfo = function (id) {
+    axios.get(`/api/jobad/${id}`, {
+        headers: {
+            'Content-Type': 'application/json',
+            accept: 'application/json'
+        }
+    })
+        .then((response) => {
+            console.log(response)
+            document.getElementById('job-acoustic').innerHTML = "" +
+                "<div>" +
+                "   <div class='item open'>" +
+                "       <div class='acoustic-button'>" +
+                "           <button class='button button-fill button-medium' onclick='Acoustic.init(this)'>The main" +
+                "               role" +
+                "           </button>" +
+                "           <div class='mask'></div>" +
+                "       </div>" +
+                "       <div class='context'>" +
+                "           <div>"+response.data.mainRequirement+"</div>" +
+                "       </div>" +
+                "   </div>" +
+                "</div>" +
+                "<div>" +
+                "   <div class='item'>" +
+                "       <div class='acoustic-button'>" +
+                "           <button class='button button-transparent button-medium' onclick='Acoustic.init(this)'>Basic" +
+                "               requirements" +
+                "           </button>" +
+                "           <div class='mask'></div>" +
+                "       </div>" +
+                "       <div class='context'>" +
+                "           <div>"+response.data.basicRequirement+"</div>" +
+                "       </div>" +
+                "   </div>" +
+                "</div>" +
+                "<div>" +
+                "   <div class='item'>" +
+                "       <div class='acoustic-button'>" +
+                "           <button class='button button-transparent button-medium' onclick='Acoustic.init(this)'>Date" +
+                "               of recieve form" +
+                "           </button>" +
+                "           <div class='mask'></div>" +
+                "       </div>" +
+                "       <div class='context'>" +
+                "           <div></div>" +
+                "       </div>" +
+                "   </div>" +
+                "</div>";
+            getJobForm(id);
+            document.querySelectorAll('.jobs').forEach((el)=>{
+                if (el.getAttribute("data-id") === id.toString())
+                    el.className = 'jobs button-text button-text__active';
+                else
+                    el.className = 'jobs button-text';
+            })
+        })
+};
+getJobForm = function (jobId) {
+    axios.get(`/jobad/cv?jobAdId=${jobId}`, {
+        headers: {
+            'Content-Type': 'text/html; charset=UTF-8',
+            accept: 'text/html; charset=UTF-8'
+        }
+    })
+        .then((response) => {
+            document.getElementById('form-target').innerHTML = response.data;
+        })
+        .catch((error)=>{
+            console.error(error);
+        })
+}
