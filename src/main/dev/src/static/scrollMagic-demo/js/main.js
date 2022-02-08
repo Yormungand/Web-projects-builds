@@ -525,6 +525,8 @@ jobInfo = function (id) {
         }
     })
         .then((response) => {
+            if (document.getElementById("cv-name"))
+                document.getElementById("cv-name").innerText = '';
             console.log(response)
             document.getElementById('job-acoustic').innerHTML = "" +
                 "<div>" +

@@ -1,4 +1,6 @@
 body {
+    display: flex;
+    flex-flow: column;
     scroll-behavior: smooth;
     min-height: 100vh;
     background-color: #151515;
@@ -15,13 +17,24 @@ body {
     padding: 30px 0;
     width: 100%;
     background-color: rgba(255,255,255,.2);
-    z-index: 10;
+    z-index: 100;
     transition: background-color .5s, padding .5s, border .5s;
 }
 .header.onthemove {
     border-bottom: 1px solid #363636;
     padding: 10px 0;
     background-color: rgba(0,0,0,.2);
+}
+
+@media (max-width: 1440px) {
+    .header {
+        padding: 15px;
+    }
+}
+@media (max-width: 1200px) {
+    .header {
+        padding: 10px;
+    }
 }
 
 .header-static {
@@ -76,8 +89,10 @@ body {
     color: #0797FD;
 }
 
-.main {overflow: hidden}
-
+.main {
+    position: relative;
+    flex: 1;
+}
 
 .section {
     position: relative;
@@ -371,7 +386,7 @@ body {
     overflow: hidden;
     font-size: 18px;
     text-align: center;
-    line-height: 21px;
+    line-height: 140%;
     font-weight: 400;
     color: rgba(0,0,0,.7);
 }
@@ -1014,8 +1029,8 @@ body {
 .top-banner {
     position: relative;
     overflow: hidden;
-    padding-bottom: 56.25%;
-    height: 0;
+    /*padding-bottom: 56.25%;*/
+    height: 100vh;
 }
 
 .top-banner .background {
@@ -1031,7 +1046,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(0,0,0,.5), transparent);
+    background: linear-gradient(45deg, rgba(0,0,0,.8), transparent);
     z-index: 2;
 }
 
@@ -1307,7 +1322,7 @@ body {
     color: rgba(255,255,255,1);
 }
 .page-content {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 400;
     color: rgba(255,255,255,1);
 }
@@ -1401,11 +1416,16 @@ body {
     .member-biography > * {
         padding-left: 30px;
     }
-    .member-biography > .photo-box {
-        width: calc(100% / 2);
+}
+@media (max-width: 1368px) {
+    .member-biography {
+        margin-left: -20px;
+    }
+    .member-biography > * {
+        padding-left: 20px;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 960px) {
     .member-biography > .photo-box {
         /*margin: 0 auto;*/
         width: calc(100% / 2);
@@ -1421,7 +1441,6 @@ body {
         padding-left: 20px;
     }
 }
-
 
 
 .member-biography .fullname {
@@ -1440,7 +1459,7 @@ body {
     font-weight: 400;
     color: #524141;
 }
-@media (max-width: 960px){
+@media (max-width: 1600px){
     .member-biography .fullname {
         font-size: 38px;
     }
