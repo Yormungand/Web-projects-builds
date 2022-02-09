@@ -591,3 +591,84 @@ getJobForm = function (jobId) {
             console.error(error);
         })
 }
+
+planet_big = function () {
+    const randomX = random(20, 55); // x coordinates
+    const randomY = random(55, 170); // y coordinates
+    const randomDelay = random(5, 12); // delays
+    const randomTime = random(11, 17); // random times
+    const randomTime2 = random(19, 12); // random times
+    const randomAngle = random(0, 0); // random angle
+    const planet = document.querySelector(".planet-big");
+    TweenLite.set(planet, {
+        x: randomX(-1),
+        y: randomX(1),
+        rotation: randomAngle(-1)
+    });
+    moveX(planet, 1);
+    moveY(planet, -1);
+    function moveX(target, direction) {
+        TweenLite.to(target, randomTime(), {
+            x: randomX(direction),
+            ease: Sine.easeInOut,
+            onComplete: moveX,
+            onCompleteParams: [target, direction * -1]
+        });
+    }
+    function moveY(target, direction) {
+        TweenLite.to(target, randomTime(), {
+            y: randomY(direction),
+            ease: Sine.easeInOut,
+            onComplete: moveY,
+            onCompleteParams: [target, direction * -1]
+        });
+    }
+    function random(min, max) {
+        const delta = max - min;
+        return (direction = 1) => (min + delta * Math.random()) * direction;
+    }
+}
+planet_small = function () {
+    const randomX = random(-20, -55); // x coordinates
+    const randomY = random(170, 55); // y coordinates
+    const randomDelay = random(23, 27); // delays
+    const randomTime = random(21, 16); // random times
+    const randomTime2 = random(15, 20); // random times
+    const randomAngle = random(0, 0); // random angle
+
+    const planet = document.querySelector(".planet-small");
+
+    TweenLite.set(planet, {
+        x: randomX(-1),
+        y: randomX(1),
+        rotation: randomAngle(-1)
+    });
+
+    moveX(planet, 1);
+    moveY(planet, -1);
+
+    function moveX(target, direction) {
+
+        TweenLite.to(target, randomTime(), {
+            x: randomX(direction),
+            ease: Sine.easeInOut,
+            onComplete: moveX,
+            onCompleteParams: [target, direction * -1]
+        });
+    }
+
+    function moveY(target, direction) {
+
+        TweenLite.to(target, randomTime(), {
+            y: randomY(direction),
+            ease: Sine.easeInOut,
+            onComplete: moveY,
+            onCompleteParams: [target, direction * -1]
+        });
+    }
+
+    function random(min, max) {
+        const delta = max - min;
+        return (direction = 1) => (min + delta * Math.random()) * direction;
+    }
+}

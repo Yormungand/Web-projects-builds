@@ -20,6 +20,9 @@ body {
     z-index: 100;
     transition: background-color .5s, padding .5s, border .5s;
 }
+.header-placeholder {
+    margin-top: 100px;
+}
 .header.onthemove {
     border-bottom: 1px solid #363636;
     padding: 10px 0;
@@ -467,7 +470,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 11;
+    z-index: 100;
     background-color: #363636;
     transition: opacity 1s;
 }
@@ -1326,6 +1329,14 @@ body {
     font-weight: 400;
     color: rgba(255,255,255,1);
 }
+@media (max-width: 1600px) {
+    .staticPage-heading {
+        font-size: 32px;
+    }
+    .page-content {
+        font-size: 16px;
+    }
+}
 
 .members {
     display: block;
@@ -1609,3 +1620,64 @@ body {
     transform: translate(50%, -50%) scale(1.3);
 }
 
+
+.ship-container {
+    position: relative;
+    min-height: 100vh;
+}
+.ship-container .planet-big,
+.ship-container .planet-small {
+    position: absolute;
+    z-index: 1;
+    width: max-content;
+}
+.ship-container .planet-big {
+    top: 0;
+    left: 0;
+    width: 32%;
+}
+.ship-container .planet-small {
+    top: 0;
+    right: 0;
+    width: 26%;
+}
+.ship-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    z-index: 3;
+}
+.ship-hull {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(50%, -50%);
+}
+.ship-hull .context {
+    position: relative;
+    display: flex;
+    z-index: 6;
+}
+@media (max-width: 1600px) {
+    .ship-container {
+        min-height: 0;
+        padding-bottom: 56.26%;
+    }
+}
+
+.poc-context {
+    position: relative;
+    z-index: 3;
+    padding-top: 20%;
+    width: 100%;
+}
+.poc-context .staticPage-heading {
+    text-align: center;
+}
