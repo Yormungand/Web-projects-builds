@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
         shine_1();
         shine_2();
         Preloading_icon();
+        document.querySelectorAll('.back')[0].style.display = 'none'
+    } else if (home === false) {
+
     }
 
     new Swiper(".article-swiper", {

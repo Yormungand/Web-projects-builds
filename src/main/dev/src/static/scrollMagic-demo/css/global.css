@@ -244,13 +244,13 @@ a:hover {text-decoration: none}
     display: flex;
     align-items: center;
     border-style: none;
-    border-radius: 5px;
+    border-radius: 10px;
     box-sizing: border-box;
     padding: 13px 10px;
     font-size: 16px;
     font-weight: 900;
     color: #fff;
-    line-height: 18.75px;
+    line-height: 150%;
     height: 40px;
     transition: box-shadow .3s, border .7s, color .7s, background-color .7s;
 }
@@ -273,6 +273,8 @@ button:not(:disabled),
 }
 .button-transparent:hover {
     box-shadow: 0 0 10px 0 #0797FD;
+    background-color: #0075FF;
+    color: #fff;
 }
 .button-transparent:active {
     box-shadow: 0 0 25px 0 #0797FD;
