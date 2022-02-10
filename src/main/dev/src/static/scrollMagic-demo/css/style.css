@@ -789,6 +789,7 @@ body {
     height: 100%;
     object-fit: cover;
     pointer-events: none;
+    user-select: none;
 }
 .team-card .name {
     position: absolute;
@@ -803,6 +804,7 @@ body {
     font-size: 20px;
     font-family: 'Roboto';
     text-transform: uppercase;
+    user-select: none;
     color: #fff;
     z-index: 3;
 }
