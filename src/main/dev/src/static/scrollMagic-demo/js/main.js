@@ -632,8 +632,8 @@ planet_big = function () {
     }
 }
 planet_small = function () {
-    const randomX = random(-20, -55); // x coordinates
-    const randomY = random(170, 55); // y coordinates
+    const randomX = random(-170, 55); // x coordinates
+    const randomY = random(-20, -55); // y coordinates
     const randomDelay = random(23, 27); // delays
     const randomTime = random(21, 16); // random times
     const randomTime2 = random(15, 20); // random times
