@@ -155,7 +155,7 @@ body {
 }
 .section-title {
     box-sizing: border-box;
-    padding-top: 100px;
+    padding-top: 75px;
     padding-bottom: 50px;
     font-size: 50px;
     font-weight: bold;
@@ -174,10 +174,10 @@ body {
     color: #fff;
     line-height: 28px
 }
-@media (max-width: 1600px) {
+@media (max-width: 1600px) and (max-height: 850px){
     .section-title {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 75px;
+        padding-bottom: 50px;
         font-size: 34px;
     }
     .section-title > div > div {
@@ -187,9 +187,9 @@ body {
         line-height: 28px
     }
 }
-@media (max-width: 1400px) {
+@media (max-width: 1400px) and (max-height: 768px) {
     .section-title {
-        padding-top: 50px;
+        padding-top: 75px;
         padding-bottom: 50px;
         font-size: 28px;
     }
@@ -552,7 +552,7 @@ body {
 .employee {
     position: relative;
     display: block;
-    border: 1px solid #fff;
+    border: 1px solid #afafaf;
     box-sizing: border-box;
     overflow: hidden;
     padding-bottom: 106.20%;
@@ -645,12 +645,12 @@ body {
 }
 
 
-
-
 .card-transparent {
     position: relative;
     display: block;
+    border: 1px solid #afafaf;
     overflow: hidden;
+    box-sizing: border-box;
     padding-bottom: 70.55%;
     height: 0;
     z-index: 4;
@@ -768,12 +768,14 @@ body {
 }*/
 
 .team {
+    position: relative;
     display: flex;
+    flex-flow: column;
     width: 100%;
 }
 .team-card {
     position: relative;
-    border: 1px solid #fff;
+    border: 1px solid #afafaf;
     box-sizing: border-box;
     overflow: hidden;
     padding-bottom: 64.02%;
@@ -791,36 +793,32 @@ body {
     pointer-events: none;
     user-select: none;
 }
-.team-card .name {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+
+.team-info {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #363636;
+    width: 85%;
+    height: auto;
+    transform: translateY(-50%);
+    transition: transform .5s, width .5s;
+}
+.team-info .name {
     display: flex;
     flex-wrap: wrap;
-    box-sizing: border-box;
     justify-content: center;
-    padding: 15px;
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Roboto';
     text-transform: uppercase;
     user-select: none;
     color: #fff;
     z-index: 3;
 }
-.team-card::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -0.64%, #141414 99.36%);
-    z-index: 2;
-    transition: height .5s;
-}
-.team-card:hover::before {
-    height: 50%;
+.team:hover .team-info {
+    transform: translateY(-70%);
+    /*width: 95%;*/
 }
 
 
@@ -1686,4 +1684,34 @@ body {
 }
 .back-button:hover i path {
     fill: #0075ff;
+}
+
+article {
+    color: #fff
+}
+
+article .name {
+    margin-bottom: 30px;
+    font-size: 48px;
+    font-weight: bold;
+}
+article .text {
+    font-size: 16px;
+}
+@media (max-width: 1600px) {
+    article .name {
+        margin-bottom: 20px;
+        font-size: 32px;
+    }
+    article .text {
+        font-size: 16px;
+    }
+}
+@media (max-width: 1200px) {
+    article .name {
+        font-size: 24px;
+    }
+    article .text {
+        font-size: 14px;
+    }
 }

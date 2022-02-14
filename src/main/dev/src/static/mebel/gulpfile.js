@@ -64,6 +64,7 @@ function js() {
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/axios/dist/axios.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/jquery/dist/jquery.js',
         'js/*.js',
     ])
         .pipe(uglify())
