@@ -5,27 +5,30 @@ body {
     min-height: 100vh;
     background-color: #151515;
     overflow-x: hidden;
-    background-image: url(../../assets/stars-bg.png);
-    background-position: top;
-    background-size: contain;
-    background-attachment: fixed;
+    background-image: url(../../assets/stars-bg.jpg?v=1);
+    /*background-position: top;*/
+    /*background-size: contain;*/
+    /*background-attachment: fixed;*/
 }
 
 .header {
     position: fixed;
     border-bottom: 1px solid rgba(255,255,255,.5);
-    padding: 30px 0;
+    box-sizing: border-box;
+    padding: 20px 0;
     width: 100%;
+    height: 95px;
     background-color: rgba(255,255,255,.2);
     z-index: 100;
-    transition: background-color .5s, padding .5s, border .5s;
+    transition: background-color .5s, padding .5s, border .5s, height .5s;
 }
 .header-placeholder {
-    margin-top: 100px;
+    margin-top: 95px;
 }
 .header.onthemove {
     border-bottom: 1px solid #363636;
     padding: 10px 0;
+    height: 75px;
     background-color: rgba(0,0,0,.2);
 }
 
@@ -1687,16 +1690,42 @@ body {
 }
 
 article {
-    color: #fff
+    padding-bottom: 60px;
+    color: #fff;
 }
 
 article .name {
-    margin-bottom: 30px;
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
     font-size: 48px;
     font-weight: bold;
+    line-height: 1.1;
+    color: #fff;
+}
+article .name::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 200px;
+    bottom: 0;
+    left: 0;
 }
 article .text {
     font-size: 16px;
+    line-height: 1.5;
+}
+article time {
+    display: block;
+    border-top: 1px solid #9bb9cb;
+    margin: 20px 0;
+    padding-top: 15px;
+    padding-right: 30px;
+    width: max-content;
+    min-width: 80px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #9bb9cb;
 }
 @media (max-width: 1600px) {
     article .name {
@@ -1708,10 +1737,31 @@ article .text {
     }
 }
 @media (max-width: 1200px) {
+    article {
+        padding-bottom: 40px;
+    }
     article .name {
         font-size: 24px;
     }
     article .text {
         font-size: 14px;
     }
+}
+.article-image {
+    position: relative;
+    display: block;
+    border-radius: 4px;
+    overflow: hidden;
+    padding-bottom: 25%;
+    -webkit-mask-image: linear-gradient(0deg,transparent 0,#000 25%);
+    mask-image: linear-gradient(0deg,transparent 0,#000 25%);
+}
+.article-image img {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

@@ -91,19 +91,20 @@ ProductOrderPopup = {
         },
         removeProduct: function(id, callback){
             var _this = this;
-            var params = "productId="+id;
+            var params = "?productId="+id;
             if(this.id!==null) params += '&basketId='+this.id;
-            ProductOrderPopup._post(this.removeProductPostUrl, params, function(data){
+            ProductOrderPopup._post(this.removeProductPostUrl + params, null, function(data){
                 _this.productList();
                 _this.setProductTotalCount();
                 if(callback!==undefined) callback(data);
             });
         },
         empty: function(callback){
-            var _this = this;
-            ProductOrderPopup._post(this.emptyPostUrl, params, function(data){
+            let _this = this;
+            let params = 'basketId='+this.id;
+            ProductOrderPopup._post(this.emptyPostUrl+'?'+params, null,function(data){
                 _this.productList();
-                if(callback!==undefined) callback(data);
+                _this.setProductTotalCount();
             });
         }
     },

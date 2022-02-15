@@ -27,9 +27,13 @@ function css() {
         // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
         // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
         // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/@fortawesome/fontawesome-free/css/all.css',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/flatpickr/dist/flatpickr.css',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/@fortawesome/fontawesome-free/css/all.css',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/flatpickr/dist/flatpickr.css',
         'css/*.css',
     ])
         .pipe(cleancss())
@@ -57,6 +61,7 @@ function js() {
         // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
         // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/axios/dist/axios.min.js',
         // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
+        // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/flatpickr/dist/flatpickr.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/js/uikit.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.extensions.min.js',
@@ -65,6 +70,7 @@ function js() {
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/axios/dist/axios.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/jquery/dist/jquery.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/flatpickr/dist/flatpickr.js',
         'js/*.js',
     ])
         .pipe(uglify())
