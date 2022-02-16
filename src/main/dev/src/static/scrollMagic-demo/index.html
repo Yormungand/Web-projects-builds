@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="https://static.sodonsolution.org/fonts/roboto-condensed/fonts.css">
     <link rel="stylesheet" href="https://static.sodonsolution.org/fonts/roboto-slab/fonts.css">
 </head>
-
+<script>
+    let home = true;
+</script>
 <body>
 <script>
     let rocket_launched = {};
@@ -250,7 +252,10 @@
                         };
                     </script>
                 </div>
-                <img class="background" src="images/bg-tech.png" alt="">
+                <div class="cosmos">
+                    <img class="earth" src="images/earth.png" alt="">
+                    <img class="moon" src="images/moon.png" alt="">
+                </div>
                 <div class="banner-info" style="pointer-events: none">
                     <div class="text-wrapper">
                         <div class="text">ALways to <br> create high value</div>
@@ -1160,3 +1165,26 @@
 </div>
 </body>
 </html>
+
+
+<div id="universe">
+    <div id="solar-system">
+        <div class="orbit orbit1">
+            <div class="path">
+                <div class="electron" id="electron1"></div>
+            </div>
+        </div>
+        <div class="orbit orbit2">
+            <div class="path">
+                <div class="electron" id="electron2"></div>
+            </div>
+        </div>
+        <div class="orbit orbit3">
+            <div class="path">
+                <div class="electron" id="electron3"></div>
+            </div>
+        </div>
+        <div id="sun"></div>
+    </div>
+    <button>Reset orbits</button>
+</div>

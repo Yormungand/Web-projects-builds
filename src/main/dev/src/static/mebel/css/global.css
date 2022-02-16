@@ -397,3 +397,154 @@ textarea:focus::placeholder {
     font-weight: 500;
     line-height: 1.5;
 }
+
+
+ul.breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
+    margin: 0 10px;
+    text-align: center
+}
+
+.button__nested {
+    display: flex;
+}
+
+.ss-offcanvas-button {
+    border: 1px solid #666;
+    display: block;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    background: #363636;
+    width: 100%;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.ss-button {
+    position: relative;
+    border: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    transition: color .2s, opacity .2s, background-color .2s;
+    outline-style: none;
+    user-select: none;
+}
+
+.ss-button__mini {
+    padding: 5px 15px
+}
+
+.ss-button:not(:disabled) {
+    cursor: pointer;
+}
+
+.ss-button:disabled, .ss-button.disabled {
+    cursor: default;
+}
+
+.ss-button:hover {
+    opacity: .8;
+}
+
+.ss-button > i {
+    padding: 0 5px;
+}
+
+.ss-button span {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: .4;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+label {
+    width: max-content
+}
+
+input.tp-input {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    outline-style: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Roboto;
+    background-color: var(--ss-color-gray95);
+    transition: border .3s, background-color .3s;
+}
+
+input.tp-input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Roboto;
+    color: #999
+}
+
+.tp-input__iconic {
+    position: relative;
+    width: max-content
+}
+
+.tp-input__iconic i {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: var(--ss-color-mine-shaft);
+    pointer-events: none
+}
+
+input.tp-input:focus {
+    border: 1px solid var(--ss-color-mine-shaft);
+    background-color: var(--ss-color-white)
+}
+
+.swiper-button-next, .swiper-button-prev {
+    display: flex;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, .5);
+    transition: box-shadow .3s;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 22px;
+    font-weight: 900;
+    display: flex;
+    color: #a0a0a0;
+    transition: color .3s;
+}
+.swiper-button-next:hover::after, .swiper-button-prev:hover::after {
+    color: #242424;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    box-shadow: -1px 0 5px 0px rgb(0, 0, 0, .5);
+}

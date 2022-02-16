@@ -231,6 +231,13 @@ a:hover {text-decoration: none}
     box-sizing: border-box;
     max-width: 710px;
 }
+.container-mini {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    max-width: 650px;
+}
 .container-padding__remove {
     padding: 0;
 }
