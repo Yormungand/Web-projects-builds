@@ -555,7 +555,8 @@ body {
 .employee {
     position: relative;
     display: block;
-    border: 1px solid #afafaf;
+    border: 5px solid #d3d3d3;
+    border-radius: 4px;
     box-sizing: border-box;
     overflow: hidden;
     padding-bottom: 106.20%;
@@ -651,7 +652,8 @@ body {
 .card-transparent {
     position: relative;
     display: block;
-    border: 1px solid #afafaf;
+    border: 5px solid #d3d3d3;
+    border-radius: 4px;
     overflow: hidden;
     box-sizing: border-box;
     padding-bottom: 70.55%;
@@ -778,7 +780,8 @@ body {
 }
 .team-card {
     position: relative;
-    border: 1px solid #afafaf;
+    border: 2px solid #d3d3d3;
+    border-radius: 3px;
     box-sizing: border-box;
     overflow: hidden;
     padding-bottom: 64.02%;
@@ -1043,24 +1046,24 @@ body {
     width: 10vw;
     height: 10vw;
     object-fit: contain;
-    animation: myOrbit infinite 25s linear;
+    animation: myOrbit infinite 500s linear;
     user-select: none;
 }
 @-webkit-keyframes myOrbit {
-    0%  {-webkit-transform: rotate(0deg) translateX(30vw);}
-    100%{-webkit-transform: rotate(360deg) translateX(30vw);}
+    0%  {-webkit-transform: rotate(0deg) translateX(-40vw);}
+    100%{-webkit-transform: rotate(360deg) translateX(50vw);}
 }
 @-moz-keyframes myOrbit {
-    0%  {-moz-transform: rotate(0deg) translateX(30vw);}
-    100%{-moz-transform: rotate(360deg) translateX(30vw);}
+    0%  {-moz-transform: rotate(0deg) translateX(-40vw);}
+    100%{-moz-transform: rotate(360deg) translateX(50vw);}
 }
 @-o-keyframes myOrbit {
-    0%  {-o-transform: rotate(0deg) translateX(30vw);}
-    100%{-o-transform: rotate(360deg) translateX(30vw);}
+    0%  {-o-transform: rotate(0deg) translateX(-40vw);}
+    100%{-o-transform: rotate(360deg) translateX(50vw);}
 }
 @keyframes myOrbit {
-    0%  {transform: rotate(0deg) translateX(30vw);}
-    100%{transform: rotate(360deg) translateX(30vw);}
+    0%  {transform: rotate(0deg) translateX(-40vw);}
+    100%{transform: rotate(360deg) translateX(50vw);}
 }
 
 .top-banner .mask {
@@ -1714,6 +1717,12 @@ body {
 }
 
 .poc-context {
+    position: relative;
+    z-index: 3;
+    padding-top: 30%;
+    width: 100%;
+}
+.page-context {
     position: relative;
     z-index: 3;
     padding-top: 50%;
