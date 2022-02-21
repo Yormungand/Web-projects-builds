@@ -1,0 +1,8 @@
+.container {
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 45px;
+    max-width: 1090px;
+    flex: 1;
+}
