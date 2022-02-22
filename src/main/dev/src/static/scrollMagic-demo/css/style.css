@@ -1792,7 +1792,7 @@ body {
     height: 100%;
 }
 .back-button i path {
-    fill: #fff;
+    fill: #0075ff;
     transition: fill .5s;
 }
 .back-button:hover {
@@ -1800,6 +1800,16 @@ body {
 }
 .back-button:hover i path {
     fill: #0075ff;
+}
+.back-button div {
+    position: absolute;
+    color: #0075ff;
+    bottom: 15%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
 article {
