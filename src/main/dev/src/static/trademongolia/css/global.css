@@ -1,3 +1,14 @@
+select {
+    border: 1px solid #f60;
+    border-radius: 5px;
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    background-color: transparent;
+    color: #f60;
+}
+
 .container {
     display: block;
     box-sizing: border-box;
@@ -5,4 +16,109 @@
     padding: 0 45px;
     max-width: 1090px;
     flex: 1;
+}
+
+
+
+.tab-header {
+    display: flex;
+    border-bottom: 1px solid #f1f1f1;
+    overflow-x: scroll;
+}
+.tab-header::-webkit-scrollbar {display: none}
+.tab-button {
+    position: relative;
+    display: flex;
+    border-style: none;
+    border-radius: 3px 3px 0 0;
+    padding: 5px 0;
+    width: max-content;
+    height: max-content;
+    line-height: 100%;
+    font-size: 14px;
+    background-color: #fff;
+    color: #A9AAAC;
+    cursor: pointer;
+    transition: color .4s, background-color .4s;
+    user-select: none;
+}
+
+.tab-button.tab-button__transparent {background-color: transparent}
+.tab-button:hover {
+    color: #626262;
+}
+.tab-button::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 1px;
+    width: auto;
+    min-width: 50px;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color .4s;
+}
+.tab-button.active {
+    color: #363636;
+}
+.tab-button.active::before {
+    background-color: #ff6600;
+}
+.tab-contents {
+    position: relative;
+    /*padding: 20px;*/
+}
+.tab-contents > div:not(.open) {
+    display: none;
+}
+
+.button-character {
+    display: flex;
+    padding: 2px 5px;
+    width: max-content;
+    height: max-content;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+    background-color: transparent;
+    color: #9d9d9f;
+    transition: color .3s;
+}
+.button-character:hover {
+    color: #626262;
+}
+.button-character.active {
+    color: #ff6600;
+}
+
+.banner-wrapper {
+    display: flex;
+    position: relative;
+    flex: 1;
+    height: 0;
+    min-width: 1px;
+    background-color: #dedede;
+}
+.banner-wrapper img{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.banner-a {
+    padding-bottom: 15.96%;
+}
+.banner-b {
+    padding-bottom: 6.93%;
+}
+.banner-c {
+    padding-bottom: 200%;
+}
+.banner-d {
+    padding-bottom: 16.23%;
 }
