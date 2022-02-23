@@ -209,35 +209,6 @@
 
 * {font-family: "Roboto"; text-decoration: none}
 a:hover {text-decoration: none}
-.container-large {
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-    max-width: 1320px;
-}
-.container {
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-    max-width: 1200px;
-    width: 100%;
-}
-.container-small {
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-    max-width: 710px;
-}
-.container-mini {
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-    max-width: 650px;
-}
 .container-padding__remove {
     padding: 0;
 }
@@ -276,78 +247,6 @@ button:not(:disabled),
 }
 .button-transparent {
     background-color: transparent;
-}
-
-input:not(input[type=checkbox], input[type=radio]) {
-    border: 1px solid rgba(255,255,255,.5);
-    border-radius: 8px;
-    box-sizing: border-box;
-    padding: 10px 20px;
-    height: 40px;
-    min-height: 40px;
-    font-size: 14px;
-    font-weight: 400;
-    outline: none;
-    color: rgba(0,0,0,1);
-    background-color: transparent;
-    transition: border .4s, background-color .4s, color .4s;
-}
-input:not(input[type=checkbox], input[type=radio])::placeholder {
-    color: rgba(255,255,255,.5);
-    font-size: 14px;
-    font-weight: 400;
-    transition: color .4s;
-}
-input:not(input[type=checkbox], input[type=radio]):hover {
-    border: 1px solid rgba(255,255,255,.8);
-}
-input:not(input[type=checkbox], input[type=radio]):focus {
-    border: 1px solid rgba(255,255,255,1);
-    background-color: rgba(255,255,255,.8);
-}
-input:not(input[value=""]):not(:focus){
-    border: 1px solid rgba(255,255,255,.8);
-    color: rgba(255,255,255,1);
-}
-input:not(input[type=checkbox], input[type=radio]):focus::placeholder {
-    color: #363636;
-}
-textarea {
-    border: 1px solid rgba(255,255,255,.5);
-    border-radius: 8px;
-    box-sizing: border-box;
-    padding: 7px 20px;
-    width: 100%;
-    max-width: 100%;
-    min-height: 40px;
-    line-height: 130%;
-    font-size: 14px;
-    font-weight: 400;
-    outline: none;
-    color: rgba(0,0,0,1);
-    background-color: transparent;
-    transition: border .4s, background-color .4s, color .4s;
-}
-textarea::placeholder {
-    color: rgba(255,255,255,.5);
-    font-size: 14px;
-    font-weight: 400;
-    transition: color .4s;
-}
-textarea:hover {
-    border: 1px solid rgba(255,255,255,.8);
-}
-textarea:not(:placeholder-shown){
-    border: 1px solid rgba(255,255,255,.8);
-    color: rgba(255,255,255,1);
-}
-textarea:focus {
-    border: 1px solid rgba(255,255,255,1);
-    background-color: rgba(255,255,255,.8);
-    color: rgba(0,0,0,1);
-}
-textarea:focus::placeholder {
-    color: #363636;
 }
 
 .max-height {
