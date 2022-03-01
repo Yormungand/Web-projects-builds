@@ -44,19 +44,42 @@ input[type="search"]::-webkit-search-cancel-button {
 input[type="search"]::-webkit-search-cancel-button:hover {
     background-color: rgba(255,255,255,.5);
 }
-input:not(input[type=checkbox], input[type=radio]) {
-
-}
 
 
-textarea {
-    border: 1px solid rgba(255,255,255,.5);
+
+input:not(input[type=search], input[type=radio], input[type=checkbox]) {
+    border: 1px solid #cfd0d3;
     border-radius: 8px;
     box-sizing: border-box;
-    padding: 7px 20px;
-    width: 100%;
+    padding: 10px 10px;
+    min-width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0,0,0,1);
+    background-color: transparent;
+    transition: border .3s, color .3s;
+    outline: none;
+}
+input:not(input[type=search], input[type=radio], input[type=checkbox])::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0,0,0,.5);
+}
+input:not(input[type=search], input[type=radio], input[type=checkbox]):focus {
+    border: 1px solid rgba(110,110,110,1);
+}
+input:not(input[type=search], input[type=radio], input[type=checkbox]):focus::placeholder {
+    color: rgba(0,0,0,.5);
+}
+
+textarea {
+    border: 1px solid #cfd0d3;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 10px 10px;
     max-width: 100%;
-    min-height: 40px;
+    min-width: 100%;
+    min-height: 80px;
     line-height: 130%;
     font-size: 14px;
     font-weight: 400;
@@ -64,27 +87,26 @@ textarea {
     color: rgba(0,0,0,1);
     background-color: transparent;
     transition: border .4s, background-color .4s, color .4s;
+    resize: vertical;
 }
 textarea::placeholder {
-    color: rgba(255,255,255,.5);
+    color: rgba(0,0,0,.5);
     font-size: 14px;
     font-weight: 400;
     transition: color .4s;
 }
+
 textarea:hover {
-    border: 1px solid rgba(255,255,255,.8);
+
 }
 textarea:not(:placeholder-shown){
-    border: 1px solid rgba(255,255,255,.8);
-    color: rgba(255,255,255,1);
+
 }
 textarea:focus {
-    border: 1px solid rgba(255,255,255,1);
-    background-color: rgba(255,255,255,.8);
-    color: rgba(0,0,0,1);
+    border: 1px solid rgba(110,110,110,1);
 }
 textarea:focus::placeholder {
-    color: #363636;
+    color: rgba(0,0,0,.5);
 }
 
 
@@ -109,6 +131,14 @@ textarea:focus::placeholder {
     padding: 0 20px;
     box-sizing: border-box;
     max-width: 650px;
+}
+.container-928 {
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 45px;
+    max-width: 928px;
+    flex: 1;
 }
 .container {
     display: block;
@@ -148,6 +178,7 @@ textarea:focus::placeholder {
     height: max-content;
     line-height: 100%;
     font-size: 14px;
+    font-weight: 700;
     background-color: #fff;
     color: #A9AAAC;
     cursor: pointer;
@@ -166,7 +197,7 @@ textarea:focus::placeholder {
     left: 0;
     border-radius: 1px;
     width: auto;
-    min-width: 50px;
+    min-width: 65px;
     height: 2px;
     background-color: transparent;
     transition: background-color .4s;
@@ -246,4 +277,44 @@ textarea:focus::placeholder {
     padding-bottom: 28.34%;
 }
 
+.c-content {
+    font-size: 14px;
+    font-weight: 500;
+    color: #363636;
+    line-height: 1.8;
+}
 
+.pagination {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    align-items: center;
+}
+.pagination li {
+    padding-left: 10px;
+}
+.pagination li > * {
+    border-radius: 3px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    min-height: 20px;
+    line-height: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    color: #626262;
+    transition: background-color .5s, color .5s;
+}
+.pagination li > *:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+.pagination li > .active {
+    background-color: #ff6600;
+    color: #fff;
+}
+.pagination a i {
+    height: max-content;
+}
