@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "atropos": "^1.0.2",
     "autonumeric": "^4.6.0",
     "axios": "^0.24.0",
     "flatpickr": "^4.6.9",
@@ -38,6 +39,7 @@
     "postcss-cssnext": "^3.1.1",
     "scrollmagic": "^2.0.8",
     "three": "^0.134.0",
+    "typeface-abel": "^1.1.13",
     "whatwg-fetch": "^2.0.3"
   },
   "description": ""
