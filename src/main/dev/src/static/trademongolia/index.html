@@ -51,6 +51,9 @@
                 </i>
             </button>
         </form>
+        <button uk-toggle="target: #modal-signin" class="button button-transparent ml-10">
+            Login
+        </button>
     </div>
 </div>
 <div class="main">
@@ -331,3 +334,53 @@
 </script>
 </body>
 </html>
+
+<div id="modal-signin" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-width-1-5@l width-1-3 uk-width-1-3@m xh-bradius-s">
+        <style>
+            .uk-tab>.uk-active>a {color: #333;border-color: #FF6600;border-width: 2px;}
+        </style>
+        <ul uk-tab="" class="uk-margin-remove-top uk-margin-remove-bottom uk-tab">
+            <li class="uk-active"><a href="#" style="" aria-expanded="true">Байгууллага</a></li>
+            <li><a href="#" style="" aria-expanded="false">Хувь хүн</a></li>
+        </ul>
+
+        <ul class="uk-switcher uk-margin">
+            <div id="loginTarget" class="uk-active">
+                <form id="signIn" method="post" uk-margin="">
+                    <input class="uk-input xh-bradius-s uk-first-column"
+                           placeholder="Байгууллагын регистр">
+                    <input class="uk-input xh-bradius-s uk-margin-bottom uk-margin-small-top uk-first-column"
+                           type="password" placeholder="Нууц үг">
+                    <button type="submit"
+                            class="uk-button uk-button-primary uk-width-1-1 uk-border-rounded">
+                        Нэвтрэх
+                    </button>
+                    <div class="uk-width-1-1 uk-margin-small-top uk-flex uk-flex-between uk-first-column">
+                        <a href="javascript:void(0);"
+                           class="uk-button uk-button-text font14">Бүртгүүлэх</a>
+                        <a href="javascript:void(0);" class="uk-button uk-button-text font14">
+                            Нууц үг мартсан
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div id="loginTargetPerson">
+                <div>
+                    <form class="form-my-account">
+                        <div class="ds-sign-in__target">
+                            <input type="text" class="ds-sign-in__input uk-input xh-bradius-s uk-margin-small-bottom" placeholder="Нэвтрэх нэр" autofocus="">
+                            <input type="password" class="ds-sign-in__input xh-bradius-s uk-input" placeholder="Нууц үг">
+                        </div>
+                        <button class="ds-sign-in__submit uk-button uk-width uk-button-primary uk-margin-top uk-border-rounded">
+                            Нэвтрэх</button>
+                        <div class="uk-width-1-1 uk-margin-small-top uk-flex uk-flex-between">
+                            <a href="/signup" target="_blank" class="uk-button uk-button-text font14">Бүртгүүлэх</a>
+                            <a href="javascript:void(0);" class="uk-button uk-button-text font14">Нууц үг мартсан</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>

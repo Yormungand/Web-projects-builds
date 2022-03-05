@@ -5,10 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
+    <title>Rinchin index</title>
+    <link rel="stylesheet" href="fonts/lato/css/lato.min.css">
     <link rel="stylesheet" href="dist/css/root.min.css">
     <script src="dist/js/root.min.js"></script>
+    <script id="script"></script>
 </head>
 <body>
 <div class="header">
@@ -72,7 +73,361 @@
     </div>
 </div>
 <div class="main">
+    <div class="container-expand">
+        <div class="section">
+            <div class="swiper main-slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img-wrapper"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-wrapper"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-wrapper"></div>
+                    </div>
+                </div>
+                <script>
+                    new Swiper('.main-slide', {
+                        slidesPerView: 1,
+                        speed: 1100,
+                        autoplay: {
+                            delay: 5500,
+                            loop: true
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="container-medium">
+        <div class="section">
+            <div class="swiper collection-slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="collection uk-child-width-1-2">
+                            <div class="uk-flex uk-flex-column">
+                                <div class="collection-desc">
+                                    <div class="collection-tag">New collection</div>
+                                    <div class="collection-name">“Tsagchig” 2022 collection.</div>
+                                    <div class="mt-40">
+                                        <button class="simple-button">View collection</button>
+                                    </div>
+                                </div>
+                                <div class="uk-margin-auto-top small img-wrapper"></div>
+                            </div>
+                            <div>
+                                <div class="big img-wrapper"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-small">
+        <div class="section">
+            <div class="sub-heading">Our popular products</div>
+            <div class="product-highlights uk-child-width-1-3">
+                <div class="loop-card">
+                    <a href="javascript:void 0" class="product-highlight">
+                        <div>
+                            <div class="img-wrapper">
+                                <img src="" alt="product">
+                            </div>
+                        </div>
+                        <div class="category">T-Shirt</div>
+                        <div class="name">Ikh Unet t-shirt</div>
+                        <div class="price">110’000₮</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-expand">
+        <div class="section">
+            <div class="swiper mid-banner">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img-wrapper">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    new Swiper('.mid-banner', {
+                        slidesPerView: 1,
+                        speed: 1100,
+                        autoplay: {
+                            delay: 5500,
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="container-expand">
+        <div id="products-tab">
+            <div class="tab-header">
+                <div class="tab-button__wrapper">
+                    <div>
+                        <button class="tab-button active" onclick="products.click(this)">New arrivals</button>
+                    </div>
+                    <div>
+                        <button class="tab-button" onclick="products.click(this)">what's trending</button>
+                    </div>
+                </div>
+                <button class="tab-button">View all</button>
+            </div>
+            <div class="container-medium">
+                <div class="tab-contents">
+                    <div class="tab-item open">
+                        <div class="products-showcase uk-child-width-1-4">
+                            <div>
+                                <a href="javascript:void 0" class="product">
+                                    <div>
+                                        <div class="img-wrapper">
+                                            <img src="" alt="product">
+                                        </div>
+                                    </div>
+                                    <div class="category">T-Shirt</div>
+                                    <div class="name">Ikh Unet t-shirt</div>
+                                    <div class="price">110’000₮</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-item">
+                        Content 2
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .yt-placeholder {
 
+        }
+        .yt-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+            background-color: chocolate;
+        }
+        .yt-wrapper iframe {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <div class="container-small">
+        <div class="section">
+            <div class="sub-heading">New collection promotion</div>
+            <div class="yt-placeholder">
+                <div class="yt-wrapper">
+                    <div id="ytplayer"></div>
+<!--                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VWvANpJWRSI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="ft-logo">
+        <img src="assets/ft-logo.png" alt="">
+    </div>
+    <div class="ft-mid">
+        <div class="container-medium">
+            <div class="ft-items uk-child-width-1-5">
+                <div>
+                    <div class="parent">Rinchin yesui</div>
+                    <div class="item">About us</div>
+                    <div class="item">About us</div>
+                    <div class="item">About us</div>
+                    <div class="item">About us</div>
+                </div>
+                <div>
+                    <div class="parent">Rinchin yesui</div>
+                    <div class="item">About us</div>
+                    <div class="item">About us</div>
+                    <div class="item">About us</div>
+                    <div class="item">About us</div>
+                </div>
+                <div>
+                    <div class="parent">Rinchin yesui</div>
+                    <div class="item">About us</div>
+                    <div class="item">About us</div>
+                    <div class="item">About us</div>
+                    <div class="item">About us</div>
+                </div>
+                <div class="contact-items">
+                    <div class="parent">Contact us</div>
+                    <div class="contact">
+                        <i>
+                            <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 0.5C3.0975 0.5 0.75 2.8475 0.75 5.75C0.75 9.6875 6 15.5 6 15.5C6 15.5 11.25 9.6875 11.25 5.75C11.25 2.8475 8.9025 0.5 6 0.5ZM6 7.625C4.965 7.625 4.125 6.785 4.125 5.75C4.125 4.715 4.965 3.875 6 3.875C7.035 3.875 7.875 4.715 7.875 5.75C7.875 6.785 7.035 7.625 6 7.625Z" fill="#555555"/>
+                            </svg>
+                        </i>
+                        Mongolia, Ulaanbaatar, river garden 2, river centere, 106
+                    </div>
+                    <div class="contact">
+                        <i>
+                            <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.375 0H1.375C0.61875 0 0.00687499 0.61875 0.00687499 1.375L0 9.625C0 10.3813 0.61875 11 1.375 11H12.375C13.1313 11 13.75 10.3813 13.75 9.625V1.375C13.75 0.61875 13.1313 0 12.375 0ZM12.375 2.75L6.875 6.1875L1.375 2.75V1.375L6.875 4.8125L12.375 1.375V2.75Z" fill="#555555"/>
+                            </svg>
+                        </i>
+                        management@rinchinyesui.mn
+                    </div>
+                    <div class="contact">
+                        <i>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.41333 5.19333C3.37333 7.08 4.92 8.62 6.80667 9.58667L8.27333 8.12C8.45333 7.94 8.72 7.88 8.95333 7.96C9.7 8.20667 10.5067 8.34 11.3333 8.34C11.7 8.34 12 8.64 12 9.00667V11.3333C12 11.7 11.7 12 11.3333 12C5.07333 12 0 6.92667 0 0.666667C0 0.3 0.3 0 0.666667 0H3C3.36667 0 3.66667 0.3 3.66667 0.666667C3.66667 1.5 3.8 2.3 4.04667 3.04667C4.12 3.28 4.06667 3.54 3.88 3.72667L2.41333 5.19333Z" fill="#555555"/>
+                            </svg>
+                        </i>
+                        +976 7700 3037
+                    </div>
+                </div>
+                <div class="contact-items">
+                    <div class="parent">Our store</div>
+                    <div class="contact">
+                        Mon - Fri <br>
+                        10:30am - 20:00pm
+                    </div>
+                    <div class="contact">
+                        Saturday <br>
+                        09:00am - 17:30pm
+                    </div>
+                    <div class="contact">
+                        Sunday <br>
+                        10:30am - 20:00pm
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="uk-flex uk-flex-center uk-width-1-1">
+        <div class="ft-socials">
+            <div>
+                <a class="social-link">
+                    <i>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.3333 0H1.66667C0.746667 0 0 0.746667 0 1.66667V12.3333C0 13.2533 0.746667 14 1.66667 14H12.3333C13.2533 14 14 13.2533 14 12.3333V1.66667C14 0.746667 13.2533 0 12.3333 0ZM11 5H10.3333C9.62 5 9.33333 5.16667 9.33333 5.66667V6.66667H11L10.6667 8.33333H9.33333V13.3333H7.66667V8.33333H6.33333V6.66667H7.66667V5.66667C7.66667 4.33333 8.33333 3.33333 9.66667 3.33333C10.6333 3.33333 11 3.66667 11 3.66667V5Z" fill="white"/>
+                        </svg>
+                    </i>
+                </a>
+            </div>
+            <div>
+                <a class="social-link">
+                    <i>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.8597 0H4.94545C2.66338 0 0.806274 1.85767 0.806274 4.14031V10.0543C0.806274 12.3366 2.66395 14.1937 4.94658 14.1937H10.8605C13.1429 14.1937 15 12.336 15 10.0534V4.13917C15 1.85711 13.1423 0 10.8597 0ZM7.90314 10.7872C5.86776 10.7872 4.21277 9.13196 4.21277 7.09686C4.21277 5.06177 5.86776 3.40649 7.90314 3.40649C9.93851 3.40649 11.5935 5.06148 11.5935 7.09686C11.5935 9.13224 9.93823 10.7872 7.90314 10.7872ZM12.1613 4.16349C11.1204 4.16349 10.8365 3.31187 10.8365 2.83874C10.8365 2.36562 11.1204 1.514 12.1613 1.514C13.2021 1.514 13.486 2.36562 13.486 2.83874C13.486 3.31187 13.2021 4.16349 12.1613 4.16349Z" fill="white"/>
+                        </svg>
+                    </i>
+                </a>
+            </div>
+            <div>
+                <a class="social-link">
+                    <i>
+                        <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 1.53267C15.4018 1.80043 14.7991 1.99893 14.1339 2.06357C14.7991 1.66655 15.3348 0.997159 15.5982 0.267756C14.933 0.664773 14.2679 0.932529 13.5357 1.06641C12.8661 0.401634 12 0 11.067 0C9.26786 0 7.79911 1.46804 7.79911 3.26847C7.79911 3.5316 7.79911 3.79936 7.86607 4.00249C4.42857 4.00249 2.07143 1.99893 0.473215 0C0.138393 0.466264 0.00446401 1.06641 0.00446401 1.66655C0.00446401 2.79759 0.607143 3.79936 1.47321 4.3995C0.937501 4.33487 0.40625 4.20099 0.00446401 4.00249C0.00446401 4.00249 0.00446401 4.00249 0.00446401 4.06712C0.00446401 5.66903 1.13839 6.99858 2.60714 7.26634C2.33929 7.33097 2.07143 7.40021 1.73661 7.40021C1.54018 7.40021 1.33929 7.40021 1.13839 7.33558C1.54018 8.66974 3.40179 10.2024 4.86607 10.2024C3.73214 11.0657 2.67857 11.8182 0.571429 11.8182C0.303571 11.8182 0.517857 11.8182 0 11.8182C1.46429 12.7507 3.20089 13 5 13C11.067 13 14.3348 8.00035 14.3348 3.66548C14.3348 3.5316 14.3348 3.40234 14.3348 3.26847C15 2.79759 15.5357 2.20206 16 1.53267Z" fill="white"/>
+                        </svg>
+                    </i>
+                </a>
+            </div>
+            <div>
+                <a class="social-link">
+                    <i>
+                        <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.90323 0.64502C6.55408 0.64502 4.47495 0.876989 3.21037 1.05741C2.1753 1.20346 1.35175 1.9767 1.16274 2.96901C1.00072 3.83675 0.838715 5.10399 0.838715 6.69341C0.838715 8.28283 1.00072 9.55007 1.16274 10.4178C1.35175 11.4101 2.1753 12.1791 3.21037 12.3294C4.47945 12.5098 6.56758 12.7418 8.90323 12.7418C11.2389 12.7418 13.3225 12.5098 14.5916 12.3294H14.5961C15.6312 12.1833 16.4547 11.4101 16.6437 10.4178C16.8057 9.54577 16.9677 8.27853 16.9677 6.69341C16.9677 5.10399 16.8057 3.83675 16.6392 2.96901C16.4547 1.9767 15.6312 1.20346 14.5961 1.05741C13.3315 0.876989 11.2524 0.64502 8.90323 0.64502ZM12.3595 6.69341C10.0553 7.79311 8.90323 8.34297 6.59908 9.44267C6.59908 7.24326 6.59908 5.5937 6.59908 3.94414C8.90323 5.04385 10.0553 5.5937 12.3595 6.69341Z" fill="white"/>
+                        </svg>
+                    </i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        “All rights reserved” ©  2022. RINCHIN YESUI LLC
+    </div>
 </div>
 </body>
 </html>
+<script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    let tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    let firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    let player;
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('ytplayer', {
+            width: '100%',
+            height: '100%',
+            videoId: 'jyE7nSUo4H4',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            },
+            controls: 0
+        });
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+        event.target.playVideo();
+        player.mute(); // comment out if you don't want the auto played video muted
+    }
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+            player.seekTo(0);
+            player.playVideo();
+        }
+    }
+    function stopVideo() {
+        player.stopVideo();
+    }
+</script>
+<script>
+
+    let pro = document.querySelectorAll('.product-highlights')[0];
+    for (let i = 0; i < 2; i++){
+        pro.innerHTML += '' +
+            '<div class="loop-card">\n' +
+            '                    <a href="javascript:void 0" class="product-highlight">\n' +
+            '                        <div>\n' +
+            '                            <div class="img-wrapper">\n' +
+            '                                <img src="" alt="product">\n' +
+            '                            </div>\n' +
+            '                        </div>\n' +
+            '                        <div class="category">T-Shirt</div>\n' +
+            '                        <div class="name">Ikh Unet t-shirt</div>\n' +
+            '                        <div class="price">110’000₮</div>\n' +
+            '                    </a>\n' +
+            '                </div>'
+    }
+    let prods = document.querySelectorAll('.products-showcase')[0];
+    for (let i = 0; i < 3; i++){
+        prods.innerHTML += '' +
+            '<div class="">\n' +
+            '                    <a href="javascript:void 0" class="product">\n' +
+            '                        <div>\n' +
+            '                            <div class="img-wrapper">\n' +
+            '                                <img src="" alt="product">\n' +
+            '                            </div>\n' +
+            '                        </div>\n' +
+            '                        <div class="category">T-Shirt</div>\n' +
+            '                        <div class="name">Ikh Unet t-shirt</div>\n' +
+            '                        <div class="price">110’000₮</div>\n' +
+            '                    </a>\n' +
+            '                </div>'
+    }
+</script>

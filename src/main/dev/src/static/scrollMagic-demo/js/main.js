@@ -7,20 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let shine1 = document.querySelector(".sphere-1");
     let shine2 = document.querySelector(".sphere-2");
 
-    if (home !== undefined && home) {
-        planet_1();
-        planet_2();
-        planet_3();
-        planet_4();
-        shine_1();
-        shine_2();
-        Preloading_icon();
-        orbiting();
-        // document.querySelectorAll('.back')[0].style.display = 'none'
-    } else if (home === false) {
-
-    }
-
     new Swiper(".article-swiper", {
         speed: 800,
         autoplay:{
@@ -38,17 +24,29 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             // when window width is >= 480px
             1200: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 30
             },
             // when window width is >= 640px
             1600: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 40
             }
         },
     })
+    if (home !== undefined && home) {
+        planet_1();
+        planet_2();
+        planet_3();
+        planet_4();
+        // shine_1();
+        // shine_2();
+        Preloading_icon();
+        // orbiting();
+        document.querySelectorAll('.back')[0].style.display = 'none'
+    } else if (home === false) {
 
+    }
 })
 
 
@@ -558,8 +556,8 @@ jobInfo = function (id) {
                 "           <div>"+response.data.basicRequirement+"</div>" +
                 "       </div>" +
                 "   </div>" +
-                "</div>" +
-                "<div>" +
+                "</div>"
+                /*"<div>" +
                 "   <div class='item'>" +
                 "       <div class='acoustic-button'>" +
                 "           <button class='button button-transparent button-medium' onclick='Acoustic.init(this)'>Date" +
@@ -571,7 +569,7 @@ jobInfo = function (id) {
                 "           <div></div>" +
                 "       </div>" +
                 "   </div>" +
-                "</div>";
+                "</div>"*/;
             getJobForm(id);
             document.querySelectorAll('.jobs').forEach((el)=>{
                 if (el.getAttribute("data-id") === id.toString())

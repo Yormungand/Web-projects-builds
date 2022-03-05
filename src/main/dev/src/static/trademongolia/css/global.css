@@ -227,7 +227,7 @@ textarea:focus::placeholder {
     height: max-content;
     font-size: 12px;
     line-height: 1;
-    font-weight: 600;
+    font-weight: 500;
     background-color: transparent;
     color: #9d9d9f;
     transition: color .3s;
