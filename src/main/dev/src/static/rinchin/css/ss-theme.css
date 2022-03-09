@@ -1,0 +1,79 @@
+:root {
+    --ss-color-vivid-red: rgba(236,28,36,1);
+    --ss-color-amber: rgba(255,193,7,1);
+    --ss-color-emerald: rgba(14,194,158,1);
+    --ss-color-gray95: rgb(242, 242, 242);
+    --ss-color-white: rgba(255,255,255,1);
+    --ss-color-river-bed: rgba(62,72,81,1);
+    --ss-color-astronaut: rgba(45,76,120,1);
+    --ss-color-tory-blue: rgba(21,75,169,1);
+    --ss-color-granite-gray: rgba(102,102,102,1);
+    --ss-color-mine-shaft: rgba(54,54,54,1);
+}
+
+html, body {background-color: white !important;}
+.main {
+    background-color: #f5f5f5;
+}
+
+.ss-button {color: var(--ss-color-white);}
+.ss-button span {background: #fff;}
+
+.ss-button__amber {background: var(--ss-color-amber)}
+.ss-button__amber-border {border: 1px solid var(--ss-color-amber); color: var(--ss-color-amber)}
+.ss-button__vivid-red {background: var(--ss-color-vivid-red)}
+.ss-button__vivid-red-border {border: 1px solid var(--ss-color-vivid-red); color: var(--ss-color-vivid-red)}
+.ss-button__vivid-red-border:hover {color: var(--ss-color-white); background: var(--ss-color-vivid-red)}
+.ss-button__emerald {background: var(--ss-color-emerald)}
+.ss-button__emerald-border {border: 1px solid var(--ss-color-emerald); color: var(--ss-color-emerald)}
+.ss-button__emerald-border:hover {color: var(--ss-color-white); background: var(--ss-color-emerald)}
+.ss-button__tory-blue {background: var(--ss-color-tory-blue)}
+.ss-button__tory-blue-border {border:1px solid var(--ss-color-tory-blue); color: var(--ss-color-tory-blue)}
+.ss-button__tory-blue-border:hover {color: var(--ss-color-white); background: var(--ss-color-tory-blue)}
+.ss-button__transparent {border: 1px solid #fff !important; background: transparent}
+.ss-button:hover {color: var(--ss-color-white)}
+
+.ss-user-actions {}
+.ss-user-actions > * > * svg path {fill: var(--ss-color-river-bed); transition: fill .2s}
+.ss-user-actions > * > *:hover {background-color: #f2f2f2;}
+.ss-user-actions > * > *:hover svg path {fill: var(--ss-color-mine-shaft)}
+.ss-user-actions > * > *:active {background-color: var(--ss-color-mine-shaft)}
+.ss-user-actions > * > *:active svg path {fill: var(--ss-color-gray95)}
+@media (hover: none){
+    .ss-user-actions > * > *:hover {background-color: transparent !important;}
+    .ss-user-actions > * > *:hover svg path {fill: var(--ss-color-mine-shaft)}
+}
+
+.uk-notification-message {border-radius: 5px; padding: 20px; font-size: 14px; font-weight: 700;}
+.uk-notification-message-primary {color: #1e87f0; }
+.uk-notification-message-primary .uk-notification-close {color: #9B5E03}
+.uk-notification-message-success {border: 1px dashed rgba(53, 140, 67, 1); color: rgba(56, 91, 16, 1); background-color: rgba(168, 228, 99, 1)}
+.uk-notification-message-success .uk-notification-close {color: rgba(56, 91, 16, 1)}
+.uk-notification-message-danger {border: 1px solid #BF1E1F; color: #FFF; background-color: #FF4B4C}
+.uk-notification-close {display: block;}
+
+.uk-alert {border-radius: 5px; padding: 20px; font-size: 14px; font-weight: 700;}
+.uk-alert.uk-alert-primary {color: #1e87f0; }
+.uk-alert.uk-alert-warning .uk-alert-close {color: #9B5E03}
+.uk-alert.uk-alert-warning {border: 1px dashed #FFCA59; color: #9B5E03; background-color: #FFF4BB}
+.uk-alert.uk-alert-danger {border: 1px solid #BF1E1F; color: #FFF; background-color: #FF4B4C}
+
+.top-headr {background: var(--ss-color-vivid-red)}
+
+.text {color: var(--ss-color-white);}
+.text svg path {fill:  rgba(0,0,0,0.5)}
+.text:hover {color: var(--ss-color-white);}
+a.text:hover svg path {fill: #FFC107}
+
+.headr-panel__search > div {background-color: var(--ss-color-gray95); transition: background-color .3s, border .3s}
+.headr-panel__search > div:focus-within {border: 1px solid rgba(0,0,0,0.2); background-color: #f5f5f5}
+.headr-panel__search > div:focus-within .headr-panel__field-wrap > div:first-child::before {height: 100%}
+.headr-panel__search select, .headr-panel__search input {border: 0; background-color: transparent; outline-style: none}
+.headr-panel__search select:focus {/*background: url(../../asset/chevron-down.svg) no-repeat right;*/ background-position-x: 80px;}
+.headr-panel__search input {color: var(--ss-color-river-bed)}
+.headr-panel__search input::placeholder {color: #999}
+
+.ss-user-actions > * {border-left: 1px solid var(--ss-color-gray95)}
+.ss-user-actions > *:last-child {border-right: 1px solid var(--ss-color-gray95)}
+.ss-user-actions > * > * {transition: background-color .3s, color .3s}
+.ss-user-actions > * > *.has-counts .count {color: #fff; background-color: var(--ss-color-vivid-red)}

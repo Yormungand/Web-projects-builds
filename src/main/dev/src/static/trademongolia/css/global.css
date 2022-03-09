@@ -132,12 +132,12 @@ textarea:focus::placeholder {
     box-sizing: border-box;
     max-width: 650px;
 }
-.container-928 {
+.container-820 {
     display: block;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0 45px;
-    max-width: 928px;
+    max-width: 820px;
     flex: 1;
 }
 .container {
@@ -241,6 +241,7 @@ textarea:focus::placeholder {
 
 .button-transparent:hover {
     background-color: rgba(255,255,255,.25);
+    color: inherit;
 }
 
 .banner-wrapper {
