@@ -230,7 +230,7 @@ a:hover {text-decoration: none}
     color: #fff;
     line-height: 150%;
     height: 40px;
-    transition: box-shadow .3s, border .7s, color .7s, background-color .7s;
+    transition: box-shadow .3s, border .3s, color .3s, background-color .3s;
 }
 .button-medium {
     padding: 15px;

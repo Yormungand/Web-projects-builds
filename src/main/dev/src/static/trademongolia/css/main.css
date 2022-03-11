@@ -380,7 +380,6 @@ body {
     height: auto;
     object-fit: contain;
     transition: transform .5s;
-    background-color: #626262;
 }
 .product-card__related .context  {
     padding: 5px 20px;
@@ -824,4 +823,120 @@ body {
     font-size: 16px;
     font-weight: 500;
     color: #fff;
+}
+
+
+
+.gallery-top {
+
+}
+.gallery-top .img-wrapper {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+    padding-bottom: 100%;
+}
+.gallery-top .img-wrapper > * {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.gallery-thumbs {
+    margin-top: 10px;
+}
+.gallery-thumbs .swiper-slide {
+    width: 100px;
+    filter: grayscale(1);
+    transition: filter .5s;
+}
+.gallery-thumbs .swiper-slide.swiper-slide-thumb-active {
+    filter: unset;
+}
+.gallery-thumbs .img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    padding-bottom: 100%;
+    height: 0;
+}
+.gallery-thumbs .img-wrapper > * {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+.product-view {
+
+}
+.product-view .name {
+    font-size: 24px;
+    color: #1F3C92;
+    font-weight: 700;
+}
+.product-view .label {
+    display: flex;
+    border-bottom: 1px dashed #55acee;
+    padding: 15px 0;
+    font-size: 14px;
+}
+.badge {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 3px;
+    font-size: 14px;
+    line-height: 1;
+    background-color: #6fd05f;
+    color: #fff;
+}
+.category-tag {
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1F3C92;
+}
+
+.share {
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    border-radius: 3px;
+    height: max-content;
+    line-height: 1;
+    color: #fff;
+    transition: background-color 0.3s, color .3s, border .3s;
+}
+.share.facebook {
+    border: 1px solid #3b5998;
+    background-color: #3b5998;
+}
+.share.facebook:hover {
+    border: 1px solid #3b5998;
+    background-color: #fff;
+    color: #3b5998;
+}
+.share.twitter {
+    border: 1px solid #55ACEE;
+    background-color: #55ACEE;
+}
+.share.twitter:hover {
+    border: 1px solid #55ACEE;
+    background-color: #fff;
+    color: #55acee;
 }

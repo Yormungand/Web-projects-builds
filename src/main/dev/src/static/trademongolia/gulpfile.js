@@ -62,10 +62,10 @@ function js() {
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/js/uikit.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.extensions.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/vendors/scrolloverflow.min.js',
-        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/axios/dist/axios.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/jquery/dist/jquery.js',
         'js/*.js',
     ])
         .pipe(uglify())

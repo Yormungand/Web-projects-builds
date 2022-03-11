@@ -244,6 +244,15 @@ textarea:focus::placeholder {
     color: inherit;
 }
 
+.button-primary {
+    background-color: #FF6600;
+    color: #fff;
+}
+.button-primary:hover {
+    background-color: #cf5200;
+    color: #fff;
+}
+
 .banner-wrapper {
     display: flex;
     position: relative;
@@ -319,3 +328,11 @@ textarea:focus::placeholder {
 .pagination a i {
     height: max-content;
 }
+
+.alert {display: flex; align-items: flex-start; border-radius: 5px; padding: 10px 15px; font-size: 14px; line-height: 20px}
+.alert svg {min-width: 20px; min-height: 20px; margin-right: 15px}
+.alert-default {border: 1px solid #dcdcdc; background-color: #F1F1F1; color: #666}
+.alert-success {border: 1px solid rgba(0,0,0,0.2); background-color: #78BF67; color: #fff; font-weight: 700}
+.alert-danger {border: 1px solid rgba(0,0,0,0.2); background-color: #DC3545; color: #fff; font-weight: 700}
+.alert-warning {border: 1px solid rgba(0,0,0,0.2);background-color: #FFC107; color: #5A4914; font-weight: 700}
+.alert-primary {border: 1px solid rgba(0,0,0,0.2);background-color: #55ACEE; color: #fff; font-weight: 700}
