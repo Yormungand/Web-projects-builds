@@ -635,6 +635,17 @@ body {
 .main-menu .menu:hover {
     background-color: rgba(255,255,255,.25);
 }
+@media (max-width: 1400px) {
+
+    .main-menu {
+        margin-top: -10px;
+        margin-left: -10px;
+    }
+    .main-menu > * {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+}
 
 .wing {
     box-sizing: border-box;
@@ -728,6 +739,26 @@ body {
 
 .translateY {
     transform: translateY(-150px);
+}
+.translateY\@xl,
+.translateY\@l,
+.translateY\@m {
+    transform: translateY(-150px);
+}
+@media (max-width: 1600px){
+    .translateY\@xl {
+        transform: translateY(0);
+    }
+}
+@media (max-width: 1200px){
+    .translateY\@l {
+        transform: translateY(0);
+    }
+}
+@media (max-width: 960px){
+    .translateY\@m {
+        transform: translateY(0);
+    }
 }
 
 .totalPage-elements {
