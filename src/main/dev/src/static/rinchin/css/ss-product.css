@@ -1543,19 +1543,24 @@ body.index .ss-header:not(.uk-active) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: -30px;
+    margin-left: -30px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between
 }
-
+.ss-product-grid > * {
+    padding-top: 30px;
+    padding-left: 30px;
+}
 .ss-product-grid__img {
-    width: 480px
+    width: 30%
 }
 
 .ss-product-grid__detail {
-    width: 450px
+    flex: 1;
 }
 
 .ss-product-grid__other {
@@ -1568,7 +1573,7 @@ body.index .ss-header:not(.uk-active) {
     display: block;
     width: 100%;
     height: 0;
-    padding-bottom: 100%;
+    padding-bottom: 126%;
     overflow: hidden;
     position: relative;
     border: 1px solid #e0e0e0
@@ -1897,11 +1902,7 @@ body.index .ss-header:not(.uk-active) {
     margin-left: -20px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
-    height: fit-content
-}
-
-.ss-product-info-grid>div {
-    padding-left: 20px
+    height: fit-content;
 }
 
 .ss-product-info-grid__main {
@@ -1928,7 +1929,7 @@ body.index .ss-header:not(.uk-active) {
 .ss-product-info-container .uk-tab>li>a {
     line-height: 50px;
     text-transform: none;
-    color: #000;
+    color: #666;
     font-size: 14px;
     -webkit-transition: .2s all;
     transition: .2s all;
@@ -1937,8 +1938,8 @@ body.index .ss-header:not(.uk-active) {
 
 .ss-product-info-container .uk-tab>.uk-active>a {
     font-weight: 700;
-    color: #ee1f52;
-    border-bottom: 2px solid #ee1f52
+    color: #555;
+    border-bottom: 2px solid #555
 }
 
 .ss-product-info-container .uk-switcher {

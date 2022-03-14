@@ -23,6 +23,11 @@
     max-width: 1920px;
     clear-after: both;
 }
+@media (max-width: 1420px){
+    .container-expand {
+        padding: 0 20px;
+    }
+}
 
 
 .button {
