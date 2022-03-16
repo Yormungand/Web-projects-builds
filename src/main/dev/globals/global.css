@@ -1,9 +1,9 @@
-[class*=grid] {
+[class^=grid] {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
 }
-[class*=grid] > * {
+[class^=grid] > * {
     box-sizing: border-box;
 }
 

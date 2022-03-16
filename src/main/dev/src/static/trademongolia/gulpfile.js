@@ -27,11 +27,12 @@ function css() {
         // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
         // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
         // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
+        'css/*.css',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.css',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.css',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/perfect-scrollbar/css/perfect-scrollbar.css',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/globals/global.css',
-        'css/*.css',
     ])
         .pipe(cleancss())
         .pipe(concat('root.min.css'))
@@ -66,6 +67,7 @@ function js() {
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/gsap/dist/*.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/jquery/dist/jquery.js',
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/perfect-scrollbar/dist/perfect-scrollbar.js',
         'js/*.js',
     ])
         .pipe(uglify())
