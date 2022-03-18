@@ -602,7 +602,6 @@ body {
     flex-wrap: wrap;
     box-sizing: border-box;
     padding: 10px 30px;
-    background-color: #1F3C92;
 }
 .header > * {
     height: max-content;
