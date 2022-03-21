@@ -534,8 +534,8 @@ jobInfo = function (id) {
                 "<div>" +
                 "   <div class='item open'>" +
                 "       <div class='acoustic-button'>" +
-                "           <button class='button button-fill button-medium' onclick='Acoustic.init(this)'>The main" +
-                "               role" +
+                "           <button class='button button-fill button-medium' onclick='Acoustic.init(this)'>" +
+                "               Main Role" +
                 "           </button>" +
                 "           <div class='mask'></div>" +
                 "       </div>" +
