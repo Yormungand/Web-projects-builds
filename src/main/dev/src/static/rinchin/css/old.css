@@ -437,7 +437,7 @@ ul.cart-items {margin: 20px 0 0 0; padding: 0; max-height: 75vh; list-style-type
 .number-input * {transition: 0.4s}
 .number-input button:first-child {border-right: 1px solid #f1f1f1}
 .number-input button:last-child {border-left: 1px solid #f1f1f1}
-.number-input button {position: relative;border: none;align-items: center;justify-content: center;width: 30px;height: 30px;outline:none;-webkit-appearance: none;cursor: pointer;margin: 0;background-color: #FFF;}
+.number-input button {position: relative;border: none;width: 30px;height: 30px;outline:none;-webkit-appearance: none;cursor: pointer;margin: 0;background-color: #FFF;}
 .number-input button:before,
 .number-input button:after {display: inline-block;position: absolute;content: '';width: 9px;height: 2px;background-color: #EC008C;transform: translate(-50%, -50%);}
 .number-input button.plus:after {transform: translate(-50%, -50%) rotate(90deg);}
@@ -583,14 +583,13 @@ article#about .blocks .block > div > div:hover::before {opacity: 1}
     .sideCategories {display: none;}
 }
 
-.products-list {border: 1px solid #f1f1f1; border-width: 1px 0 0 1px; display: flex; flex-wrap: wrap; overflow: hidden}
+.products-list {border-top: 1px solid #f1f1f1; margin-top: 20px; padding-top:20px; display: flex; flex-wrap: wrap; overflow: hidden}
 .products-list .product {display: block; background: #FFF; pointer-events: auto}
 .products-list .product .img {display: block; width: 100%; overflow: hidden}
 .products-list .product .img div {padding-bottom: 100%; width: 100%; transition: 0.2s}
 .products-list .product .details {padding: 20px; text-align: center}
 .products-list .product .details .name {margin-bottom: 10px; font-size: 14px; font-weight: 400; line-height: 18px; color: #363636}
 .products-list .product .details .price {margin-top: 5px; font-size: 18px; font-weight: 400; color: #30408E; line-height: 100%}
-.products-list .product {border: 1px solid #f1f1f1; border-width: 0 1px 1px 0}
 .products-list .product button.button:hover {pointer-events: fill}
 .products-list .product:hover .img div {transform: scale(1.1)}
 .products-list .product:hover .details .name {color: #00AEEF}

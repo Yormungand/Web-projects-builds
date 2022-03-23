@@ -356,6 +356,13 @@ body {
     transform: translate(50%, -50%) scale(1.1);
 }
 
+.article-view {
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.1);
+}
+
 .card-article {
     display: block;
     overflow: hidden;
@@ -457,7 +464,7 @@ body {
     padding: 0 25px;
 }
 
-.text-card {
+.op-card {
     border-radius: 3px;
     overflow: hidden;
     box-sizing: border-box;
@@ -465,13 +472,13 @@ body {
     box-shadow: 0 2px 2px rgba(0,0,0,.5);
     background-color: rgba(255,255,255,.1);
 }
-.text-card .icon {
+.op-card .icon {
     display: none;
     justify-content: center;
     padding-bottom: 20px;
     min-height: 80px;
 }
-.text-card .title {
+.op-card .title {
     margin: 0 auto 20px;
     font-size: 20px;
     font-weight: 500;
@@ -480,7 +487,7 @@ body {
     max-width: 325px;
     text-align: center;
 }
-.text-card .text {
+.op-card .text {
     display: -webkit-box!important;
     -webkit-line-clamp: 8;
     -webkit-box-orient: vertical;
@@ -491,28 +498,28 @@ body {
     font-weight: 400;
     color: rgba(255,255,255,.8);
 }
-.text-card svg {
+.op-card svg {
     transition: filter .4s;
 }
-.text-card:hover svg {
+.op-card:hover svg {
     filter: drop-shadow(0 0 5px rgba(7, 151, 253, 1));
 }
 
 @media (max-width: 1200px) {
-    .text-card .title {
+    .op-card .title {
         font-size: calc(100vw / 40);
         margin: 0 auto 20px;
     }
-    .text-card .text {
+    .op-card .text {
         font-size: calc(100vw / 50);
     }
 }
 @media (max-width: 960px) {
-    .text-card .title {
+    .op-card .title {
         font-size: calc(100vw / 30);
         margin: 0 auto 10px;
     }
-    .text-card .text {
+    .op-card .text {
         font-size: calc(100vw / 35);
     }
 }
@@ -521,40 +528,62 @@ body {
     border-radius: 3px;
     overflow: hidden;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 30px;
     background-color: rgba(255,255,255,.1);
 }
-.vision .text-card {
+.vision > * > * .op-card .title{
+    padding: 10px 20px;
+}
+.vision > * > *:nth-child(1) .op-card .title{
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px rgb(53 54 58 / 50%);
+    background-color: #35363A;
+}
+.vision > * > *:nth-child(2) .op-card .title{
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px rgb(0 96 175 / 50%);
+    background-color: #0060AF;
+}
+.vision > * > *:nth-child(3) .op-card .title{
+    border: 1px solid rgba(255,255,255,.1);
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px rgb(234 30 48 / 50%);
+    background-color: #EA1E30;
+}
+.vision .op-card {
     transition: transform 1.3s;
 }
-.vision > :nth-child(3) .text-card {
+.vision > :nth-child(3) .op-card {
     transition-delay: .2s;
 }
-.vision > :nth-child(2) .text-card {
+.vision > :nth-child(2) .op-card {
     transition-delay: .5s;
 }
-.vision > :nth-child(1) .text-card {
+.vision > :nth-child(1) .op-card {
     transition-delay: .8s;
 }
 
-.vision.vision-hidden > :nth-child(3) .text-card {
+.vision.vision-hidden > * > :nth-child(3) .op-card {
     transition-delay: .2s;
 }
-.vision.vision-hidden > :nth-child(2) .text-card {
+.vision.vision-hidden > * > :nth-child(2) .op-card {
     transition-delay: .5s;
 }
-.vision.vision-hidden > :nth-child(1) .text-card {
+.vision.vision-hidden > * > :nth-child(1) .op-card {
     transition-delay: .8s;
 }
-.vision.vision-hidden .text-card {
+.vision.vision-hidden .op-card {
     transition: transform .3s;
     transform: translateY(200%);
 }
-.vision.vision-shown .text-card {
+.vision.vision-shown .op-card {
     transform: translateY(0);
 }
 @media (max-width: 1024px){
-    .vision.vision-hidden .text-card {
+    .vision.vision-hidden .op-card {
         transform: translateY(0);
     }
 }
@@ -1909,7 +1938,7 @@ article time {
     display: block;
     border-radius: 4px;
     overflow: hidden;
-    padding-bottom: 25%;
+    padding-bottom: 35%;
     -webkit-mask-image: linear-gradient(0deg,transparent 0,#000 25%);
     mask-image: linear-gradient(0deg,transparent 0,#000 25%);
 }

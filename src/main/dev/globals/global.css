@@ -6,18 +6,11 @@
     --br-point-s: 640px;
 }
 
-[class*=grid] {
+*[class^='grid'], *[class*=' grid-'] {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
 }
-
-/*[class^=grid] > * {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-}*/
-
 .grid-collapse {
 
 }
