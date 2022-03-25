@@ -100,9 +100,17 @@
             color: #fff;
             mix-blend-mode: difference;
             font-size: 56px;
-            font-weight: 400;
+            font-weight: 500;
             text-transform: uppercase;
             line-height: 1;
+        }
+        .video-wrapper .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            height: 100%;
+            width: 100%;
         }
     </style>
     <div class="container-small">
@@ -110,6 +118,7 @@
             <div class="video-wrapper">
                 <div id="ytplayer"></div>
                 <div class="overtext">About us</div>
+                <div class="overlay"></div>
             </div>
         </div>
         <div class="grid-20">

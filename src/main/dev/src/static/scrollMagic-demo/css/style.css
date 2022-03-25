@@ -96,10 +96,11 @@ body {
 }
 .menu a {
     font-size: 16px;
-    font-weight: 500;
     line-height: 1;
     color: #fff;
     transition: text-shadow .5s, color .5s, font-weight .5s, font-size .5s;
+    font-family: SamsungOne-Regular, serif;
+    font-weight: 600;
 }
 .menu a:hover {
     text-shadow: 0 0 5px 0 #00000080;
@@ -178,7 +179,7 @@ body {
     font-size: 50px;
     font-weight: bold;
     color: #fff;
-    font-family: 'Noto Sans';
+    font-family: 'SamsungSharpSans-Bold';
     text-align: center;
 }
 .section-title > div {
@@ -679,13 +680,13 @@ body {
 .employee__info .name {
     width: max-content;
     text-transform: uppercase;
-    font-family: 'Noto Sans';
+    font-family: 'SamsungSharpSans-Bold';
     font-size: 15px;
     font-weight: 400;
     color: #fff;
 }
 .employee__info .post {
-    font-family: 'Noto Sans';
+    font-family: 'SamsungSharpSans-Bold';
     font-size: 8px;
     font-weight: 400;
     color: #fff;
@@ -764,14 +765,14 @@ body {
 .card-transparent__info .name {
     width: max-content;
     text-transform: uppercase;
-    font-family: 'Noto Sans';
+    font-family: 'SamsungSharpSans-Bold';
     line-height: 27px;
     font-size: 20px;
     font-weight: 400;
     color: #fff;
 }
 .card-transparent__info .post {
-    font-family: 'Noto Sans';
+    font-family: 'SamsungSharpSans-Bold';
     font-size: 12px;
     font-weight: 300;
     color: #fff;
@@ -1192,7 +1193,7 @@ body {
     margin: 0 auto;
     padding-top: 50px;
     width: 70%;
-    font-family: 'Noto Sans';
+    font-family: 'SamsungSharpSans-Bold';
     text-align: center;
     text-transform: uppercase;
     line-height: 76px;
@@ -1440,7 +1441,7 @@ body {
     margin: 30px 0;
     font-size: 50px;
     font-weight: 600;
-    font-family: 'Noto Sans';
+    font-family: 'SamsungSharpSans-Bold';
     color: rgba(255,255,255,1);
 }
 .page-content {
@@ -1506,14 +1507,14 @@ body {
     text-align: center;
     font-size: 15px;
     font-weight: 400;
-    font-family: "Noto Sans";
+    font-family: "SamsungSharpSans-Bold";
     color: rgba(255,255,255,1);
 }
 .member .position {
     text-align: center;
     font-size: 10px;
     font-weight: 300;
-    font-family: "Noto Sans";
+    font-family: "SamsungSharpSans-Bold";
     color: rgba(255,255,255,1);
 }
 .member:hover .img-wrapper img{
@@ -1538,6 +1539,12 @@ body {
 }
 .member-biography > .photo-box {
     width: calc(100% / 3.001);
+}
+.member-biography.semi {
+    justify-content: center;
+}
+.member-biography.semi > .photo-box {
+    width: 80%;
 }
 @media (max-width: 1444px) {
     .member-biography {
@@ -1622,7 +1629,7 @@ body {
 .member-biography .history .heading {
     font-size: 20px;
     font-weight: 700;
-    font-family: "Noto Sans";
+    font-family: "SamsungSharpSans-Bold";
     color: #524141;
 }
 .member-biography .history .context {
@@ -1648,7 +1655,7 @@ body {
 }
 .member-stats .item .label,
 .member-stats .item .value {
-    font-family: "Noto Sans";
+    font-family: "SamsungSharpSans-Bold";
     font-size: 20px;
     color: #524141;
 }
@@ -1841,8 +1848,8 @@ body {
     border-radius: 50%;
     border: 1px solid transparent;
     padding: 0;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background-color: transparent;
     transition: border .5s, background-color .5s;
 }
@@ -1884,7 +1891,7 @@ article .name {
     position: relative;
     display: block;
     margin-bottom: 15px;
-    font-size: 48px;
+    font-size: 180%;
     font-weight: bold;
     line-height: 1.1;
     color: #fff;
@@ -1898,7 +1905,7 @@ article .name::before {
     left: 0;
 }
 article .text {
-    font-size: 16px;
+    font-size: 110%;
     line-height: 1.5;
 }
 article time {
@@ -1915,15 +1922,15 @@ article time {
 }
 @media (max-width: 1600px) {
     article .name {
-        margin-bottom: 20px;
-        font-size: 32px;
+        /*margin-bottom: 20px;*/
+        /*font-size: 32px;*/
     }
     article .text {
-        font-size: 16px;
+        /*font-size: 16px;*/
     }
 }
 @media (max-width: 1200px) {
-    article {
+    /*article {
         padding-bottom: 40px;
     }
     article .name {
@@ -1931,7 +1938,7 @@ article time {
     }
     article .text {
         font-size: 14px;
-    }
+    }*/
 }
 .article-image {
     position: relative;
@@ -1980,4 +1987,32 @@ table td {
 }
 table td p:last-child{
     margin-bottom: 0;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.breadcrumb .item * {
+    font-size: 100%;
+}
+.breadcrumb .item:not(:last-child)::after {
+    content: "";
+    padding: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='5' height='8' viewBox='0 0 5 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.45312 4.26562C4.59375 4.125 4.59375 3.89062 4.45312 3.75L1.42188 0.703125C1.26562 0.5625 1.03125 0.5625 0.890625 0.703125L0.53125 1.0625C0.390625 1.20312 0.390625 1.4375 0.53125 1.59375L2.9375 4L0.53125 6.42188C0.390625 6.57812 0.390625 6.8125 0.53125 6.95312L0.890625 7.3125C1.03125 7.45312 1.26562 7.45312 1.42188 7.3125L4.45312 4.26562Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.breadcrumb .item a {
+    color: #9e9e9e;
+    transition: color .5s, opacity .5s;
+}
+.breadcrumb .item span {
+    color: #ccc;
+    transition: color .5s
+}
+.breadcrumb .item:hover a {
+    opacity: .5;
 }
