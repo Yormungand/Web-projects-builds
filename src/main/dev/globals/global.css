@@ -1889,83 +1889,180 @@
 [class*=child-width] > * {
     box-sizing: border-box;
 }
-.child-width-1-1 > * {
-    width: 100%;
-}
-.child-width-1-12 > * {
-    width: 8.333%;
-}
-.child-width-2-12 > * {
-    width: 16.666%;
-}
-.child-width-3-12 > * {
-    width: 25%;
-}
-.child-width-4-12 > * {
-    width: 33.333%;
-}
-
-.child-width-5-12 > * {
-    width: 41.666%;
-}
-.child-width-6-12 > * {
-    width: 50%;
-}
-.child-width-7-12 > * {
-    width: 58.333%;
-}
-.child-width-8-12 > * {
-    width: 66.666%;
-}
-.child-width-9-12 > * {
-    width: 75%;
-}
-.child-width-10-12 > * {
-    width: 83.333%;
-}
-.child-width-11-12 > * {
-    width: 91.666%;
-}
+.child-width-expand > * {min-width: 1px;flex: 1;}
+.child-width-1-1 > * {width: 100%;}
+.child-width-1-12 > * {width: 8.333%;}
+.child-width-2-12 > * {width: 16.666%;}
+.child-width-3-12 > * {width: 25%;}
+.child-width-4-12 > * {width: 33.333%;}
+.child-width-5-12 > * {width: 41.666%;}.child-width-6-12 > * {width: 50%;}
+.child-width-7-12 > * {width: 58.333%;}
+.child-width-8-12 > * {width: 66.666%;}
+.child-width-9-12 > * {width: 75%;}
+.child-width-10-12 > * {width: 83.333%;}
+.child-width-11-12 > * {width: 91.666%;}
 
 @media (min-width: 1600px) {
+    .child-width-expand\@xl > * {min-width: 1px;flex: 1;}
+    .child-width-1-1\@xl > * {width: 100%;}
+    .child-width-1-12\@xl > * {width: 8.333%;}
+    .child-width-2-12\@xl > * {width: 16.666%;}
+    .child-width-3-12\@xl > * {width: 25%;}
+    .child-width-4-12\@xl > * {width: 33.333%;}
+    .child-width-5-12\@xl > * {width: 41.666%;}.child-width-6-12 > * {width: 50%;}
+    .child-width-7-12\@xl > * {width: 58.333%;}
+    .child-width-8-12\@xl > * {width: 66.666%;}
+    .child-width-9-12\@xl > * {width: 75%;}
+    .child-width-10-12\@xl > * {width: 83.333%;}
+    .child-width-11-12\@xl > * {width: 91.666%;}
 }
-.width-1-1 {
-    width: 100%;
+@media (min-width: 1440px) {
+    .child-width-expand\@n > * {min-width: 1px;flex: 1;}
+    .child-width-1-1\@n > * {width: 100%;}
+    .child-width-1-12\@n > * {width: 8.333%;}
+    .child-width-2-12\@n > * {width: 16.666%;}
+    .child-width-3-12\@n > * {width: 25%;}
+    .child-width-4-12\@n > * {width: 33.333%;}
+    .child-width-5-12\@n > * {width: 41.666%;}.child-width-6-12 > * {width: 50%;}
+    .child-width-7-12\@n > * {width: 58.333%;}
+    .child-width-8-12\@n > * {width: 66.666%;}
+    .child-width-9-12\@n > * {width: 75%;}
+    .child-width-10-12\@n > * {width: 83.333%;}
+    .child-width-11-12\@n > * {width: 91.666%;}
 }
-.width-1-12 {
-    width: 8.333%;
+@media (min-width: 1200px) {
+    .child-width-expand\@l > * {min-width: 1px;flex: 1;}
+    .child-width-1-1\@l > * {width: 100%;}
+    .child-width-1-12\@l > * {width: 8.333%;}
+    .child-width-2-12\@l > * {width: 16.666%;}
+    .child-width-3-12\@l > * {width: 25%;}
+    .child-width-4-12\@l > * {width: 33.333%;}
+    .child-width-5-12\@l > * {width: 41.666%;}.child-width-6-12 > * {width: 50%;}
+    .child-width-7-12\@l > * {width: 58.333%;}
+    .child-width-8-12\@l > * {width: 66.666%;}
+    .child-width-9-12\@l > * {width: 75%;}
+    .child-width-10-12\@l > * {width: 83.333%;}
+    .child-width-11-12\@l > * {width: 91.666%;}
 }
-.width-2-12 {
-    width: 16.666%;
+@media (min-width: 960px) {
+    .child-width-expand\@m > * {min-width: 1px;flex: 1;}
+    .child-width-1-1\@m > * {width: 100%;}
+    .child-width-1-12\@m > * {width: 8.333%;}
+    .child-width-2-12\@m > * {width: 16.666%;}
+    .child-width-3-12\@m > * {width: 25%;}
+    .child-width-4-12\@m > * {width: 33.333%;}
+    .child-width-5-12\@m > * {width: 41.666%;}.child-width-6-12 > * {width: 50%;}
+    .child-width-7-12\@m > * {width: 58.333%;}
+    .child-width-8-12\@m > * {width: 66.666%;}
+    .child-width-9-12\@m > * {width: 75%;}
+    .child-width-10-12\@m > * {width: 83.333%;}
+    .child-width-11-12\@m > * {width: 91.666%;}
 }
-.width-3-12 {
-    width: 25%;
-}
-.width-4-12 {
-    width: 33.333%;
-}
-.width-5-12 {
-    width: 41.666%;
-}
-.width-6-12 {
-    width: 50%;
-}
-.width-7-12 {
-    width: 58.333%;
-}
-.width-8-12 {
-    width: 66.666%;
-}
-.width-9-12 {
-    width: 75%;
-}
-.width-10-12 {
-    width: 83.333%;
-}
-.width-11-12 {
-    width: 91.666%;
+@media (min-width: 640px) {
+    .child-width-expand\@s > * {min-width: 1px;flex: 1;}
+    .child-width-1-1\@s > * {width: 100%;}
+    .child-width-1-12\@s > * {width: 8.333%;}
+    .child-width-2-12\@s > * {width: 16.666%;}
+    .child-width-3-12\@s > * {width: 25%;}
+    .child-width-4-12\@s > * {width: 33.333%;}
+    .child-width-5-12\@s > * {width: 41.666%;}.child-width-6-12 > * {width: 50%;}
+    .child-width-7-12\@s > * {width: 58.333%;}
+    .child-width-8-12\@s > * {width: 66.666%;}
+    .child-width-9-12\@s > * {width: 75%;}
+    .child-width-10-12\@s > * {width: 83.333%;}
+    .child-width-11-12\@s > * {width: 91.666%;}
 }
 
+
+
+.width-expand {min-width: 1px;flex: 1;}
+.width-1-1 {width: 100%;}
+.width-1-12 {width: 8.333%;}
+.width-2-12 {width: 16.666%;}
+.width-3-12 {width: 25%;}
+.width-4-12 {width: 33.333%;}
+.width-5-12 {width: 41.666%;}
+.width-6-12 {width: 50%;}
+.width-7-12 {width: 58.333%;}
+.width-8-12 {width: 66.666%;}
+.width-9-12 {width: 75%;}
+.width-10-12 {width: 83.333%;}
+.width-11-12 {width: 91.666%;}
+@media (min-width: 1600px){
+    .width-expand\@xl {min-width: 1px;flex: 1;}
+    .width-1-1\@xl {width: 100%;}
+    .width-1-12\@xl {width: 8.333%;}
+    .width-2-12\@xl {width: 16.666%;}
+    .width-3-12\@xl {width: 25%;}
+    .width-4-12\@xl {width: 33.333%;}
+    .width-5-12\@xl {width: 41.666%;}
+    .width-6-12\@xl {width: 50%;}
+    .width-7-12\@xl {width: 58.333%;}
+    .width-8-12\@xl {width: 66.666%;}
+    .width-9-12\@xl {width: 75%;}
+    .width-10-12\@xl {width: 83.333%;}
+    .width-11-12\@xl {width: 91.666%;}
+}
+@media (min-width: 1440px){
+    .width-expand\@n {min-width: 1px;flex: 1;}
+    .width-1-1\@n {width: 100%;}
+    .width-1-12\@n {width: 8.333%;}
+    .width-2-12\@n {width: 16.666%;}
+    .width-3-12\@n {width: 25%;}
+    .width-4-12\@n {width: 33.333%;}
+    .width-5-12\@n {width: 41.666%;}
+    .width-6-12\@n {width: 50%;}
+    .width-7-12\@n {width: 58.333%;}
+    .width-8-12\@n {width: 66.666%;}
+    .width-9-12\@n {width: 75%;}
+    .width-10-12\@n {width: 83.333%;}
+    .width-11-12\@n {width: 91.666%;}
+}
+@media (min-width: 1200px){
+    .width-expand\@l {min-width: 1px;flex: 1;}
+    .width-1-1\@l {width: 100%;}
+    .width-1-12\@l {width: 8.333%;}
+    .width-2-12\@l {width: 16.666%;}
+    .width-3-12\@l {width: 25%;}
+    .width-4-12\@l {width: 33.333%;}
+    .width-5-12\@l {width: 41.666%;}
+    .width-6-12\@l {width: 50%;}
+    .width-7-12\@l {width: 58.333%;}
+    .width-8-12\@l {width: 66.666%;}
+    .width-9-12\@l {width: 75%;}
+    .width-10-12\@l {width: 83.333%;}
+    .width-11-12\@l {width: 91.666%;}
+}
+@media (min-width: 960px){
+    .width-expand\@m {min-width: 1px;flex: 1;}
+    .width-1-1\@m {width: 100%;}
+    .width-1-12\@m {width: 8.333%;}
+    .width-2-12\@m {width: 16.666%;}
+    .width-3-12\@m {width: 25%;}
+    .width-4-12\@m {width: 33.333%;}
+    .width-5-12\@m {width: 41.666%;}
+    .width-6-12\@m {width: 50%;}
+    .width-7-12\@m {width: 58.333%;}
+    .width-8-12\@m {width: 66.666%;}
+    .width-9-12\@m {width: 75%;}
+    .width-10-12\@m {width: 83.333%;}
+    .width-11-12\@m {width: 91.666%;}
+}
+@media (min-width: 640px){
+    .width-expand\@s {min-width: 1px;flex: 1;}
+    .width-1-1\@s {width: 100%;}
+    .width-1-12\@s {width: 8.333%;}
+    .width-2-12\@s {width: 16.666%;}
+    .width-3-12\@s {width: 25%;}
+    .width-4-12\@s {width: 33.333%;}
+    .width-5-12\@s {width: 41.666%;}
+    .width-6-12\@s {width: 50%;}
+    .width-7-12\@s {width: 58.333%;}
+    .width-8-12\@s {width: 66.666%;}
+    .width-9-12\@s {width: 75%;}
+    .width-10-12\@s {width: 83.333%;}
+    .width-11-12\@s {width: 91.666%;}
+}
 
 .lineClamp12 {
     display: -webkit-box !important;
