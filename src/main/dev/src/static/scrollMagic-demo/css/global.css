@@ -275,25 +275,28 @@ button:not(:disabled),
     color: #666;
 }
 .button-transparent {
-    border: 2px solid #0075FF;
+    border: 2px solid #3fc9e1;
     background-color: transparent;
 }
 .button-transparent:hover {
-    box-shadow: 0 0 10px 0 #0797FD;
-    background-color: #0075FF;
-    color: #fff;
+    box-shadow: 0 0 10px 0 #3fc9e1;
+    background-color: #3fc9e1;
+    color: #000;
 }
 .button-transparent:active {
-    box-shadow: 0 0 25px 0 #0797FD;
+    box-shadow: 0 0 25px 0 #3fc9e1;
 }
 .button-fill {
-    background-color: #0075FF;
+    background-color: #3fc9e1;
+    color: #000;
 }
 .button-fill:hover {
-    box-shadow: 0 0 10px 0 #0797FD;
+    box-shadow: 0 0 10px 0 #3fc9e1;
+    color: inherit;
 }
 .button-fill:active {
-    box-shadow: 0 0 25px 0 #0797FD;
+    box-shadow: 0 0 25px 0 #3fc9e1;
+    color: inherit;
 }
 
 
@@ -336,6 +339,13 @@ button:not(:disabled),
 }
 .button-text:hover {
     color:  rgba(255,255,255,.8);
+}
+
+.button span {
+    display: inline-block;
+    line-height: 100%;
+    height: max-content;
+    margin-bottom: -5px;
 }
 
 

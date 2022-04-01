@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/css/root.min.css">
+    <script src="../dist/js/root.min.js"></script>
+</head>
+<body>
+<div>
+    <div class="uk-container">
+        <div class="pt-30"></div>
+        <div class="grid-30 child-width-4-12">
+            <div>
+                <div class="atropos game-box">
+                    <span class="atropos-scale">
+                        <span class="atropos-rotate">
+                            <span class="atropos-inner">
+                                <img class="game-box-size" src="https://atroposjs.com/images/demos/game-boxes/box-size.svg"
+                                     alt="box bg"/>
+                                <img class="game-box-bg" data-atropos-offset="-4" src="https://atroposjs.com/images/demos/game-boxes/returnal-bg.jpg" alt="game cover"/>
+                                <img class="game-box-logo" data-atropos-offset="2.5" src="https://atroposjs.com/images/demos/game-boxes/returnal-logo.png" alt="game logo"/>
+                                <img src="https://atroposjs.com/images/demos/game-boxes/box-ribbon.svg" alt=""/>
+                                <img class="game-box-studio" src="https://atroposjs.com/images/demos/game-boxes/ps-studios-logo.svg" alt="game studio"/>
+                                <span class="atropos-highlight"></span>
+                            </span>
+                            <span class="game-box-t"></span>
+                            <span class="game-box-r"></span>
+                            <span class="game-box-b"></span>
+                            <span class="game-box-l"></span>
+                            <span class="atropos-shadow"></span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pb-30"></div>
+</div>
+<script>
+    const atropos = Atropos({
+        el: '.game-box'
+    })
+</script>
+</body>
+</html>
