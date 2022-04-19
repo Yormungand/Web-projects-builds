@@ -52,6 +52,7 @@ input:not(input[type=search],input[type=radio],input[type=checkbox]) {
     border-radius: 8px;
     box-sizing: border-box;
     padding: 10px 10px;
+    max-width: 100%;
     min-width: 100%;
     font-size: 14px;
     font-weight: 400;

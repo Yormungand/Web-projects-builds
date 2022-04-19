@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="dist/css/root.min.css">
+    <script src="dist/js/root.min.js"></script>
+</head>
+<body>
+<style>
+
+    body {
+        display: flex;
+        flex-flow: column;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .sign-container {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 340px;
+    }
+    .sign-form input {
+        border: 1px solid #e7e7e7;
+        border-radius: 3px;
+        box-sizing: border-box;
+        padding: 5px 15px;
+        width: 100%;
+        max-width: 100%;
+        outline: none;
+        transition: border .5s;
+    }
+    .sign-form input:focus {
+        border: 1px solid #333;
+        outline: none;
+    }
+    .sign-form input::placeholder {
+        font-size: 14px;
+        color: #999;
+        transition: color .5s;
+    }
+    .sign-form input:focus::placeholder {
+        color: #9998;
+    }
+    .sign-form input.error {
+        border: 1px solid rgba(255, 0, 0, .3);
+        background-color: rgba(255, 0, 0, .1);
+        color: rgba(255, 0, 0, .8);
+    }
+    .sign-form input.error::placeholder {
+        color: rgba(255, 0, 0, .4);
+    }
+    .sign-form input[type=checkbox] {
+        width: max-content;
+    }
+    .sign-form label {
+        font-size: 14px;
+        font-weight: 400;
+        color: #666;
+        user-select: none;
+    }
+    .sign-form a {
+        display: block;
+        font-size: 12px;
+        width: max-content;
+        color: #666;
+        transition: color .5s;
+    }
+    .sign-form a:hover {
+        color: #333;
+        text-decoration: underline;
+    }
+    .sign-wrap {
+        margin-top: 10px;
+        display: flex;
+    }
+    .signup {
+        margin-left: auto;
+    }
+    button {
+        display: block;
+        border: 1px solid #E7E7E7;
+        border-radius: 3px;
+        padding: 5px 10px;
+        width: 100%;
+        background-color: #f8f8f8;
+        color: #666;
+        font-size: 14px;
+        cursor: pointer;
+        transition: border .5s, color .5s;
+    }
+    button:hover {
+        border: 1px solid #666;
+        color: #333;
+    }
+    button {
+
+    }
+
+</style>
+<div class="sign-container">
+    <div class="">
+        <form class="sign-form" action="">
+            <div class="mb-10">
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="mb-10">
+                <input type="password" placeholder="Password">
+            </div>
+            <div style="text-align: center;">
+                <img src="https://www.zaal.mn/captcha/signin" alt="зураг" width="250" height="50"/>
+            </div>
+            <div class="d-form-control">
+                <input name="j_captcha" type="text" placeholder="Captcha">
+            </div>
+            <div class="mb-10">
+                <label>
+                    <input type="checkbox">
+                    <span>Remember me</span>
+                </label>
+            </div>
+            <div>
+                <button>Login</button>
+            </div>
+            <div class="sign-wrap">
+                <a href="javascript:void 0;">Нууц үг мартсан</a>
+                <a href="javascript:void 0;" class="signup">Бүртгүүлэх</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

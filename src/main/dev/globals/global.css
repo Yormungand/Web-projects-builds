@@ -6,6 +6,22 @@
     --br-point-s: 640px;
 }
 
+.flex {
+    display: flex;
+}
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-column {
+    display: flex;
+    flex-flow: column;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
 *[class^='grid'], *[class*=' grid-'] {
     display: flex;
     flex-wrap: wrap;
@@ -1708,6 +1724,22 @@
 }
 
 
+
+.ml-auto {
+    margin-left: auto;
+}
+.mr-auto {
+    margin-right: auto;
+}
+.m-auto {
+    margin: auto;
+}
+.mh-auto {
+    margin: 0 auto;
+}
+.mv-auto {
+    margin: auto 0;
+}
 .m-5 {
     margin: 5px
 }
