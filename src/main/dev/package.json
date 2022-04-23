@@ -33,6 +33,7 @@
     "gsap": "^3.9.1",
     "gulp-cli": "^2.3.0",
     "gulp-util": "^3.0.8",
+    "highlight.js": "^11.5.1",
     "npx": "^10.2.2",
     "perfect-scrollbar": "^1.5.5",
     "postcss": "^8.4.5",
