@@ -1229,7 +1229,10 @@ a:hover {
     color: #666;
     font-size: 14px;
     cursor: pointer;
-    transition: border .5s, color .5s;
+    transition: border .5s, color .5s, background-color .5s;
+}
+.button svg path {
+    fill: #666;
 }
 .button__small {
     display: flex;
@@ -1242,22 +1245,22 @@ a:hover {
     color: #666;
     font-size: 14px;
     cursor: pointer;
-    transition: border .5s, color .5s;
+    transition: border .5s, color .5s, background-color .5s;
 }
 .button__medium {
     display: flex;
     align-items: center;
     border: 1px solid #E7E7E7;
     border-radius: 3px;
-    padding: 5px 7px;
+    padding: 5px 15px;
     min-width: 42px;
     min-height: 42px;
     text-align: center;
     background-color: #f8f8f8;
     color: #666;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
-    transition: border .5s, color .5s;
+    transition: border .5s, color .5s, background-color .5s;
 }
 .button:hover {
     border: 1px solid #666;
@@ -1274,6 +1277,10 @@ a:hover {
     color: #5A4914;
     background-color: #FFC107;
 }
+.button-warning:hover {
+    color: #5A4914;
+    background-color: #cf9b00;
+}
 .button-success svg path{
     fill: #5A4914;
 }
@@ -1281,6 +1288,11 @@ a:hover {
     border: 1px solid #609952;
     color: #fff;
     background-color: #78BF67;
+}
+.button-success:hover {
+    border-color: #78BF67;
+    color: #fff;
+    background-color: #578f4a;
 }
 .button-success svg path {
     fill: #fff;
@@ -1290,6 +1302,35 @@ a:hover {
     color: #FFFFFF;
     background-color: #DC3545;
 }
+.button-danger:hover {
+    border-color: #DC3545;
+    color: #FFFFFF;
+    background-color: #b32735;
+}
 .button-danger svg path{
     fill: #fff;
+}
+.button-dark {
+    border-color: #333;
+    color: #FFFFFF;
+    background-color: #363636;
+}
+.button-dark:hover {
+    color: #FFFFFF;
+}
+.button-dark svg path {
+    fill: #fff
+}
+.button-secondary {
+    border-color: #9e9e9e;
+    color: #FFFFFF;
+    background-color: #9e9e9e;
+}
+.button-secondary svg path {
+    fill: #fff
+}
+.button-secondary:hover {
+    border-color: #6e6e6e;
+    color: #FFFFFF;
+    background-color: #6e6e6e;
 }

@@ -337,6 +337,7 @@ button:not(:disabled),
     color: #fff
 }
 
+
 .glitter-button {
     display: flex;
     align-items: center;
