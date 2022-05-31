@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.client {}
+.client-body {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    min-width: 1px;
+    flex: 1;
+}
+.client-body > *{
+    /*padding-top: 30px;*/
+    /*padding-left: 30px;*/
+}
+.client-side {
+    width: 300px;
+    /*height: 100%;*/
+    min-height: 100vh;
+    box-shadow: 2px 0 5px rgba(0,0,0,.2);
+    transition: transform 1s;
+}
+.client-main {
+    box-sizing: border-box;
+    min-width: 1px;
+    flex: 1;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.client-main__body {
+    box-sizing: border-box;
+    padding: 20px;
+}
+.client-sidebar {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding: 20px 0;
+    max-height: 100vh;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.client-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.client-menu a {
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 20px;
+    align-items: center;
+    width: 100%;
+    max-height: 40px;
+    min-height: 40px;
+    font-size: 14px;
+    color: #363636;
+    transition: background-color .8s;
+}
+.client-menu a i {
+    justify-self: center;
+    align-self: center;
+    max-width: 20px;
+    margin-right: 7px;
+}
+.client-menu a:hover {
+    background-color: #f7f7f7;
+}
+
+@media (max-width: 1000px){
+    .client-side {
+        position: absolute;
+        transform: translateX(-100%);
+    }
+}
+
+
+.i-button {
+    border: 1px solid transparent;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: white;
+    transition: padding .5s ease, background-color .4s ease, color .4s ease;
+    line-height: 150%;
+    font-size: 14px;
+}
+.i-button * {
+    transition: background-color .4s ease, color .4s ease, fill .4s ease;
+}
+.i-button:not(:disabled) {cursor: pointer}
+.i-button__small {
+    padding: 7px;
+    height: 30px;
+}
+.i-button__medium {
+    padding: 10px;
+    height: 60px;
+}
+.i-button-transparent {
+    color: #363636;
+    background-color: transparent;
+}
+.i-button-transparent:hover {
+    background-color: #f1f1f1;
+}
+
+.border-vertical {
+    border: 1px solid #f7f7f7; padding: 10px 0;margin: 10px 0
+}
+
+
+.content-primary {background: #fff;border: 1px solid rgba(0,0,0,0.2);box-sizing: border-box;border-radius: 5px;}
+.content-primary .content_name p{margin: 5px 0;line-height: 14px;text-transform: uppercase;color: #245195; font-weight: 500}
+.content-primary .content_desc p{margin: 5px 0;line-height: 16px;font-weight: bold;color:#363636;}
+.content-primary .content_price p{margin: 5px 0;line-height: 16px;text-align: right;font-weight: bold;color: #DD4B39}
+.content-primary .content_credit span{margin: 5px 0;line-height: 16px;text-align: right;color: #666}
+.content-primary .content_credit p{margin: 5px 0 5px 5px;line-height: 16px;text-align: right;color: #245195}
+.content-primary .content_date span{margin: 5px 0;line-height: 16px;text-align: right;color: #666}
+.content-primary .content_date p{margin: 5px;line-height: 16px;text-align: right;color: #245195}
+.content-primary .content_address span{margin: 5px 0;line-height: 16px;text-align: right;color: #666}
+.content-primary .content_address p{margin: 5px;line-height: 16px;text-align: right;color: #245195}
+.content-primary:hover {border: 1px solid #55acee}

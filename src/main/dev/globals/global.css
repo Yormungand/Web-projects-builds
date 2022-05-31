@@ -12,6 +12,8 @@
 .flex-row {display: flex;flex-direction: row;}
 .flex-middle {align-items: center}
 .flex-center {justify-content: center}
+.flex-center-self {align-self: center}
+.flex-middle-self {justify-self: center}
 @media (min-width: 1600px){
     .flex\@xl {display: flex;}
     .flex-wrap\@xl {display: flex;flex-wrap: wrap;}
@@ -19,6 +21,8 @@
     .flex-row\@xl {display: flex;flex-direction: row;}
     .flex-middle\@xl {align-items: center}
     .flex-center\@xl {justify-content: center}
+    .flex-center-self\@xl {align-self: center}
+    .flex-middle-self\@xl {justify-self: center}
 }
 @media (min-width: 1440px){
     .flex\@n {display: flex;}
@@ -27,6 +31,8 @@
     .flex-row\@n {display: flex;flex-direction: row;}
     .flex-middle\@n {align-items: center}
     .flex-center\@n {justify-content: center}
+    .flex-center-self\@n {align-self: center}
+    .flex-middle-self\@n {justify-self: center}
 }
 @media (min-width: 1200px){
     .flex\@l {display: flex;}
@@ -35,6 +41,8 @@
     .flex-row\@l {display: flex;flex-direction: row;}
     .flex-middle\@l {align-items: center}
     .flex-center\@l {justify-content: center}
+    .flex-center-self\@l {align-self: center}
+    .flex-middle-self\@l {justify-self: center}
 }
 @media (min-width: 960px){
     .flex\@m {display: flex;}
@@ -43,6 +51,8 @@
     .flex-row\@m {display: flex;flex-direction: row;}
     .flex-middle\@m {align-items: center}
     .flex-center\@m {justify-content: center}
+    .flex-center-self\@m {align-self: center}
+    .flex-middle-self\@m {justify-self: center}
 }
 @media (min-width: 640px){
     .flex\@s {display: flex;}
@@ -51,6 +61,8 @@
     .flex-row\@s {display: flex;flex-direction: row;}
     .flex-middle\@s {align-items: center}
     .flex-center\@s {justify-content: center}
+    .flex-center-self\@s {align-self: center}
+    .flex-middle-self\@s {justify-self: center}
 }
 
 *[class^='grid'], *[class*=' grid-'] {
@@ -1221,6 +1233,7 @@ a:hover {
 .button {
     display: flex;
     align-items: center;
+    box-sizing: border-box;
     border: 1px solid #E7E7E7;
     border-radius: 3px;
     padding: 5px 7px;
@@ -1229,6 +1242,7 @@ a:hover {
     color: #666;
     font-size: 14px;
     cursor: pointer;
+    user-select: none;
     transition: border .5s, color .5s, background-color .5s;
 }
 .button svg path {
@@ -1333,4 +1347,38 @@ a:hover {
     border-color: #6e6e6e;
     color: #FFFFFF;
     background-color: #6e6e6e;
+}
+.input__default {
+    box-sizing: border-box;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #363636;
+    width: 100%;
+    max-width: 100%;
+}
+.input__default::placeholder {
+    font-size: 16px;
+    color: #999;
+}
+.textarea__default {
+    box-sizing: border-box;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #363636;
+    width: 100%;
+    max-width: 100%;
+}
+.textarea__default::placeholder {
+    font-size: 16px;
+    color: #999;
+}
+.radio__default {
+
+}
+.checkbox__default {
+
 }
