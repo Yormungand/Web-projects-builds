@@ -36,6 +36,7 @@
     "highlight.js": "^11.5.1",
     "npx": "^10.2.2",
     "perfect-scrollbar": "^1.5.5",
+    "plyr": "^3.7.2",
     "postcss": "^8.4.5",
     "postcss-cssnext": "^3.1.1",
     "scrollmagic": "^2.0.8",

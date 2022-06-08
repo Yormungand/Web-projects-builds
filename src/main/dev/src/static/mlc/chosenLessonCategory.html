@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Training view</title>
+    <title>Chosen lesson category</title>
     <link rel="stylesheet" href="dist/css/root.min.css">
     <link rel="stylesheet" href="https://static.sodonsolution.org/fonts/roboto/fonts.css">
     <link rel="stylesheet" href="https://static.sodonsolution.org/fonts/roboto-condensed/fonts.css">
+    <link rel="stylesheet" href="https://static.sodonsolution.org/fonts/fontawesome-free-5/css/all.css">
 </head>
 <body>
+
 <div class="client">
     <div class="client-header">
         <a class="cl-logo" href="javascript:void 0;">
@@ -203,75 +205,61 @@
         <div class="client-main">
             <div class="client-main__body">
                 <div class="container">
-                    <div class="training-view">
-                        <div class="name">Javascript Програмчлалын хэлний хөтөлбөр гэж юу вэ?</div>
-                        <div class="training-view__content">
-                            <div id="main-tab">
-                                <div class="grid-30 child-width-max">
-                                    <div>
-                                        <button class="tab-button tab-button__transparent active"
-                                                onclick="tabs.click(this)"
-                                                title="Тайлан">
-                                            Тайлбар
-                                        </button>
-                                    </div>
-                                    <div>
-                                        <button class="tab-button tab-button__transparent"
-                                                onclick="tabs.click(this)"
-                                                title="Тайлан">
-                                            Үнэлгээ
-                                        </button>
-                                    </div>
+                    <div class="uk-background-default p-15 mt-30" style="border-radius: 10px">
+                        <h4>Таний сонгосон төрлүүд</h4>
+                        <div class="grid-10">
+                            <div>
+                                <div class="chosen-category">
+                                    MLC Specials
+                                    <button class="remove" type="button" title="Устгах"
+                                            onclick="sodon_module.delete(${row.id}); return false;">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
                                 </div>
-                                <div class="tab-contents">
-                                    <div class="tab-item open">
-                                        <span id="timer"></span>
-                                        <video id="video"></video>
-<!--                                        <img src="https://www.picsum.photos/700/300" alt="">-->
-                                        <p>Сургалтын онцлог</p>
-                                        <p>
-                                            Салбартаа тэргүүлэгч сургагч багш
-                                            Мэдээлэл технологийн салбарт олон жил амжилттай ажиллаж туршлага
-                                            хуримтлуулсан сургагч нар хөтөлбөрийг явуулна.
-                                        </p>
-                                        <p>
-                                            Шалгарсан хөтөлбөр
-                                            Европ тивдээ мэдээлэл технологийн боловсролын салбараараа 5-р байр эзэлдэг
-                                            Болгар улсын чанарын өндөр шаардлага хангасан хөтөлбөрийг албан ёсны
-                                            эрхтэйгээр оролцогчдод хүргэнэ.
-                                        </p>
-                                        <p>
-                                            Хосолсон хөтөлбөр
-                                            Сургалтыг танхимаар болон цахимаар үзэх боломжтой байдаг тул оролцогчдын
-                                            хэрэгцээ шаардлагад нийцүүлж цагийн төлөвлөлт болон тухтай орчин нөхцөлийг
-                                            бүрдүүлж өгдөг.
-                                        </p>
-                                        <p>
-                                            Давуу тал
-                                            Хамгийн хурдацтай хөгжиж буй салбар
-                                            Мэдээлэллийн эрин зуунд бусдаас түрүүлж алхахад туслах мэдлэг, ур чадварыг
-                                            олгох сургалт. Java хэл нь ялангуяа бизнесийн салбарт ажилладаг хүмүүст
-                                            тусгайлан зориулагдсан байдаг нь уг салбарын бизнес эрхлэгчдийн зайлшгүй
-                                            хэрэгцээ болж өгдөг.
-                                        </p>
-                                        <p>
-                                            Амжилттай төгсөгч
-                                            Хөтөлбөрт бүрэн хамрагдсан тохиолдолд ажлын байраар хангагдах бүрэн
-                                            боломжтой бөгөөд цаашлаад Европын компаниудад ажилд орох боломжтой болно.
-                                        </p>
-                                        <p>
-                                            Үр дүн
-                                            Программист
-                                            Хөтөлбөрт бүрэн хамрагдсанаар хувьдаа веб хуудас, аппликейшн, тоолоолон
-                                            бодох төхөөрөмжүүдийн кодчиллыг бүрэн хийх чадвартай болно.
-                                        </p>
-                                    </div>
-                                    <div class="tab-item">
-                                        Content 2
-                                    </div>
+                            </div>
+                            <div>
+                                <div class="chosen-category">
+                                    Бизнесийн чадвар
+                                    <button class="remove" type="button" title="Устгах"
+                                            onclick="sodon_module.delete(${row.id}); return false;">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
+                        <h4>Сонирхолд нэмэх</h4>
+                        <div class="grid-10">
+                            <div>
+                                <div class="chosen-category">
+                                    MLC Specials
+                                    <button class="add" type="button" title="Устгах"
+                                            onclick="add(this); return false;">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="chosen-category">
+                                    Бизнесийн чадвар
+                                    <button class="add" type="button" title="Устгах"
+                                            onclick="add(this); return false;">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            function add(el) {
+                                el.querySelectorAll("i")[0].style.transform = "scale(0)"
+                                el.querySelectorAll("i")[0].remove();
+                                el.innerHTML += `<i class="fa fa-spinner fa-spin"></i>`
+                                setTimeout(()=>{
+                                    el.querySelectorAll("i")[0].remove();
+                                    el.innerHTML += `<i class="fa fa-check"></i>`
+                                    el.className = "done"
+                                }, 1500)
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
@@ -290,12 +278,8 @@
         </defs>
     </svg>
 </button>
+<script src="dist/js/root.min.js"></script>
 <script>
-    let tabs
-    document.addEventListener('DOMContentLoaded', e => {
-        tabs = new Tab_interaction('#main-tab');
-    })
-
     let clientHeader = document.querySelectorAll('.client-header')[0];
     let clientBody = document.querySelectorAll('.client-body')[0];
     let clientMain = document.querySelectorAll('.client-main')[0];
@@ -354,73 +338,6 @@
         }, 500)
     })
 </script>
-<div class="sidebar-control"></div>
-<script src="dist/js/root.min.js"></script>
-<script>
-    const player = new Plyr(document.getElementById('video'), {
-        muted: false,
-        hideControls: false,
-        markers: {
-            enabled: true,
-            points: [
-                {time: 120, label: "2 дугаар сэдэв"},
-                {time: 240, label: "3 дугаар сэдэв"},
-                {time: 640, label: "4 дугаар сэдэв"},
-                {time: 920, label: "5 дугаар сэдэв"},
-                {time: 1500, label: "6 дугаар сэдэв"},
-            ],
-        },
-    });
-    player.source = {
-        title: 'Би маргааш руу тэмүүлнэ',
-        type: 'video',
-        sources: [
-            {
-                src: "https://www.mnfansubs.net/resource/mnfansubs/video/2020/11/17/ucknfosukeiyjv0t/MNF_Tengen_Toppa_Gurren_Lagann_-_15_BD1080pDBE7298D.mp4",
-                type: "video/mp4",
-                size: 1080,
-            },
-            {
-                src: "https://www.mnfansubs.net/resource/mnfansubs/video/2020/11/27/o6rtxiycsm0zsqc0/MNF_Tengen_Toppa_Gurren_Lagann_-_15_BD720p8EB6C25F.mp4",
-                type: "video/mp4",
-                size: 720,
-            },
-            {
-                src: "https://www.mnfansubs.net/resource/mnfansubs/video/2020/11/27/88v9oocjxt947va1/MNF_Tengen_Toppa_Gurren_Lagann_-_15_BD480p3B12589F.mp4",
-                type: "video/mp4",
-                size: 480,
-            },
-        ],
-    }
 
-    document.addEventListener('DOMContentLoaded', e=>{
-        const video = document.querySelectorAll(".plyr__video-wrapper video")[0];
-        let liveCurrentTime = 0;
-        video.addEventListener('timeupdate', e=>{
-            if (!video.seeking)
-                liveCurrentTime = video.currentTime;
-            document.getElementById("timer").innerText = liveCurrentTime;
-            let valid = false;
-        })
-        video.addEventListener('seeking', e=>{
-            let delta = video.currentTime - liveCurrentTime;
-            if (video.currentTime < liveCurrentTime){
-
-            } else {
-                if (Math.abs(delta) > 0.01){
-                    console.log("We don't do that(seeking) here, bro");
-                    video.currentTime = liveCurrentTime;
-                }
-            }
-
-        })
-        video.addEventListener('stalled', e=>{
-            console.log("Couldn't fetch video meta data");
-        })
-        video.addEventListener('canplay', e=>{
-            video.play();
-        })
-    })
-</script>
 </body>
 </html>
