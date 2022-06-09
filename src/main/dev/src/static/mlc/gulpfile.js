@@ -30,6 +30,7 @@ function css() {
         // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/@fortawesome/fontawesome-free/css/all.css',
         // 'C:/Users/jturb/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/flatpickr/dist/flatpickr.css',
 
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/bootstrap/dist/css/bootstrap.css',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/plyr/dist/plyr.css',
 
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/css/uikit.css',
@@ -73,6 +74,7 @@ function js() {
         // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/plyr/src/js/plyr.js',
         // '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/plyr/src/js/preview-thumbnails.js',
 
+        '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/bootstrap/dist/js/bootstrap.bundle.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/swiper/swiper-bundle.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/uikit/dist/js/uikit.min.js',
         '/home/turbold/IdeaProjects/Web-projects-builds/src/main/dev/node_modules/fullpage.js/dist/fullpage.extensions.min.js',

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="dist/css/root.min.css">
     <link rel="stylesheet" href="https://static.sodonsolution.org/fonts/roboto/fonts.css">
     <link rel="stylesheet" href="https://static.sodonsolution.org/fonts/roboto-condensed/fonts.css">
+    <link rel="stylesheet" href="https://static.sodonsolution.org/fonts/fontawesome-free-5/css/all.css">
 </head>
 <body>
 <div class="client">
@@ -202,9 +203,72 @@
         </div>
         <div class="client-main">
             <div class="client-main__body">
+                <div class="tablinks child-width-expand">
+                    <div><a href="javascript:void 0" class="client-tablink"><span>Үзэж буй</span> <i class="fa fa-play"></i></a></div>
+                    <div><a href="javascript:void 0" class="client-tablink"><span>Үзсэн</span> <i class="fa fa-history"></i></a></div>
+                    <div><a href="javascript:void 0" class="client-tablink"><span>Хадгалсан</span> <i class="fa fa-heart"></i></a></div>
+                    <div><a href="javascript:void 0" class="client-tablink"><span>Худалдаж авсан</span> <i class="fa fa-shopping-basket"></i></a></div>
+                </div>
                 <div class="container">
-                    <div class="training-view">
-                        <div class="name">Javascript Програмчлалын хэлний хөтөлбөр гэж юу вэ?</div>
+                    <div class="training-view" style="background-color: #fff">
+<!--                        <div class="name">Javascript Програмчлалын хэлний хөтөлбөр гэж юу вэ?</div>-->
+                        <div class="video-box">
+                            <div class="grid-collapse">
+                                <div class="width-expand">
+                                    <video id="video"></video>
+                                </div>
+                                <div class="width-3-12">
+                                    <div class="video-lesson__name">Javascript Програмчлалын хэлний хөтөлбөр гэж юу вэ?</div>
+                                    <div class="video-topics">
+                                        <ul>
+                                            <li class="video-topic__name">
+                                                <div class="">Javascript Програмчлалын хэлний хөтөлбөр гэж юу вэ?</div>
+                                            </li>
+                                            <li class="video-topic__name">
+                                                <div class="">Javascript Програмчлалын хэлний хөтөлбөр гэж юу вэ?</div>
+                                            </li>
+                                            <li class="video-topic__name">
+                                                <div class="">Javascript Програмчлалын хэлний хөтөлбөр гэж юу вэ?</div>
+                                            </li>
+                                            <li class="video-topic__name">
+                                                <div class="">Javascript Програмчлалын хэлний хөтөлбөр гэж юу вэ?</div>
+                                            </li>
+                                            <li class="video-topic__name">
+                                                <div class="">Javascript Програмчлалын хэлний хөтөлбөр гэж юу вэ?</div>
+                                            </li>
+                                            <li class="video-topic__name">
+                                                <div class="">Javascript Програмчлалын хэлний хөтөлбөр гэж юу вэ?</div>
+                                            </li>
+                                            <li class="video-topic__name">
+                                                <div class="">Javascript Програмчлалын хэлний хөтөлбөр гэж юу вэ?</div>
+                                            </li>
+                                            <li class="video-topic__name">
+                                                <div class="">Javascript Програмчлалын хэлний хөтөлбөр гэж юу вэ?</div>
+                                            </li>
+                                            <li class="video-topic__name">
+                                                <div class="">Javascript Програмчлалын хэлний хөтөлбөр гэж юу вэ?</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-3">
+                            <button class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                                    <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                                </svg>
+                                Хуваалцах
+                            </button>
+                            <button class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                </svg>
+                                Хадгалах
+                            </button>
+                        </div>
+
                         <div class="training-view__content">
                             <div id="main-tab">
                                 <div class="grid-30 child-width-max">
@@ -225,8 +289,6 @@
                                 </div>
                                 <div class="tab-contents">
                                     <div class="tab-item open">
-                                        <span id="timer"></span>
-                                        <video id="video"></video>
 <!--                                        <img src="https://www.picsum.photos/700/300" alt="">-->
                                         <p>Сургалтын онцлог</p>
                                         <p>
@@ -356,6 +418,14 @@
 </script>
 <div class="sidebar-control"></div>
 <script src="dist/js/root.min.js"></script>
+<style>
+    .plyr__progress {
+        pointer-events: none;
+    }
+    .plyr__progress__marker {
+        pointer-events: fill;
+    }
+</style>
 <script>
     const player = new Plyr(document.getElementById('video'), {
         muted: false,
@@ -391,6 +461,15 @@
                 size: 480,
             },
         ],
+        tracks:[
+            {
+                kind: 'captions',
+                label: 'English',
+                srclang: 'en',
+                src: 'View_From_A_Blue_Moon_Trailer-HD.en.vtt',
+                default: true,
+            },
+        ],
     }
 
     document.addEventListener('DOMContentLoaded', e=>{
@@ -399,27 +478,40 @@
         video.addEventListener('timeupdate', e=>{
             if (!video.seeking)
                 liveCurrentTime = video.currentTime;
-            document.getElementById("timer").innerText = liveCurrentTime;
             let valid = false;
         })
         video.addEventListener('seeking', e=>{
             let delta = video.currentTime - liveCurrentTime;
             if (video.currentTime < liveCurrentTime){
-
             } else {
                 if (Math.abs(delta) > 0.01){
                     console.log("We don't do that(seeking) here, bro");
                     video.currentTime = liveCurrentTime;
                 }
             }
-
         })
         video.addEventListener('stalled', e=>{
-            console.log("Couldn't fetch video meta data");
+            console.error("Couldn't fetch video meta data");
         })
         video.addEventListener('canplay', e=>{
-            video.play();
-        })
+            // video.play();
+            const topics = document.querySelectorAll('.video-topics')[0];
+            const lessonName = document.querySelectorAll(".video-lesson__name")[0];
+            topics.style.maxHeight = video.innerHeight + "px";
+            topics.style.maxHeight = video.offsetHeight - lessonName.offsetHeight+'px'
+        });
+        /*document.addEventListener("keydown", e=>{
+            UIkit.notification('e',{status: 'success'})
+            e.preventDefault();
+        });
+        document.addEventListener("keyup", e=>{
+            UIkit.notification('e',{status: 'success'})
+            e.preventDefault();
+        });
+        video.addEventListener("keypress", e=>{
+            UIkit.notification('e',{status: 'success'})
+            e.preventDefault();
+        });*/
     })
 </script>
 </body>
