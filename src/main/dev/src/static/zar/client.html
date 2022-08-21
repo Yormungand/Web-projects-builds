@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="KKc5GTwKmw2a9XtpBxaYLQRBVZCMdlXtk8LJVAoYpHQ" />
+    <meta name="_csrf_parameter" content="_csrf" /><meta name="_csrf_header" content="X-CSRF-TOKEN" /><meta name="_csrf" content="e58b45e6-8d87-47e7-a666-38972e30f599" /><title></title>
+    <meta property="fb:app_id" content="205602176170947"/>
+    <meta property="og:title" content="">
+    <meta property="og:type" content="webSite">
+    <meta property="og:image" content="/static/frontend/css/assets/share.jpg">
+    <link rel="canonical" href="http://www.my-zar.mn"/>
+    <meta name="viewport" content="width=device-width">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#5451e7">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#5451e7">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#5451e7">
+    <link href="//static.sodonsolution.org/fonts/fontawesome-free-5/css/all.css" rel="stylesheet">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link href="http://www.my-zar.mn/static/base/webs/core/css/roboto.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.my-zar.mn/static/webs/myzar2/css/root.min.css?v=10">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="16x16 24x24 32x32 48x48 64x64"/>
+    <link rel="shortcut icon" type="image/png" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="196x196" >
+    <link rel="icon" type="image/x-icon"  href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="16x16 24x24 32x32 48x48 64x64">
+    <link rel="icon" type="image/png" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="76x76">
+    <link rel="icon" type="image/png" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="128x128">
+    <link rel="icon" type="image/png" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="196x196">
+    <link rel="apple-touch-icon-precomposed" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="57x57">
+    <link rel="apple-touch-icon-precomposed" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="60x60">
+    <link rel="apple-touch-icon-precomposed" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="72x72">
+    <link rel="apple-touch-icon-precomposed" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="76x76">
+    <link rel="apple-touch-icon-precomposed" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="114x114">
+    <link rel="apple-touch-icon-precomposed" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="120x120">
+    <link rel="apple-touch-icon-precomposed" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="144x144">
+    <link rel="apple-touch-icon-precomposed" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="152x152">
+    <link rel="apple-touch-icon-precomposed" href="http://www.my-zar.mn/static/webs/myzar/assets/favicon.png" sizes="180x180">
+
+    <script src="http://www.my-zar.mn/static/webs/myzar2/js/root.min.js?v=3"></script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-115011277-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajaxSetup({
+                headers:{
+                    'X-CSRF-TOKEN': 'e58b45e6-8d87-47e7-a666-38972e30f599'
+                },
+                statusCode:{
+                    401:function(){
+                        window.location.reload();
+                    }
+                },
+                error:function(event, config, error){
+                    switch (event.status){
+                        case 401: msg = 'Таны SESSION дууссан байна'; break;
+                        case 403: msg = 'Таны эрх хүрэлцэхгүй байна'; break;
+                        case 500: msg = 'Сервер дээр алдаа гарлаа'; break;
+                        case 503: msg = 'Сервер лүү түр хугацаанд холбогдох боломжгүй байна, дараа дахин холбогдоно уу'; break;
+                        default: msg = event.statusText;
+                    }
+                    UIkit.notification({message: event.status+'. '+msg, pos: 'top-right',status: 'danger'})
+                }
+            });
+        });
+        function _postJSON(url, data, callback){
+            $.ajax({
+                method: 'POST',
+                url: url,
+                headers: {
+                    Accept: 'application/json'
+                },
+                data: data,
+                success: function(res){
+                    if(callback!==undefined) callback(res);
+                }
+            });
+        }
+        function _postJSON2(url, data, callback){
+            $.ajax({
+                method: 'POST',
+                url: url,
+                headers: {
+                    Accept: 'application/json'
+                },
+                contentType: "application/json;charset=utf-8",
+                data: data,
+                success: function(res){
+                    if(callback!==undefined) callback(res);
+                }
+            });
+        }
+        function _getJSON(url, data, callback){
+            $.ajax({
+                method: 'GET',
+                url: url,
+                headers: {
+                    Accept: 'application/json'
+                },
+                data: data,
+                success: function(res){
+                    if(callback!==undefined) callback(res);
+                }
+            });
+        }
+        function _getJSON2(url, data, callback){
+            $.ajax({
+                method: 'GET',
+                url: url,
+                headers: {
+                    Accept: 'application/json'
+                },
+                contentType: "application/json;charset=utf-8",
+                data: data,
+                success: function(res){
+                    if(callback!==undefined) callback(res);
+                }
+            });
+        }
+    </script>
+
+    <link rel="stylesheet" href="/static/client/dist/css/root.min.css?v=14">
+    <link rel="stylesheet" href="//static.sodonsolution.org/fonts/roboto/fonts.css">
+    <link rel="stylesheet" href="/static/client/css/cropper.min.css">
+    <script src="/static/client/dist/js/root.min.js?v=10"></script>
+    <script src="/static/client/js/ckeditor/ckeditor.js"></script>
+    <script src="/static/client/js/cropper.min.js"></script>
+    <script src="/static/client/js/ImageCrop.js"></script>
+    <link rel="stylesheet" href="/static/webs/myzar/css/client.css">
+    <style>
+        .profile__input {
+            border-radius: 5px;
+        }
+        .profile__input--error {
+            border-color: #ff0000;
+        }
+        .form-error {
+            font-size: 14px;
+            display: block;
+            text-align: center;
+            color: #FF0000;
+        }
+        .my-ad__heading{display: block;}
+        .my-ad__price{margin-top: 5px;}
+    </style>
+</head>
+<body>
+<header>
+    <div class="header" uk-sticky style="padding: 10px 0">
+        <div class="uk-container" style="width: 1200px; max-width: 100%">
+            <div class="uk-flex uk-flex-between uk-width-1-1">
+                <a href="/" class="header-logo">
+                    <img src="//resource.ads.sodonsolution.org/myzar/site/2022/02/08/vpp847prn323rpmy/mn.png" alt="myzar">
+                </a>
+                <div class="header-button">
+                    <div id="districts" style="display: none">
+                        <option value="">...</option>
+                    </div>
+                    <form class="my-search-box" action="/zaruud/search">
+                        <input type="search" class="my-input" id="searchInput" placeholder="Авто машин, Ажлын зар, Үл хөдлөх " name="q">
+                        <div style="color: #000" id="ad-counts"></div>
+                        <button class="my-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <script>
+                        $.getJSON('/api/ad/totalCount', function(data){
+                        }, true).then(function(data){
+                            const totalCount = "Авто машин, Ажлын зар, Үл хөдлөх " + "(" + data + " зар байна" + ")"
+                            $('#searchInput').attr('placeholder', totalCount);
+                        })
+                    </script>
+                    <a href="/client/myzar" title="Миний зарууд" uk-tooltip="Миний зарууд" class="my-btn my-btn-default">
+                        <i class="fas fa-store"></i> Миний зарууд
+                    </a>
+                    <a href="/client/ad/create" class="my-btn my-btn-create" uk-tooltip="Зар нэмэх" title="Зар нэмэх">
+                        <i class="fas fa-plus-circle"></i> Зар нэмэх
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<style>
+    .client-menu__children {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s;
+    }
+    .client-menu__children ul {
+        /*padding: 0;*/
+        margin-bottom: 10px;
+        padding-left: 40px;
+        list-style-type: disc;
+    }
+    .client-menu__children ul li {
+        /*padding: 0;*/
+    }
+    .client-menu__children.shown {
+        max-height: 500px;
+    }
+    .client-wrapper__menu ul li.active {
+        background-color: ghostwhite;
+    }
+    .client-menu__children ul li::marker {
+        font-size: 10px;
+    }
+    .client-menu__children ul li a {
+        padding: 5px 0;
+        font-size: 14px;
+    }
+    .client-menu__children ul li a:hover {
+        color: cornflowerblue;
+    }
+    .client-menu__children ul li a.active {
+        color: #0060af;
+    }
+</style>
+<main class="client-container">
+    <div>
+        <div class="client-heading">
+            <div class="client-heading__img">
+                8</div>
+            <div class="client-heading__text">
+                <div class="client-heading__user-name">
+                    88209980</div>
+                <div class="client-heading__user-wallet"><i class="fas fa-wallet"></i> 223,440&nbsp;₮
+                </div>
+            </div>
+        </div>
+        <div class="client-wrapper">
+            <div class="client-wrapper__menu">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);" title="Миний зарууд" uk-tooltip="Миний зарууд">
+                            <i class="fas fa-user-cog"></i>
+                            <span>Хувийн мэдээлэл</span>
+                        </a>
+                        <div class="client-menu__children shown">
+                            <ul>
+                                <li><a class="active" href="">Мэдээлэл засах</a></li>
+                                <li><a href="">Нууц үг солих</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="Миний зарууд" uk-tooltip="Миний зарууд">
+                            <i class="fas fa-store-alt"></i>
+                            <span>MyZar</span>
+                        </a>
+                        <div class="client-menu__children shown">
+                            <ul>
+                                <li><a href="">Миний зарууд</a></li>
+                                <li><a href="">Содон зар</a></li>
+                                <li><a href="">Автомат зар</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="Миний зарууд" uk-tooltip="Миний зарууд">
+                            <i class="fa fa-images"></i>
+                            <span>Баннер</span>
+                        </a>
+                        <div class="client-menu__children shown">
+                            <ul>
+                                <li><a href="">Баннерууд</a></li>
+                                <li><a href="">Онцолсон баннер</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="Миний cургалтууд" uk-tooltip="Миний зарууд">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>Миний cургалтууд</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" title="Тун удахгүй" uk-tooltip="Тун удахгүй">
+                            <i class="fas fa-comments"></i>
+                            <span>Чат</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/client/transaction" title="Хэтэвч" uk-tooltip="Хэтэвч">
+                            <i class="fa fa-wallet"></i>
+                            <span>Хэтэвч</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" title="Системээс гарах" uk-tooltip="Системээс гарах">
+                            <i class="fas fa-door-open"></i>
+                            <span>Системээс гарах</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="xh-client-content uk-padding-remove uk-width-3-4@l uk-width-expand">
+
+            </div>
+        </div>
+    </div>
+</main>
+<form action="/signout" id="signOut" method="post">
+    <input type="hidden" name="_csrf" value="e58b45e6-8d87-47e7-a666-38972e30f599" /></form>
+<div id="message"></div>
+<footer>
+    <div class="footer">
+        <div class="footer-top">
+            <div class="uk-container" style="width: 1200px; max-width: 100%">
+                <div >
+                    <div class="uk-flex uk-width-1-1 uk-flex-between">
+                        <ul class="footer-social">
+                            <li><a href="javascript:void(0);" target="_blank"><img src="//resource.ads.sodonsolution.org/"/></a></li>
+                            <li><a href="javascript:void(0);" target="_blank"><img src="//resource.ads.sodonsolution.org/"/></a></li>
+                            <li><a href="javascript:void(0);" target="_blank"><img src="//resource.ads.sodonsolution.org/"/></a></li>
+                        </ul>
+                        <ul class="footer-contact">
+                            <li>
+                                <a href="mailto:info@myzar.mn">
+                                    <i class="fas fa-envelope"></i>
+                                    info@myzar.mn
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:99777142">
+                                    <i class="fas fa-phone"></i>
+                                    9977-7142
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2020 www.my-zar.mn All rights reserved
+        </div>
+        <a href="/client/ad/create" class="my-btn my-btn-create my-btn-bottom-right">
+            <i class="fas fa-plus-circle"></i> Зар нэмэх
+        </a>
+    </div>
+
+</footer>
+</body>
+</html>
