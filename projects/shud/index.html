@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <title>SHUD</title>
-    <link rel="stylesheet" href="../css/root.css">
-    <link rel="stylesheet" href="../css/uikit.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/uikit.css">
     <link rel="stylesheet" href="../css/uikit.min.css">
     <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.css">
-    <script src="../js/uikit-icons.js"></script>
+    <script src="js/uikit-icons.js"></script>
     <script src="../js/uikit-icons.min.js"></script>
-    <script src="../js/uikit.js"></script>
-    <script src="../js/uikit.min.js"></script>
+    <script src="js/uikit.js"></script>
+    <script src="js/uikit.min.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,7 +96,7 @@
                 </ul>
             </div>
             <div class="home-page__logo">
-                <img src="../assets/logo.png">
+                <img src="assets/logo.png">
             </div>
             <div class="home-page__header-search">
                 <form id="search" action="/en/search" method="GET" class="search__button">
@@ -121,7 +121,7 @@
                             <span></span>
                         <ul id="menu">
                             <div class="mobile-menu__image">
-                                <img src="../assets/logo.png">
+                                <img src="assets/logo.png">
                             </div>
                             <li><a href="javascript:void(0)">Service</a></li>
                             <li><a href="javascript:void(0)">Promotion</a></li>
@@ -145,7 +145,7 @@
                     </div>
                 </nav>
                 <div class="mobi-img">
-                    <img src="../assets/logo.png">
+                    <img src="assets/logo.png">
                 </div>
             </div>
             <a href="javascript:void(0)" class="mobi-search">
@@ -173,19 +173,6 @@
                             <div>
                                 <div class="main-page__image">
                                     <img src="https://www.mongolchamber.mn/resource/mongolchamber/image/2022/09/02/ndoyv8ou55azel6n/304154858_3_l.jpg">
-                                    <div class="overflowContent">
-                                        <div class="swiper-desc">
-                                        <div class="swiper-title">
-                                            "Эрүүл шүд - Эрүүл Монгол" хөтөлбөр
-                                        </div>
-                                        <div class="swiper-body">
-                                            АШУҮИС, Нүүр Ам Судлалын Сургуулиас санаачилан ЭМЯ, Нүүр Ам Судлалын Мэргэжлийн салбар
-                                            зөвлөлтэй
-                                            хамтран хэрэгжүүлж буй үндэсний хөтөлбөр
-                                        </div>
-                                        <a href="javascript:void(0)" class="swiper-button">Detail</a>
-                                    </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -193,19 +180,6 @@
                             <div>
                                 <div class="main-page__image">
                                     <img src="https://www.mongolchamber.mn/resource/mongolchamber/image/2022/09/02/ndoyv8ou55azel6n/304154858_3_l.jpg">
-                                    <div class="overflowContent">
-                                        <div class="swiper-desc">
-                                            <div class="swiper-title">
-                                                "Эрүүл шүд - Эрүүл Монгол" хөтөлбөр
-                                            </div>
-                                            <div class="swiper-body">
-                                                АШУҮИС, Нүүр Ам Судлалын Сургуулиас санаачилан ЭМЯ, Нүүр Ам Судлалын Мэргэжлийн салбар
-                                                зөвлөлтэй
-                                                хамтран хэрэгжүүлж буй үндэсний хөтөлбөр
-                                            </div>
-                                            <a href="javascript:void(0)" class="swiper-button">Detail</a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -213,19 +187,6 @@
                             <div>
                                 <div class="main-page__image">
                                     <img src="https://www.mongolchamber.mn/resource/mongolchamber/image/2022/09/02/ndoyv8ou55azel6n/304154858_3_l.jpg">
-                                    <div class="overflowContent">
-                                        <div class="swiper-desc">
-                                            <div class="swiper-title">
-                                                "Эрүүл шүд - Эрүүл Монгол" хөтөлбөр
-                                            </div>
-                                            <div class="swiper-body">
-                                                АШУҮИС, Нүүр Ам Судлалын Сургуулиас санаачилан ЭМЯ, Нүүр Ам Судлалын Мэргэжлийн салбар
-                                                зөвлөлтэй
-                                                хамтран хэрэгжүүлж буй үндэсний хөтөлбөр
-                                            </div>
-                                            <a href="javascript:void(0)" class="swiper-button">Detail</a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -540,6 +501,9 @@
                 prevEl: ".custom-swiper-button-prev",
                 nextEl: ".custom-swiper-button-next",
             },
+            autoplay: {
+                delay: 2000,
+            },
             pagination: {
                 el: ".swiper-pagination",
             },
@@ -675,12 +639,25 @@
         z-index: 100;
         padding: 15px;
         border-radius: 50%;
-        background-color: #fff;;
+        background-color: #fff;
+
+    }
+    @media (max-width: 700px){
+        .item-box svg{
+            width: 40px;
+            height: 40px;
+        }
+    }
+    @media (min-width: 1400px){
+        .home-page__logo img{
+            width: 130px;
+            height: 120px;
+        }
     }
     @media (min-width: 1600px){
         .home-page__logo img{
-            width: 150px;
-            height: 130px;
+            width: 130px;
+            height: 120px;
         }
     }
     @media (max-width: 1000px) {
@@ -696,6 +673,18 @@
         }
         .home-page__header {
             display: none!important;
+        }
+    }
+    @media (max-width: 1300px){
+        .home-page__logo img{
+            width: 100px;
+            height: 90px;
+        }
+        .home-page__menu ul li a{
+            font-size: 14px;
+            color: #040e3f;
+            padding-right: 20px;
+            font-weight: 700;
         }
     }
     @media (max-width: 900px){
@@ -1055,6 +1044,7 @@
         /*color: rgba(4,14,63,.64);*/
         color: #ec2027;
         font-weight: 700;
+        font-family: italic;
         font-size: 28px;
     }
     .item-box {
