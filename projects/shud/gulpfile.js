@@ -16,6 +16,9 @@ function refresh() {
 
 function css() {
     return gulp.src([
+        '../../node_modules/uikit/dist/css/uikit.css',
+        '../../node_modules/swiper/swiper-bundle.css',
+        '../../node_modules/@fortawesome/fontawesome-free/css/all.css',
         './css/*.css',
     ])
         .pipe(cleancss())
