@@ -4903,7 +4903,6 @@ ul.uk-nav-sub {
   /* 1 */
   display: none;
   /* 2 */
-  position: absolute;
   z-index: 1020;
   /* 3 */
   box-sizing: border-box;
