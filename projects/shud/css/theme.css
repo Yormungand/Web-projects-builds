@@ -894,6 +894,7 @@ from input{
 }
 .content-body p {
     margin-bottom: 16px;
+    text-align: start!important;
 }
 .content-body p {
     min-height: 40px;
@@ -903,6 +904,7 @@ from input{
     font-size: 20px;
     line-height: 40px;
     color: #333;
+    text-align: start!important;
 }
 @media (min-width: 768px){
     .md\:mt-14 {
