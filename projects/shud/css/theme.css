@@ -997,9 +997,12 @@ from input{
         max-width: 768px;
     }
 }
-@media (min-width: 640px){
+@media (min-width: 1200px){
     .container {
-        max-width: 640px;
+        max-width: 1100px;
+    }
+    .bs-text-padding {
+        padding: 0px 100px;
     }
     .container {
         width: 100%;
@@ -1163,6 +1166,32 @@ s
         margin-bottom: 30px!important;
     }
     .max-w-5xl{
-        font-size: 15px;
+        font-size: 22px;
+        text-transform: uppercase;
+        line-height: 1.7rem;
     }
+    .content-body * {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 40px;
+        color: #333;
+        line-height: 1.8rem;
+        text-align: start!important;
+    }
+}
+
+.shud__title {
+    position: relative;
+    top: 10px;
+}
+
+.container-large{
+    display: flow-root;
+    box-sizing: content-box;
+    max-width: 2029px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
 }
