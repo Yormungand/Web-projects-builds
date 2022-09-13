@@ -20,7 +20,7 @@
     <header>
         <div class="header-height">
             <div class="shud-header">
-            <div class="header-red__line"></div>
+            <div class="header-red-line"></div>
             <div class="container-large">
                 <div class="home-page__header">
         <div class="home-page__menu">
@@ -134,32 +134,9 @@
                             <li><a href="javascript:void(0)">Сургалт</a></li>
                             <li><a href="javascript:void(0)">Ажлын байр</a></li>
                             <li>
-                                <a href="javascript:void(0)">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                         stroke-linejoin="round" class="icon"
-                                         data-inject-url="https://www.mobicom.mn/build/assets/dd75d8007592eb3928c3691e2d251294.svg"
-                                         style="margin-top: -3px; vertical-align: middle;">
-                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
-                                    </svg>
-                                    Онлайн дэлгүүр
-                                </a>
+                                <a href="javascript:void(0)">Блог</a>
                             </li>
-                            <ul class="uk-list uk-flex uk-flex-wrap uk-margin-auto-vertical uk-margin-remove-top uk-accordion" style="flex-direction: column" uk-accordion="">
-                                <li class="">
-                                    <a href="javascript:void(0)" class="uk-accordion-title ">Блог</a>
-                                    <div class="uk-accordion-content">
-                                        <ul>
-                                            <li><a href="/ac/lifestages" class="color2d font14">Нярай үе</a></li>
-                                            <li><a href="/ac/lifestages" class="color2d font14">Балчир нас</a></li>
-                                            <li><a href="/ac/lifestages" class="color2d font14">Өсвөр нас</a></li>
-                                            <li><a href="/ac/lifestages" class="color2d font14">Жирэмсэн үе</a></li>
-                                            <li><a href="/ac/lifestages" class="color2d font14">Ахмад настан</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
+                            <ul class="uk-list uk-flex uk-flex-wrap uk-margin-auto-vertical uk-margin-remove-top uk-accordion" style="flex-direction: column; margin-left: 25px" uk-accordion="">
                                 <li class="">
                                     <a href="#" class="uk-accordion-title ">Насны онцлог</a>
                                     <div class="uk-accordion-content">
@@ -233,6 +210,20 @@
                                     </div>
                                 </li>
                             </ul>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                         stroke-linejoin="round" class="icon"
+                                         data-inject-url="https://www.mobicom.mn/build/assets/dd75d8007592eb3928c3691e2d251294.svg"
+                                         style="margin-top: -3px; vertical-align: middle;">
+                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                    </svg>
+                                    Онлайн дэлгүүр
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -592,8 +583,9 @@
                 prevEl: ".custom-swiper-button-prev",
                 nextEl: ".custom-swiper-button-next",
             },
+            loop: true,
             autoplay: {
-                delay: 3600,
+                delay: 3500,
             },
             pagination: {
                 el: ".swiper-pagination",
