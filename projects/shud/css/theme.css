@@ -510,7 +510,7 @@ from input{
 {
     position: absolute;
     width: 250px;
-    height: 2000px;
+    height: 560px;
     box-shadow: 0 0 10px #85888C;
     margin: -50px 0 0 -50px;
     padding: 50px;
@@ -520,6 +520,8 @@ from input{
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 #menu li
@@ -1199,3 +1201,4 @@ s
     padding-right: 15px;
     position: relative;
 }
+
