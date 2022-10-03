@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="code-box-1">
+  <div class="code-tabs">
+    <button class="tablinks" onclick="openTab(event, 'disp-Apples','code-box-1')" id="defaultOpen-1">Apples</button>
+    <button class="tablinks" onclick="openTab(event, 'disp-Oranges','code-box-1')">Oranges</button>
+    <button class="tablinks" onclick="openTab(event, 'disp-Bananas','code-box-1')">Bananas</button>
+    <div class="spacer"></div>
+  </div>
+
+  <pre id="disp-Apples" class="sg-tab-content">
+        <p>foo-1</p>
+    </pre>
+
+  <pre id="disp-Oranges" class="sg-tab-content">
+        <p>foo-2</p>
+    </pre>
+
+  <pre id="disp-Bananas" class="sg-tab-content">
+        <p>foo-3</p>
+    </pre>
+</div>
+
+<div id="code-box-2">
+  <div class="code-tabs">
+    <button class="tablinks" onclick="openTab(event, 'disp-Plums','code-box-2')" id="defaultOpen-2">Plums</button>
+    <button class="tablinks" onclick="openTab(event, 'disp-Pears','code-box-2')">Pears</button>
+    <button class="tablinks" onclick="openTab(event, 'disp-Grapes','code-box-2')">Grapes</button>
+    <div class="spacer"></div>
+  </div>
+
+  <pre id="disp-Plums" class="sg-tab-content">
+        <p>foo-4</p>
+    </pre>
+
+  <pre id="disp-Pears" class="sg-tab-content">
+        <p>foo-5</p>
+    </pre>
+
+  <pre id="disp-Grapes" class="sg-tab-content">
+        <p>foo-6</p>
+    </pre>
+</div>
+</body>
+</html>
+
+<script>
+  document.getElementById("defaultOpen-1").click();
+
+  function openTab(evt, tabName, boxName) {
+    var i, tabcontent, tablinks;
+
+    var box = document.getElementById(boxName)
+
+    tabcontent = box.getElementsByClassName("sg-tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    tablinks = box.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" sg-current", "");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " sg-current";
+  }
+</script>

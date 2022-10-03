@@ -225,8 +225,12 @@ body{
     top: 52px;
     right: 124px;
 }
-.header-red__line{
-    border: 3px solid #ec2027;
+.header-red-line{
+    display: flex;
+    background: #f50909;
+    height: 3px;
+    margin: 0;
+    padding: 0
 }
 .search__button svg{
     position: absolute;
@@ -343,7 +347,7 @@ svg:not(:root){
 #search input{
     color: #040e3f;
     width: 200px;
-    height: 36px;
+    height: 32px;
     padding-left: 40px;
     border: 1px solid #F5F5F5;
     background: #f6f7f9;
@@ -515,7 +519,15 @@ from input{
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
+}
+
+#menu .menu-wrap{
+    width: 250px;
+    height: 560px;
+    padding-right: 20px;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 #menu li
@@ -1195,3 +1207,4 @@ s
     padding-right: 15px;
     position: relative;
 }
+
