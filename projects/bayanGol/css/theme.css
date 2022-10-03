@@ -907,13 +907,12 @@ img {
 .hero {
     height: 450px;
     max-width: 100%;
-    margin-top: 110px;
 }
 
 .hero.providers {
     position: relative;
     height: 550px;
-    background-image: url(../assets/20044.jpg);
+    background-image: url(../assets/24emch.jpg);
     background-position: 50% 0%;
     background-size: cover;
     background-attachment: scroll;
