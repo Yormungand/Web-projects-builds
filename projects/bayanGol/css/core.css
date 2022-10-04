@@ -1,3 +1,5 @@
+@import "../fonts/Roboto/font.css";
+
 :root {
     --br-point-xl: 1600px;
     --br-point-n: 1200px;
@@ -1545,6 +1547,7 @@ a:hover{
 
 * {
     font-family: "Roboto";
+    font-weight: 600;
     text-decoration: none
 }
 

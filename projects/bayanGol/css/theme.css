@@ -1,9 +1,6 @@
+@import "../fonts/Roboto/font.css";
+
 <!-- Толгой хэсгийн css-->
-
-body{
-    font-family: 'Roboto';
-}
-
 
 .nav-menu-item{
     position: relative;
@@ -340,7 +337,7 @@ header .navbar .nav-menu{
 header .navbar .nav-menu .nav-menu-item .nav-menu-first {
     position: relative;
     padding: 1.30208vw 1.5625vw;
-    font-weight: 500;
+    font-weight: 600;
     color: #fff;
 }
 header .navbar .nav-menu .nav-menu-item .nav-menu-link {
@@ -1635,7 +1632,7 @@ header .menubar .nav-menu {
 header .menubar .nav-menu .nav-menu-item .nav-menu-first {
     position: relative;
     padding: 1.30208vw 1.5625vw;
-    font-weight: 500;
+    font-weight: 600;
     color: #22181c;
 }
 
