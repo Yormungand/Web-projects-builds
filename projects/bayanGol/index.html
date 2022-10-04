@@ -33,7 +33,6 @@
                             <a href="javascript:void(0);" class="nav-operate-btn nav-search-btn nav-search-btn-mob"
                                id="navSearchMobBtn">search</a>
                             <input id="navSearch" class="nav-search-input" type="search" data-url="/en/search-result">
-                            <a href="javascript:void(0)" class="nav-operate-btn nav-login-btn" id="navLoginBtn">login</a>
                             <i class="nav-operate-btn nav-logined-btn hidden" id="navLoginedBtn">
                                 <div class="nav-logined-block">
                                     <a href="/en/auth/user-account" class="nav-logined-block-ele text-red">My
@@ -54,57 +53,27 @@
                             <a href="about-us.html" class="nav-menu-link nav-menu-first">Бидний тухай</a>
                         </li>
                         <li class="nav-menu-item">
-                            <a href="list-view.html" class="nav-menu-link nav-menu-first">Үйлчилгээ<i class="fa fa-caret-down"></i></a>
-                            <div class="dropdown-contain__main">
-                                <div class="menu__list-wrapper">
-                                    <div class="menu__list">
-                                        <a href="javascript:void(0)" class="menu-style red">Engineer service</a>
-                                        <a href="javascript:void(0)" class="menu-style">Customer training</a>
-                                        <a href="javascript:void(0)" class="menu-style">ISO</a>
-                                    </div>
-                                </div>
-                                <div class="grid-20 mt-10">
-                                    <div class="width-6-12">
-                                        <div class="menu__image">
-                                            <img src="assets/image2.jpg">
-                                        </div>
-                                    </div>
-                                    <div class="width-6-12">
-                                        <div class="drop-menu__desc">
-                                            <h1>Systematically ensure accuracy</h1>
-                                            <ul>
-                                                <li>
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dumm
-                                                </li>
-                                                <li>
-                                                    It was popularised in the 1960s with the release of Letraset sheets
-                                                    containing Lorem Ipsum passages,
-                                                </li>
-                                                <li>
-                                                    and more recently with desktop publishing software like Aldus
-                                                    PageMaker including versions of Lorem Ipsu
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                            <a href="service.html" class="nav-menu-link nav-menu-first">Үйлчилгээ<i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-contain">
+                                <a href="javascript:void(0)" class="drop-menu">Engineer service</a>
+                                <a href="javascript:void(0)" class="drop-menu">Customer training</a>
+                                <a href="javascript:void(0)" class="drop-menu">ISO</a>
                             </div>
                         </li>
                         <li class="nav-menu-item">
                             <a href="Product.html" class="nav-menu-link nav-menu-first dropbtn">Бүтээгдэхүүн<i class="fa fa-caret-down"></i></a>
                             <div class="dropdown-contain">
+                                <a href="javascript:void(0)" class="drop-menu">Тоног төхөөрөмж</a>
                                 <a href="javascript:void(0)" class="drop-menu">Урвалж хэрэгсэл</a>
-                                <a href="javascript:void(0)" class="drop-menu">Эм биологи идэвхи</a>
-                                <a href="javascript:void(0)" class="drop-menu">Бүтээгдэхүүн</a>
                                 <a href="list-page.html" class="drop-menu">Гоо сайхан</a>
+                                <a href="javascript:void(0)" class="drop-menu">Эм биологи</a>
                             </div>
                         </li>
                         <li class="nav-menu-item">
-                            <a href="javascript:void(0)" class="nav-menu-link nav-menu-first">Our provider</a>
+                            <a href="our-providers.html" class="nav-menu-link nav-menu-first">Our provider</a>
                         </li>
                         <li class="nav-menu-item">
-                            <a href="javascript:void(0)" class="nav-menu-link nav-menu-first">Холбоо барих</a>
+                            <a href="Contact-us.html" class="nav-menu-link nav-menu-first">Холбоо барих</a>
                         </li>
                     </ul>
                 </div>
@@ -114,10 +83,6 @@
                     <div class="wrap">
                         <div class="top-navbar-item">
                             <a class="top-navbar-text" title="Media Center" href="javascript:void(0)">Media Center</a>
-                        </div>
-                        <div class="top-navbar-item">
-                            <a class="top-navbar-text" title="Investor Relations" href="javascript:void(0)">Investor
-                                Relations</a>
                         </div>
                         <div class="top-navbar-item">
                             <a class="top-navbar-text" title="Contact Us" href="Contact-us.html" target="_blank">Contact
@@ -277,7 +242,7 @@
             </div>
         </div>
     </div>
-    <div class="news">
+    <div class="news mt-40">
         <section class="mr-home-news" style="">
             <div id="mHomeNewsTrigger"></div>
             <div data-scrollmagic-pin-spacer="" class="scrollmagic-pin-spacer" style="inset: auto; margin: 0px; display: flex; position: relative; box-sizing: content-box; min-height: 975px; height: auto; padding-top: 0px; padding-bottom: 0px;"><div class="mr-home-news-pin" style="position: relative; margin: auto; inset: 0px auto auto 0px; box-sizing: border-box; width: 100%;">
@@ -377,7 +342,7 @@
         </section>
     </div>
     <div class="container">
-        <div class="related_post post-type-service">
+        <div class="related_post post-type-service mt-40">
             <h2 class="related-posts-title">Our cooperation</h2>
             <div class="swiper related-container footerSwiper">
                 <div class="swiper-wrapper">
@@ -558,193 +523,7 @@
     }
 </script>
 
-<style>
-    .drop-menu__desc ul li {
-        color: #4c4c4c;
-        font-size: 14px;
-        list-style-type: disc;
-    }
-    .drop-menu__desc h1{
-        font-size: 20px;
-        color: #22181c;
-        margin-top: 20px;
-    }
-    .red{
-        color: #ec2027!important;
-    }
-    .menu__image{
-        position: relative;
-        overflow: hidden;
-        padding-bottom: 64.11%;
-        height: 0;
-        background-repeat: no-repeat;
-    }
-
-    .menu__list{
-        position: relative;
-    }
-    .menu__image img{
-        position: absolute;
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-    }
-    .menu__list a:hover{
-        color: #ec2027;
-    }
-    .menu__list::after{
-        content: "";
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 123px;
-        height: 2px;
-        background-color: #ec2027;
-        transition: width .5s,background-color .5s;
-    }
-    .menu__list{
-        border-bottom: 1px solid #e9e9e9;
-    }
-    .menu__list{
-        display: flex;
-        padding: 0;
-    }
-
-    .menu-style{
-        color: #22181c;
-        font-size: 16px;
-        font-weight: 500;
-    }
-    .nav-menu li:hover .dropdown-contain__main {
-        display: block;
-        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
-    }
-    .dropdown-contain__main a {
-        text-decoration: none;
-        display: block !important;
-        text-align: left;
-        padding: 20px 20px 5px 0px;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-    }
-    .dropdown-contain__main{
-        background-color: #fff;
-        display: none;
-        overflow: hidden;
-        min-width: 800px;
-        min-height: 400px;
-        position: absolute;
-        top: 73px;
-        z-index: 1;
-        cursor: pointer;
-    }
-    a.btn-grey {
-        border-color: #4c4c4c;
-        color: #4c4c4c;
-    }
-
-    .btn-bordered {
-        display: inline-block;
-        line-height: 23px;
-        padding: 6px 23px;
-        border: 1px solid transparent;
-    }
-    #covidtext{
-        color: #646464;
-        font-size: 14px;
-    }
-    a.covid {
-        font-size: 17px !important;
-        text-transform: uppercase;
-    }
-    .covid {
-        color: white;
-        background-color: #e2001a;
-        border: 1px solid transparent;
-        border-radius: 10px;
-        margin: 5px 10px 5px 10px;
-        padding: 6px 23px 6px 23px;
-    }
-    #bilder {
-        background-color: #ec2027;
-        padding-bottom: 30px;
-        padding-top: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    #ac-wrapper {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 105%;
-        background: rgba(0,0,0,0.4);
-        z-index: 1001;
-    }
-    #popup {
-        position: relative;
-        top: 16%;
-        width: 90%;
-        max-width: 950px;
-        margin: auto;
-        box-sizing: border-box;
-        background-color: #ffffff;
-        margin-top: 5%;
-        font-size: 14px;
-    }
-    #popup .responsive {
-        width: 100%;
-        height: auto;
-        max-height: 205px;
-    }
-    .btn-rounded {
-        border-radius: 5px;
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 5px;
-    }
-    .contact-form, button, input, select, textarea {
-        color: #646464!important;
-    }
-    input, button, select, textarea {
-        font-family: inherit;
-        line-height: inherit;
-    }
-    button, html input[type="button"], input[type="reset"], input[type="submit"] {
-        min-width: 130px;
-        cursor: pointer;
-        -webkit-appearance: button;
-    }
-    button, select {
-        text-transform: none;
-    }
-    button, input {
-        line-height: normal;
-    }
-    button {
-        margin: 0;
-        font-family: inherit;
-        font-size: 100%;
-    }
-    button, input, select, textarea {
-        border: 1px solid #F4F4F4;
-        color: #A5A5A5;
-        font-family: inherit;
-        font-size: 13px;
-        margin: 0 10px 7px 0;
-        padding: 10px 9px;
-        box-shadow: 0 1px 0 #f4f4f4;
-        -moz-box-shadow: 0 1px 0 #f4f4f4;
-        -webkit-box-shadow: 0 1px 0 #f4f4f4;
-        border-radius: 5px;
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 5px;
-        float: left;
-    }
-</style>
-
+x
 
 <script>
     function myFunction() {
