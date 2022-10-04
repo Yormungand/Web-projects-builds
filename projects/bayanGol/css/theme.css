@@ -1,5 +1,84 @@
 <!-- Толгой хэсгийн css-->
 
+body{
+    font-family: Roboto;
+}
+
+
+.nav-menu-item{
+    position: relative;
+}
+
+.nav-menu-item a, .dropbtn{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 14px 50px;
+    text-decoration: none;
+
+}
+.active, .nav-menu li:hover{
+    border-bottom: 3px solid #ec2027;
+    transition: 0.4s ease-in;
+}
+.menubar ul li a{
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+}
+.drop-menu{
+    font-size: 14px;
+    font-weight: 400;
+    color: #beb6ea;
+}
+
+.fa-caret-down{
+    margin-left: 3px;
+    vertical-align: bottom;
+}
+
+.dropdown-contain {
+    border-color: rgba(64,92,152,1);
+    background-color: rgba(64,92,152,1);;
+    display: none;
+    overflow: hidden;
+    min-width: 200px;
+    position: absolute;
+    top: 74px;
+    z-index: 1;
+    cursor:pointer;
+}
+.dropdown-contain a:hover{
+    color: #fff!important;
+}
+.dropdown-contain a{
+    text-decoration: none;
+    display: block !important;
+    text-align: left;
+    padding: 15px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1)
+}
+.dropdown-contain a:hover{
+    border-color: rgba(64,92,152,1)
+}
+.nav-menu li:hover .dropdown-contain{
+    display: block;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+.bn{
+    border: none !important;
+}
+.middle{
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
 header .top-navbar{
     position: relative;
     z-index: 2;
@@ -912,7 +991,7 @@ img {
 .hero.providers {
     position: relative;
     height: 550px;
-    background-image: url(../assets/24emch.jpg);
+    background-image: url(../assets/about-us1.jpg);
     background-position: 50% 0%;
     background-size: cover;
     background-attachment: scroll;
@@ -1577,12 +1656,12 @@ header .menubar .no-link {
 ol, ul {
     padding-left: 30px;
 }
-*+address, *+dl, *+fieldset, *+figure, *+ol, *+p, *+pre, *+ul {
-    margin-top: 20px;
-}
-address, dl, fieldset, figure, ol, p, pre, ul {
-    margin: 0 0 20px 0;
-}
+/**+address, *+dl, *+fieldset, *+figure, *+ol, *+p, *+pre, *+ul {*/
+/*    margin-top: 20px;*/
+/*}*/
+/*address, dl, fieldset, figure, ol, p, pre, ul {*/
+/*    margin: 0 0 20px 0;*/
+/*}*/
 
 .icontent ul li {
     list-style: circle;
@@ -1634,7 +1713,7 @@ address, dl, fieldset, figure, ol, p, pre, ul {
     width: 100%;
 }
 .about_c {
-    background: url(assets/about.png);
+    background: url(../assets/about.png);
     background-position: bottom right !important;
     background-repeat: no-repeat !important;
 }
