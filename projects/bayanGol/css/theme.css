@@ -17,7 +17,7 @@ body{
     text-decoration: none;
 
 }
-.active, .nav-menu li:hover{
+.active, .nav-menu .nav-menu-item:hover{
     border-bottom: 3px solid #ec2027;
     transition: 0.4s ease-in;
 }
@@ -1361,7 +1361,7 @@ mr-home-news .mr-home-news-container .mr-home-news-item .home-news-content .home
 .article__image{
     position: relative;
     overflow: hidden;
-    padding-bottom: 64.11%;
+    padding-bottom: 79.11%;
     height: 0;
     background-repeat: no-repeat;
 }

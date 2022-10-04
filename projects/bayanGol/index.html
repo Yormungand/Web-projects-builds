@@ -55,14 +55,49 @@
                         </li>
                         <li class="nav-menu-item">
                             <a href="javascript:void(0)" class="nav-menu-link nav-menu-first">Үйлчилгээ</a>
+                            <div class="dropdown-contain__main">
+                                <div class="menu__list-wrapper">
+                                    <div class="menu__list">
+                                        <a href="javascript:void(0)" class="menu-style red">Engineer service</a>
+                                        <a href="javascript:void(0)" class="menu-style">Customer training</a>
+                                        <a href="javascript:void(0)" class="menu-style">ISO</a>
+                                    </div>
+                                </div>
+                                <div class="grid-20 mt-10">
+                                    <div class="width-6-12">
+                                        <div class="menu__image">
+                                            <img src="assets/image2.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="width-6-12">
+                                        <div class="drop-menu__desc">
+                                            <h1>Systematically ensure accuracy</h1>
+                                            <ul>
+                                                <li>
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry. Lorem Ipsum has been the industry's standard dumm
+                                                </li>
+                                                <li>
+                                                    It was popularised in the 1960s with the release of Letraset sheets
+                                                    containing Lorem Ipsum passages,
+                                                </li>
+                                                <li>
+                                                    and more recently with desktop publishing software like Aldus
+                                                    PageMaker including versions of Lorem Ipsu
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-menu-item">
                             <a href="Product.html" class="nav-menu-link nav-menu-first dropbtn">Бүтээгдэхүүн<i class="fas fa-caret-down"></i></a>
                             <div class="dropdown-contain">
-                                <a href="javascript:void(0)" class="drop-menu dropbtn">Урвалж хэрэгсэл</a>
-                                <a href="javascript:void(0)" class="drop-menu dropbtn">Эм биологи идэвхи</a>
-                                <a href="javascript:void(0)" class="drop-menu dropbtn">Бүтээгдэхүүн</a>
-                                <a href="javascript:void(0)" class="drop-menu dropbtn">Гоо сайхан</a>
+                                <a href="javascript:void(0)" class="drop-menu">Урвалж хэрэгсэл</a>
+                                <a href="javascript:void(0)" class="drop-menu">Эм биологи идэвхи</a>
+                                <a href="javascript:void(0)" class="drop-menu">Бүтээгдэхүүн</a>
+                                <a href="javascript:void(0)" class="drop-menu">Гоо сайхан</a>
                             </div>
                         </li>
                         <li class="nav-menu-item">
@@ -434,14 +469,11 @@
             </div>
             <div class="wrapper" id="bilder">
                 <div class="grid-20" style="padding-bottom: 20px; padding-top: 15px;">
-                    <div class="width-4-12">
+                    <div class="width-6-12">
                         <img src="assets/about-us2.jpg" class="responsive">
                     </div>
-                    <div class="width-4-12">
+                    <div class="width-6-12">
                         <img src="assets/about-us1.jpg" class="responsive">
-                    </div>
-                    <div class="width-4-12">
-                        <img src="assets/about-us2.jpg" class="responsive">
                     </div>
                 </div>
             </div>
@@ -517,6 +549,88 @@
 </script>
 
 <style>
+    .drop-menu__desc ul li {
+        color: #4c4c4c;
+        font-size: 14px;
+        list-style-type: disc;
+    }
+    .drop-menu__desc h1{
+        font-size: 20px;
+        color: #22181c;
+        margin-top: 20px;
+    }
+    .red{
+        color: #ec2027!important;
+    }
+    .menu__image{
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 64.11%;
+        height: 0;
+        background-repeat: no-repeat;
+    }
+
+    .menu__list{
+        position: relative;
+    }
+    .menu__image img{
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+    .menu__list a:hover{
+        color: #ec2027;
+    }
+    .menu__list::after{
+        content: "";
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 123px;
+        height: 2px;
+        background-color: #ec2027;
+        transition: width .5s,background-color .5s;
+    }
+    .menu__list{
+        border-bottom: 1px solid #e9e9e9;
+    }
+    .menu__list{
+        display: flex;
+        padding: 0;
+    }
+
+    .menu-style{
+        color: #22181c;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .nav-menu li:hover .dropdown-contain__main {
+        display: block;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    }
+    .dropdown-contain__main a {
+        text-decoration: none;
+        display: block !important;
+        text-align: left;
+        padding: 20px 20px 5px 0px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .dropdown-contain__main{
+        background-color: #fff;
+        display: none;
+        overflow: hidden;
+        min-width: 800px;
+        min-height: 400px;
+        position: absolute;
+        top: 73px;
+        z-index: 1;
+        cursor: pointer;
+    }
     a.btn-grey {
         border-color: #4c4c4c;
         color: #4c4c4c;
@@ -545,7 +659,7 @@
         padding: 6px 23px 6px 23px;
     }
     #bilder {
-        background-color: #002e63;
+        background-color: #ec2027;
         padding-bottom: 30px;
         padding-top: 15px;
         padding-left: 15px;
@@ -562,6 +676,7 @@
     }
     #popup {
         position: relative;
+        top: 16%;
         width: 90%;
         max-width: 950px;
         margin: auto;
