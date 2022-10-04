@@ -1,7 +1,7 @@
 <!-- Толгой хэсгийн css-->
 
 body{
-    font-family: Roboto;
+    font-family: 'Roboto';
 }
 
 
@@ -17,9 +17,9 @@ body{
     text-decoration: none;
 
 }
-.active, .nav-menu .nav-menu-item:hover{
+.nav-menu .nav-menu-item:hover{
     border-bottom: 3px solid #ec2027;
-    transition: 0.4s ease-in;
+    /*transition: 0.4s ease-in;*/
 }
 .menubar ul li a{
     text-decoration: none;
@@ -267,7 +267,6 @@ input[type=search] {
     -webkit-appearance: textfield;
 }
 input, select, textarea {
-    font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
 }
@@ -746,9 +745,7 @@ header .top-navbar.active .top-navbar-block, header .top-navbar.show .top-navbar
 
  }
 
-.fal, .far {
-    font-family: "Font Awesome 5 Pro";
-}
+
 .fal {
     font-weight: 300;
 }
@@ -791,14 +788,12 @@ abbr[title] {
     list-style-type: none;
 }
 #footer .widget .widget-title, #footer .widget .widgettitle {
-    font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300!important;
 }
 
 .widget .widget-title {
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto Condensed', sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 20px;
@@ -853,7 +848,6 @@ abbr[title] {
 }
 #footer {
     background-color: transparent;
-    font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300!important;
     color: #8b99a6!important;
 }
@@ -1462,10 +1456,8 @@ li, ol, ul {
     list-style: none;
 }
 
-header .menubar .nav-menu {
-    list-style: none;
-    font-size: 0;
-    margin-left: 12.1875vw;
+ul{
+    margin-bottom: 0!important;
 }
 
 header .menubar .nav-logo {
@@ -1689,7 +1681,7 @@ ol, ul {
 }
 
 .icontent ul li{
-    line-height: 26px;
+    line-height: 30px;
     text-align: justify;
     font-weight: 200;
     font-size: 16px;
@@ -1743,7 +1735,6 @@ ol, ul {
     font-size: 9.5px;
 }
 .fa, .fas {
-    font-family: "Font Awesome 5 Pro";
     font-weight: 900;
 }
 .back-color{
@@ -1759,6 +1750,5 @@ ol, ul {
     float: left;
     color: #777;
     padding: 7px 5px;
-    font-family: 'Roboto Condensed', sans-serif;
     font-size: 13.5px;
 }
