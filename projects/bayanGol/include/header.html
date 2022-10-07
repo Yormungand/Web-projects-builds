@@ -4,6 +4,37 @@
         <div class="header-modal" style="display: none;"></div>
         <div id="botNavbar" class="menubar">
           <div class="wrap">
+            <ul class="nav-menu">
+              <li class="nav-menu-item">
+                <a href="index.html" class="nav-menu-link nav-menu-first">Нүүр хуудас</a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="../about-us.html" class="nav-menu-link nav-menu-first">Бидний тухай</a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="service.html" class="nav-menu-link nav-menu-first">Үйлчилгээ<i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-contain">
+                  <a href="javascript:void(0)" class="drop-menu">Engineer service</a>
+                  <a href="javascript:void(0)" class="drop-menu">Customer training</a>
+                  <a href="javascript:void(0)" class="drop-menu">ISO</a>
+                </div>
+              </li>
+              <li class="nav-menu-item">
+                <a href="Product.html" class="nav-menu-link nav-menu-first dropbtn">Бүтээгдэхүүн<i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-contain">
+                  <a href="equipment-view.html" class="drop-menu">Тоног төхөөрөмж</a>
+                  <a href="Reagents.html" class="drop-menu">Урвалж хэрэгсэл</a>
+                  <a href="list-page.html" class="drop-menu">Гоо сайхан</a>
+                  <a href="javascript:void(0)" class="drop-menu">Эм биологи</a>
+                </div>
+              </li>
+              <li class="nav-menu-item">
+                <a href="our-providers.html" class="nav-menu-link nav-menu-first">Our provider</a>
+              </li>
+              <li class="nav-menu-item">
+                <a href="Contact-us.html" class="nav-menu-link nav-menu-first">Холбоо барих</a>
+              </li>
+            </ul>
             <div class="nav-block">
               <a href="/" class="nav-logo">
                 <img src="assets/Bayangol.png">
@@ -23,37 +54,6 @@
                 <a href="javascript:void(0);" class="nav-operate-btn navbar-toggle">Menu</a>
               </div>
             </div>
-            <ul class="nav-menu">
-              <li class="nav-menu-item">
-                <a href="/" class="nav-menu-link nav-menu-first">Нүүр хуудас</a>
-              </li>
-              <li class="nav-menu-item">
-                <a href="../about-us.html" class="nav-menu-link nav-menu-first">Бидний тухай</a>
-              </li>
-              <li class="nav-menu-item">
-                <a href="service.html" class="nav-menu-link nav-menu-first">Үйлчилгээ<i class="fa fa-caret-down"></i></a>
-                <div class="dropdown-contain">
-                  <a href="javascript:void(0)" class="drop-menu">Engineer service</a>
-                  <a href="javascript:void(0)" class="drop-menu">Customer training</a>
-                  <a href="javascript:void(0)" class="drop-menu">ISO</a>
-                </div>
-              </li>
-              <li class="nav-menu-item">
-                <a href="Product.html" class="nav-menu-link nav-menu-first dropbtn">Бүтээгдэхүүн<i class="fa fa-caret-down"></i></a>
-                <div class="dropdown-contain">
-                  <a href="javascript:void(0)" class="drop-menu">Тоног төхөөрөмж</a>
-                  <a href="Reagents.html" class="drop-menu">Урвалж хэрэгсэл</a>
-                  <a href="list-page.html" class="drop-menu">Гоо сайхан</a>
-                  <a href="javascript:void(0)" class="drop-menu">Эм биологи</a>
-                </div>
-              </li>
-              <li class="nav-menu-item">
-                <a href="../our-providers.html" class="nav-menu-link nav-menu-first">Our provider</a>
-              </li>
-              <li class="nav-menu-item">
-                <a href="../Contact-us.html" class="nav-menu-link nav-menu-first">Холбоо барих</a>
-              </li>
-            </ul>
           </div>
         </div>
         <div id="topNavbar" class="bottom-menubar" style="display: block;">
@@ -63,12 +63,21 @@
                 <a class="top-navbar-text" title="Media Center" href="javascript:void(0)">Media Center</a>
               </div>
               <div class="top-navbar-item">
-                <a class="top-navbar-text" title="Contact Us" href="../Contact-us.html" target="_blank">Contact
+                <a class="top-navbar-text" title="Contact Us" href="Contact-us.html" target="_blank">Contact
                   Us</a>
               </div>
               <div class="top-navbar-item">
                 <a id="selectRegion" class="top-navbar-text top-navbar-lang-icon" href="javascript:void(0)">
-                  Select Region / Language </a>
+                  <svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="25" height="15" fill="url(#pattern0)"></rect>
+                    <defs>
+                      <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0" transform="scale(0.04 0.0666667)"></use>
+                      </pattern>
+                      <image id="image0" width="25" height="15" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAPCAYAAAARZmTlAAABVElEQVQ4EbWUO04DMRCGP693k92EpACBFJSIDirgADRIiJImh6HkBHRcBW7ACaBCQgiliUSQAgmPzT5s5F3FUUKDEjPN2pbn//TPeEfc7h1qpiFASI1OzQJqKuWifcr1+gFCJdNb9qu9gOO3By57N8ReYM8XF97iwX/sLUSlgtpOzObJEJULpywLKVU1QiiYFdAJzEJ0Jtg4eme7OyBo5miHbgqIVmWjTbOTYYCs5ZjyuQrfCMkwJ+qkfPVCvEAjo5yoPUH33YAKJ9WthN3zZ2RVkQx9Wt0BrbMBeWyruZIpq2J64Dfy4v8QArRaSXcuuShXqQzN/TGmP4Wj1/rcxVU21ol5tqO7BvlYkn1K8Ny94xIiNF6okHVF9u0jDMN3BynKpWKP0f0aH48RQTNj0q9gRpWZYy6igExeKjxdddBGU4Mw/gTUw99DcRnorCfLZP8x5wehGWiEeijHZgAAAABJRU5ErkJggg=="></image>
+                    </defs>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -80,12 +89,17 @@
   </div>
 
 
-
-
 <style>
+  header .navbar {
+    position: relative;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    order: 2;
+    background-color: transparent;
+  }
   .nav-logo img{
     max-width: 180px;
-    height: 45px;
+    height: 51px;
   }
   #botNavbar{
     border-bottom: 1px solid #eee;

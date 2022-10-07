@@ -86,13 +86,6 @@ header .top-navbar{
     flex: 0 0 100%;
     max-width: 100%;
 }
-
-.wrap{
-    position: relative;
-    width: 80.9375vw;
-    margin-right: auto;
-    margin-left: auto;
-}
 header .top-navbar .top-navbar-block{
     height: 2.60417vw;
     font-size: 0;
@@ -2060,4 +2053,11 @@ header
 .nav-logo__bayanGol-link img{
     width: 140px;
     height: 40px;
+}
+
+.home_c a{
+    color: #ec2027;
+}
+.breadcrumb_c svg{
+    font-size: 10px;
 }
