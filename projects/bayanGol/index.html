@@ -90,15 +90,9 @@
                         </div>
                         <div class="top-navbar-item">
                             <a href="javascript:void(0)" class="top-navbar-text">
-                                <svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <rect width="25" height="15" fill="url(#pattern0)"></rect>
-                                    <defs>
-                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                            <use xlink:href="#image0" transform="scale(0.04 0.0666667)"></use>
-                                        </pattern>
-                                        <image id="image0" width="25" height="15" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAPCAYAAAARZmTlAAABVElEQVQ4EbWUO04DMRCGP693k92EpACBFJSIDirgADRIiJImh6HkBHRcBW7ACaBCQgiliUSQAgmPzT5s5F3FUUKDEjPN2pbn//TPeEfc7h1qpiFASI1OzQJqKuWifcr1+gFCJdNb9qu9gOO3By57N8ReYM8XF97iwX/sLUSlgtpOzObJEJULpywLKVU1QiiYFdAJzEJ0Jtg4eme7OyBo5miHbgqIVmWjTbOTYYCs5ZjyuQrfCMkwJ+qkfPVCvEAjo5yoPUH33YAKJ9WthN3zZ2RVkQx9Wt0BrbMBeWyruZIpq2J64Dfy4v8QArRaSXcuuShXqQzN/TGmP4Wj1/rcxVU21ol5tqO7BvlYkn1K8Ny94xIiNF6okHVF9u0jDMN3BynKpWKP0f0aH48RQTNj0q9gRpWZYy6igExeKjxdddBGU4Mw/gTUw99DcRnorCfLZP8x5wehGWiEeijHZgAAAABJRU5ErkJggg=="></image>
-                                    </defs>
-                                </svg>
+                                <div class="lang__icon">
+                                    <i class="fa fa-globe mr-10"></i><span>EN</span>
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -457,62 +451,29 @@
     </div>
 </main>
 <footer id="footer" class="mt-40">
-    <section class="vc_section">
-        <div class="container">
-            <div class="grid-30 mt-40">
-                <div class="width-4-12">
-                    <div class="footer_widget widget latest_blogs">
-                        <img src="assets/Bayangol.png" width="200">
-                        <div class="flex-container uk-flex uk-child-width-auto uk-flex-top soc_c" style="margin:40px 0">
-                            <div class="social-icon">
-                                <a href="javascript:void(0)" class="fa fa-facebook"></a>
-                                <a href="javascript:void(0)" class="fa fa-instagram"></a>
-                                <a href="javascript:void(0)" class="fa fa-youtube"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="width-4-12">
-                    <div class="wpb_wrapper">
-                        <div id="nav_menu-1" class="footer_widget widget widget_nav_menu">
-                            <h5 class="widget-title">Menu</h5>
-                            <div class="menu-footer-navigation-container">
-                                <ul id="menu-footer-navigation-2" class="menu">
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                        <a href="javascript:void(0)">About Us</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                        <a href="javascript:void(0)">Products</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                        <a href="javascript:void(0)">Service</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                        <a href="javascript:void(0)">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="width-4-12">
-                    <div class="wpb_wrapper">
-                        <div id="themeton_address_widget-2" class="footer_widget widget widget_contact">
-                            <h5 class="widget-title">Contact info</h5>
-                            <address>
-                                <abbr class="address" title="Address"><span class="fal fa-location-arrow"></span>
-                                    Setunari LLC, UBH building, 5th Floor, Peace avenue-23, Sukhbaatar, district 1st
-                                    khoroo,
-                                    Ulaanbaatar 14210 | Mongolia</abbr>
-                                <abbr title="Phone"><span class="fa fa-phone"></span> +976 7017-7016</abbr>
-                                <abbr title="Email"><span class="fa fa-envelope"></span>
-                                    <a href="javascript:void(0)" class="address_email">info@setunari.com</a></abbr>
-                            </address>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </footer>
 </body>
 </html>
+
+<script>
+    /** @code footer */
+    fetch('include/footer.html').then(data=>{return data.text()}).then(data=>{document.querySelector("footer").innerHTML = data})
+    function seeMore(el) {
+        let p = el.parentElement.querySelector("p")
+        if (el.classList.contains("active")){
+            el.classList.remove("active");
+            p.style.maxHeight = '260px';
+            setTimeout(()=>{
+                p.style = "max-height: 260px";
+            }, 500)
+        } else {
+            el.classList.add("active")
+            p.style = "-webkit-line-clamp:unset";
+            p.style.maxHeight = el.parentElement.querySelector("p").scrollHeight+'px'
+        }
+    }
+</script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 

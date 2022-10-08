@@ -36,7 +36,7 @@
               </li>
             </ul>
             <div class="nav-block">
-              <a href="/" class="nav-logo">
+              <a href="index.html" class="nav-logo">
                 <img src="assets/Bayangol.png">
               </a>
               <div class="nav-operate">
@@ -67,17 +67,11 @@
                   Us</a>
               </div>
               <div class="top-navbar-item">
-                <a id="selectRegion" class="top-navbar-text top-navbar-lang-icon" href="javascript:void(0)">
-                  <svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <rect width="25" height="15" fill="url(#pattern0)"></rect>
-                    <defs>
-                      <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0" transform="scale(0.04 0.0666667)"></use>
-                      </pattern>
-                      <image id="image0" width="25" height="15" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAPCAYAAAARZmTlAAABVElEQVQ4EbWUO04DMRCGP693k92EpACBFJSIDirgADRIiJImh6HkBHRcBW7ACaBCQgiliUSQAgmPzT5s5F3FUUKDEjPN2pbn//TPeEfc7h1qpiFASI1OzQJqKuWifcr1+gFCJdNb9qu9gOO3By57N8ReYM8XF97iwX/sLUSlgtpOzObJEJULpywLKVU1QiiYFdAJzEJ0Jtg4eme7OyBo5miHbgqIVmWjTbOTYYCs5ZjyuQrfCMkwJ+qkfPVCvEAjo5yoPUH33YAKJ9WthN3zZ2RVkQx9Wt0BrbMBeWyruZIpq2J64Dfy4v8QArRaSXcuuShXqQzN/TGmP4Wj1/rcxVU21ol5tqO7BvlYkn1K8Ny94xIiNF6okHVF9u0jDMN3BynKpWKP0f0aH48RQTNj0q9gRpWZYy6igExeKjxdddBGU4Mw/gTUw99DcRnorCfLZP8x5wehGWiEeijHZgAAAABJRU5ErkJggg=="></image>
-                    </defs>
-                  </svg>
-                </a>
+                  <a href="javascript:void(0)" class="top-navbar-text">
+                    <div class="lang__icon-2">
+                      <i class="fa fa-globe mr-10"></i><span>EN</span>
+                    </div>
+                  </a>
               </div>
             </div>
           </div>
@@ -90,6 +84,12 @@
 
 
 <style>
+
+  .lang__icon-2 span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+  }
   header .navbar {
     position: relative;
     -webkit-box-ordinal-group: 3;
@@ -99,7 +99,7 @@
   }
   .nav-logo img{
     max-width: 180px;
-    height: 51px;
+    height: 43px;
   }
   #botNavbar{
     border-bottom: 1px solid #eee;

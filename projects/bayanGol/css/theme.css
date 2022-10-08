@@ -40,7 +40,7 @@
     overflow: hidden;
     min-width: 200px;
     position: absolute;
-    top: 72px;
+    top: 73px;
     z-index: 1;
     cursor:pointer;
 }
@@ -765,11 +765,15 @@ abbr[title] {
 .widget ul li a {
     color: #5c666a;
 }
+address{
+    font-size: 16px;
+}
 .widget ul li {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     position: relative;
     border-bottom: 1px solid rgba(92, 102, 106, 0.1);
+    font-size: 16px;
 }
 .widget ul {
     margin: 0px;
@@ -847,6 +851,7 @@ abbr[title] {
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+    height: 280px;
 }
 .vc_section[data-vc-full-width] {
     -webkit-transition: opacity .5s ease;
@@ -896,7 +901,7 @@ abbr[title] {
 
 .w-button {
     display: inline-block;
-    padding: 9px 15px;
+    padding: 6px 15px;
     background-color: #1670a6;
     color: white;
     border: 0;
@@ -1455,7 +1460,7 @@ header .menubar .nav-logo {
     top: 0;
     left: 0;
     margin-bottom: 0;
-    width: 6.04167vw;
+    width: 7vw;
     height: 3.6vw;
     padding-top: 1.04167vw;
     padding-bottom: 1.04167vw;
@@ -1705,7 +1710,7 @@ ol, ul {
     width: 100%;
 }
 .about_c {
-    background: url(../assets/about.png);
+    /*background: url(../assets/about.png);*/
     background-position: bottom right !important;
     background-repeat: no-repeat !important;
 }
@@ -2060,4 +2065,81 @@ header
 }
 .breadcrumb_c svg{
     font-size: 10px;
+}
+
+ a:hover {
+     text-decoration: none;
+ }
+
+.lang__icon span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+
+warpper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0px 2px;
+    background: #32557f;
+    display: inline-block;
+    color: #fff;
+    border-radius: 3px 3px 0px 0px;
+    box-shadow: 0 0.5rem 0.8rem #00000080;
+}
+
+.panels {
+    background: #fff;
+    box-shadow: 0 2rem 2rem #00000080;
+    min-height: 200px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.panel {
+    display: none;
+    animation: fadein 0.8s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.panel-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.radio {
+    display: none;
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel {
+    display: block;
+}
+
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab {
+    background: #fff;
+    color: #000;
+    border-top: 3px solid #32557f;
 }
