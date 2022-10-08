@@ -14,7 +14,16 @@
     text-decoration: none;
 
 }
-.nav-menu .nav-menu-item:hover{
+.nav-menu .nav-menu-item::before {
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid transparent;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    transition: border .3s ease;
+}
+.nav-menu .nav-menu-item:hover::before {
     border-bottom: 3px solid #ec2027;
     /*transition: 0.4s ease-in;*/
 }
@@ -40,7 +49,6 @@
     overflow: hidden;
     min-width: 200px;
     position: absolute;
-    top: 73px;
     z-index: 1;
     cursor:pointer;
 }
