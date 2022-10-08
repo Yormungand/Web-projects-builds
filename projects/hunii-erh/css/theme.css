@@ -849,3 +849,14 @@ body{
     width: 100%;
     box-sizing: border-box;
 }
+
+.main-grid{position: relative}
+.main-grid>div{}
+.main-img-sticky{}
+.main-img-sticky>img{width: 100%; height: 100vh}
+.main-text-grid{position: relative; width: 50%;}
+.main-text-item{margin-bottom: 500px; line-height: 20px; color: #fff}
+
+.main-grid1{position: relative}
+.main-img-sticky1{}
+.main-img-sticky1>img{width: 100%; height: 100vh}
