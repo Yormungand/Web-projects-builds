@@ -55,10 +55,104 @@
                         </li>
                         <li class="nav-menu-item">
                             <a href="service.html" class="nav-menu-link nav-menu-first">Үйлчилгээ<i class="fa fa-caret-down"></i></a>
-                            <div class="dropdown-contain">
-                                <a href="javascript:void(0)" class="drop-menu">Engineer service</a>
-                                <a href="javascript:void(0)" class="drop-menu">Customer training</a>
-                                <a href="javascript:void(0)" class="drop-menu">ISO</a>
+                            <div class="dropdown-contain__wrap">
+<!--                                <a href="javascript:void(0)" class="drop-menu">Engineer service</a>-->
+<!--                                <a href="javascript:void(0)" class="drop-menu">Customer training</a>-->
+<!--                                <a href="javascript:void(0)" class="drop-menu">ISO</a>-->
+                                <div class="tab">
+                                    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Engineer service</button>
+                                    <button class="tablinks" onclick="openCity(event, 'Paris')">Customer training</button>
+                                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">ISO</button>
+                                </div>
+                                <div id="London" class="tabcontent">
+                                    <div class="grid-30">
+                                        <div class="width-6-12">
+                                            <div class="tab-content__image">
+                                                <img src="assets/image2.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="width-6-12">
+                                            <div class="drop-menu__desc">
+                                                <h1>Systematically ensure accuracy</h1>
+                                                <ul>
+                                                    <li>
+                                                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                        industry. Lorem Ipsum has been the industry's standard dumm
+                                                    </li>
+                                                    <li>
+                                                        It was popularised in the 1960s with the release of Letraset
+                                                        sheets containing Lorem Ipsum passages,
+                                                    </li>
+                                                    <li>
+                                                        and more recently with desktop publishing software like Aldus
+                                                        PageMaker including versions of Lorem Ipsu
+                                                    </li>
+                                                </ul>
+                                                <div class="mt-10" style="text-align: center">
+                                                    <a href="service.html">Дэлгэрэнгүй</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="Paris" class="tabcontent">
+                                    <div class="grid-30">
+                                        <div class="width-6-12">
+                                            <div class="tab-content__image">
+                                                <img src="assets/emch.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="width-6-12">
+                                            <div class="drop-menu__desc">
+                                                <h1>Systematically ensure accuracy</h1>
+                                                <ul>
+                                                    <li>
+                                                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                        industry. Lorem Ipsum has been the industry's standard dumm
+                                                    </li>
+                                                    <li>
+                                                        It was popularised in the 1960s with the release of Letraset
+                                                        sheets containing Lorem Ipsum passages,
+                                                    </li>
+                                                    <li>
+                                                        and more recently with desktop publishing software like Aldus
+                                                        PageMaker including versions of Lorem Ipsu
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="Tokyo" class="tabcontent">
+                                    <div class="grid-30">
+                                        <div class="width-6-12">
+                                            <div class="tab-content__image">
+                                                <img src="assets/emch.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="width-6-12">
+                                            <div class="drop-menu__desc">
+                                                <h1>Systematically ensure accuracy</h1>
+                                                <ul>
+                                                    <li>
+                                                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                        industry. Lorem Ipsum has been the industry's standard dumm
+                                                    </li>
+                                                    <li>
+                                                        It was popularised in the 1960s with the release of Letraset
+                                                        sheets containing Lorem Ipsum passages,
+                                                    </li>
+                                                    <li>
+                                                        and more recently with desktop publishing software like Aldus
+                                                        PageMaker including versions of Lorem Ipsu
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                         <li class="nav-menu-item">
@@ -67,7 +161,7 @@
                                 <a href="equipment-view.html" class="drop-menu">Тоног төхөөрөмж</a>
                                 <a href="Reagents.html" class="drop-menu">Урвалж хэрэгсэл</a>
                                 <a href="list-page.html" class="drop-menu">Гоо сайхан</a>
-                                <a href="javascript:void(0)" class="drop-menu">Эм биологи</a>
+                                <a href="biology.html" class="drop-menu">Эм биологи</a>
                             </div>
                         </li>
                         <li class="nav-menu-item">
@@ -434,7 +528,7 @@
                     - Хүчин чадал: 32 шинжилгээ/цаг (нэгж шинжилгээний хариу богино хугацаанд буюу 15-40 минутанд гарна)
                     - Үйлдвэрийн баталгаат хугацаа 3 жил
                     <br>
-                    <a class="mt-10 btn-rounded btn-bordered btn-grey" href="/en/news/product-news/">Check our product news</a>
+                    <a class="mt-10 btn-rounded btn-bordered btn-grey" href="javascript:void(0)">Дэлгэргүй үзэх</a>
                 </p>
             </div>
             <div class="wrapper" id="bilder">
@@ -568,4 +662,56 @@
             lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
         })
     })
+</script>
+
+<style>
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+    }
+
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+    }
+
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    .tab button.active {
+        background-color: #e9e9e9;
+    }
+
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+</style>
+
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
 </script>

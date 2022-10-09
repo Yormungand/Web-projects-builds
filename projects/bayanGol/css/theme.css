@@ -879,7 +879,7 @@ address{
     font-weight: 700;
     text-align: right;
     text-shadow: 4px 0 10px #fff;
-    font-size: 26px;
+    font-size: 24px;
     color: #1670a6;
 }
 .block-video__target {
@@ -2167,7 +2167,6 @@ header .navbar {
 .tab {
     color: #5c666a;
     font-size: 15px;
-    padding: 15px !important;
     display: block;
     font-weight: 500;
     text-transform: capitalize;
@@ -2203,7 +2202,6 @@ header .navbar {
 
 .tab {
     cursor: pointer;
-    padding: 10px;
 }
 
 .tab.active {
@@ -2219,4 +2217,70 @@ header .navbar {
 .tab-content {
     margin-left: 20px;
     margin-right: 20px;
+}
+
+
+.dropdown-contain__wrap {
+    background-color: #fff;
+    display: none;
+    overflow: hidden;
+    min-width: 700px;
+    position: absolute;
+    z-index: 200;
+    cursor: pointer;
+}
+
+
+.nav-menu li:hover .dropdown-contain__wrap {
+    display: block;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+}
+
+.drop-menu__desc h1 {
+    font-size: 20px;
+    color: #22181c;
+    margin-top: 20px;
+}
+
+.drop-menu__desc ul li {
+    color: #4c4c4c;
+    font-size: 14px;
+    list-style-type: disc;
+}
+
+
+.tab-content__image{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 92.11%;
+    height: 0;
+    background-repeat: no-repeat;
+}
+.tab-content__image img{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.drop-menu__desc a{
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    padding: 6px 15px;
+    background-color: #1670a6;
+    border: 0;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.drop-menu__desc a:hover{
+    background-color: #ec2027;
 }
