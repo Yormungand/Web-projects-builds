@@ -2284,3 +2284,7 @@ header .navbar {
 .drop-menu__desc a:hover{
     background-color: #ec2027;
 }
+
+.tabs li{
+    padding: 15px;
+}
