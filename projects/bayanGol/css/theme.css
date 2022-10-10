@@ -937,9 +937,10 @@ img {
 .overview-image {
     position: relative;
     overflow: hidden;
-    padding-bottom: 90.11%;
+    padding-bottom: 80.11%;
     height: 0;
     border: 3px solid #1670a6;
+    border-radius: 10px;
 }
 
 .overview-image img {

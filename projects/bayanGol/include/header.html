@@ -82,4 +82,34 @@
     </nav>
   </div>
 
-
+<script>
+  document.addEventListener("DOMContentLoaded", e=>{
+    const navTop = document.getElementById("topNavbar");
+    const navBot = document.getElementById("botNavbar");
+    const headerNav = document.getElementById("header");
+    // const modalElm = document.getElementById("active");
+    // const modalElm2 = document.getElementById("show");
+    document.getElementById('header').addEventListener('mouseover', ev => {
+      navTop.classList.add('active');
+      navBot.classList.add('show');
+    })
+    document.getElementById('header').addEventListener('mouseleave', ev => {
+      navTop.classList.remove('active');
+      navBot.classList.remove('show');
+    })
+    let lastScrollTop = 0;
+    document.addEventListener('scroll', ev=>{
+      var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+      if (st > lastScrollTop){
+        // downscroll code
+      } else if (window.pageYOffset === 0) {
+        headerNav.classList.remove('active-fixed');
+        navTop.style.display = "block";
+      } else {
+        headerNav.classList.add('active-fixed');
+        navTop.style.display = "none";
+      }
+      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    })
+  })
+</script>
