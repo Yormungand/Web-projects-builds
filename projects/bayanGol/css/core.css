@@ -555,6 +555,7 @@ a:hover{
 .mt-30 {margin-top: 30px}
 .mt-35 {margin-top: 35px}
 .mt-40 {margin-top: 40px}
+.mt-60 {margin-top: 60px}
 .mt-45 {margin-top: 45px}
 .mr-5 {margin-right: 5px}
 .mr-10 {margin-right: 10px}
@@ -1545,10 +1546,10 @@ a:hover{
 }
 
 
-* {
-    font-family: "Roboto-Bold";
-    text-decoration: none
-}
+/** {*/
+/*    font-family: "Roboto-Bold";*/
+/*    text-decoration: none*/
+/*}*/
 
 a:hover {
     text-decoration: none
@@ -1736,3 +1737,4 @@ a:hover {
 .checkbox__default {
 
 }
+

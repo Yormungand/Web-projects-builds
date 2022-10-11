@@ -1,0 +1,11 @@
+/*@font-face {*/
+/*    font-family: 'Roboto-condensed';*/
+/*    src: url('RobotoCondensed-Bold.ttf');*/
+/*    font-weight: 900;*/
+/*}*/
+
+@font-face {
+    font-family: 'Roboto-condensed';
+    src: url('RobotoCondensed-Light.ttf');
+    font-weight: 900;
+}
