@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
 </head>
 <body>
 <header class="show">
@@ -312,14 +313,14 @@
     <div class="news mt-60">
         <section class="mr-home-news" style="">
             <div id="mHomeNewsTrigger"></div>
-            <div data-scrollmagic-pin-spacer="" class="scrollmagic-pin-spacer" style="inset: auto; margin: 0px; display: flex; position: relative; box-sizing: content-box; min-height: 975px; height: auto; padding-top: 0px; padding-bottom: 0px;"><div class="mr-home-news-pin" style="position: relative; margin: auto; inset: 0px auto auto 0px; box-sizing: border-box; width: 100%;">
+            <div class="scrollmagic-pin-spacer" style="inset: auto; margin: 0px; display: flex; position: relative; box-sizing: content-box; min-height: 975px; height: auto; padding-top: 0px; padding-bottom: 0px;"><div class="mr-home-news-pin" style="position: relative; margin: auto; inset: 0px auto auto 0px; box-sizing: border-box; width: 100%;">
                 <div class="mr-home-news-container">
-                    <div class="news-geometry-block active">
+                    <div class="news-geometry-block">
                         <img class="show-mob" src="assets/20044.jpg" alt="">
                         <div class="news-geometry"></div>
                     </div>
                     <div class="mr-home-news-top">
-                        <div class="mr-home-news-summary active">
+                        <div class="mr-home-news-summary">
                             <div>
                                 <div class="ani-overflow-text">
                                     <h2 class="home-news-title ani-overflow-word">What’s New</h2>
@@ -650,6 +651,24 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", e=>{
+        /*""*/
+        var controller = new ScrollMagic.Controller();
+
+        var scene = new ScrollMagic.Scene({
+            triggerElement: '#mHomeNewsTrigger',
+            triggerHook: .7
+        })
+            .setClassToggle('.news-geometry-block', 'active')
+            .addTo(controller);
+
+        scene.on("start", (e)=>{
+            document.querySelector('.mr-home-news-summary').classList.add('active');
+            document.querySelector('.news-geometry-red-block').classList.add('active');
+        })
+        scene.on("leave", e=>{
+            document.querySelector('.mr-home-news-summary').classList.remove('active');
+            document.querySelector('.news-geometry-red-block').classList.remove('active');
+        })
         const navTop = document.getElementById("topNavbar");
         const navBot = document.getElementById("botNavbar");
         const headerNav = document.getElementById("header");
