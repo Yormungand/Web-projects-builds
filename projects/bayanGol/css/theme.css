@@ -1194,7 +1194,7 @@ img {
     left: 0;
     width: 0;
     height: 0.52083vw;
-    background-color: #9b0000;
+    background-color: #ec2027;
     -webkit-transition: width .5s ease-out .8s;
     transition: width .5s ease-out .8s;
 }
@@ -1221,7 +1221,7 @@ img {
 }
 
 a {
-    color: #9b0000;
+    color: #ec2027;
     background-color: transparent;
 }
 
