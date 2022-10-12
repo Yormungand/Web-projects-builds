@@ -96,7 +96,7 @@
           </div>
           <div class="width-6-12@l">
             <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(assets/about-us2.jpg); border-radius: 10px">
-              <img src="assets/about-us2.jpg" />
+                <img src="assets/about-us2.jpg" />
             </figure>
           </div>
         </div>
@@ -355,6 +355,8 @@
 
 </script>
 
+
+
 <script>
   function zoom(e){
     let zoomer = e.currentTarget;
@@ -367,6 +369,22 @@
 </script>
 
 <style>
+
+/*  .image-wrapper img{*/
+/*    width: 100%;*/
+/*    object-fit: cover;*/
+/*  }*/
+/*  .image-wrapper {*/
+/*    width: 100%;*/
+/*    height: 0;*/
+/*    padding-bottom: 55.17%;*/
+/*    background: #ccc;*/
+/*  }*/
+  .image-wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+
   figure.zoom {
     cursor: zoom-in;
   }
@@ -379,7 +397,7 @@
     transition: opacity 0.5s;
     display: block;
     width: 100%;
-    height: 400px;
+    height: 350px;
     border-radius: 10px;
   }
   .overview-profile__desc{

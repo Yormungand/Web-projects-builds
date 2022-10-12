@@ -47,9 +47,92 @@
         <div class="background" style="background-image: url('https://www.endermologie.com/en/wp-content/uploads/sites/42/2022/04/LPG-endermologie-Soins_visage-header-Btoc.jpg');;"></div>
       </div>
     </div>
-    <div class="grid-20">
-      <div class="width-4-12">
-
+    <div class="mt-40"></div>
+    <div class="container">
+      <h2 class="view-page__title animate animate--opacity animate--delay-300 animate--reveal">Visible results <br>from the first session</h2>
+      <div style="margin-top: 100px"></div>
+      <div class="grid-20 translate-wrap">
+          <div class="width-4-12 translate">
+            <div class="square">
+              <div class="box">
+                <h3>70%</h3>
+                <p>Firmer skin*</p>
+              </div>
+            </div>
+          </div>
+          <div class="width-4-12 translate">
+            <div class="square">
+              <div class="box">
+                <h3>70%</h3>
+                <p>Firmer skin*</p>
+              </div>
+            </div>
+          </div>
+          <div class="width-4-12 translate">
+            <div class="square">
+              <div class="box">
+                <h3>70%</h3>
+                <p>Firmer skin*</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <h2 class="view-page__title mt-40">Face treatments</h2>
+      <div class="grid-30">
+        <div class="width-7-12">
+          <div class="list-page__view-wrapper">
+             <div class="list-page__view-wrap">
+                <div class="box">
+                  <h3 class="">Smooth wrinkles</h3>
+                  <div class="text-list">Skin begins to sag and lose its density, creating wrinkles and furrows, mostly on the face, neck, décolleté, and hands.Other external factors, such as sun, stress, tobacco, or even pollution, can accelerate the appearance of wrinkles.<br>
+                    <br>
+                  </div>
+                  <a href="javascript:void(0)" class="lined">Learn more</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-5-12">
+          <div href="javascript:void(0)" class="product-box">
+            <img src="assets/KV9_4129.jpg" alt="" class="">
+          </div>
+        </div>
+        <div class="width-5-12">
+          <div href="javascript:void(0)" class="product-box">
+            <img src="assets/KV9_4129.jpg" alt="" class="">
+          </div>
+        </div>
+        <div class="width-7-12">
+          <div class="list-page__view-wrapper">
+            <div class="list-page__view-wrap">
+              <div class="box">
+                <h3 class="">Smooth wrinkles</h3>
+                <div class="text-list">Skin begins to sag and lose its density, creating wrinkles and furrows, mostly on the face, neck, décolleté, and hands.Other external factors, such as sun, stress, tobacco, or even pollution, can accelerate the appearance of wrinkles.<br>
+                  <br>
+                </div>
+                <a href="javascript:void(0)" class="lined">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-7-12">
+          <div class="list-page__view-wrapper">
+            <div class="list-page__view-wrap">
+              <div class="box">
+                <h3 class="">Smooth wrinkles</h3>
+                <div class="text-list">Skin begins to sag and lose its density, creating wrinkles and furrows, mostly on the face, neck, décolleté, and hands.Other external factors, such as sun, stress, tobacco, or even pollution, can accelerate the appearance of wrinkles.<br>
+                  <br>
+                </div>
+                <a href="javascript:void(0)" class="lined">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="width-5-12">
+          <div href="javascript:void(0)" class="product-box">
+            <img src="assets/KV9_4129.jpg" alt="" class="">
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -194,6 +277,161 @@
 
 
 <style>
+  .product-box:hover:after {
+    opacity: .7;
+    border-width: 15px;
+  }
+  .product-box:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    width: 94%;
+    height: 94%;
+    background-color: #d8acad;
+    border: 0 solid #fff;
+    opacity: 0;
+    transition: 333ms all ease-out;
+  }
+  .position-change:nth-child(1){order: 1}
+  .position-change:nth-child(2){order: 2}
+  .position-change:nth-child(3){order: 3}
+  .position-change:nth-child(4){order: 4}
+
+
+  .list-page__view-wrap .box .text-list {
+    color: #696b66;
+    line-height: 1.75rem;
+  }
+  .list-page__view-wrap .box h3{
+    font-size: 2.4rem;
+    color: #ec2027;
+    font-weight: 400;
+  }
+  .product-box img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    object-fit: cover;
+  }
+  .product-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    padding-bottom: 90%;
+    border-radius: 5px;
+  }
+  .product-box {
+
+  }
+  .list-page__view-wrapper{
+    position: relative;
+    padding: 0 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .list-page__view-wrap .box .text-list {
+    color: #696b66;
+    line-height: 1.75rem;
+  }
+  .list-page__view-wrap .box {
+    text-align: right;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 30px 15px;
+    width: 90%;
+    z-index: 999;
+  }
+  .list-page__view-wrap::before, .list-page__view-wrap::after {
+    content: ' ';
+    display: table;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .list-page__view-wrap::after {
+    clear: both;
+  }
+
+  .list-page__view-wrap::before, .list-page__view-wrap::after {
+    content: ' ';
+    display: table;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .view-page__title {
+    color: #ec2027;
+  }
+  view-page__title {
+    font-size: 3.125rem;
+    line-height: 3.2rem;
+    font-weight: 100;
+  }
+  .translate-wrapper{
+    padding: 70px 0px;
+  }
+  .translate:nth-child(1){    transform: translateY(0px);}
+  .translate:nth-child(2){    transform: translateY(-85px);}
+  .translate:nth-child(3){    transform: translateY(0px);}
+  .translate:nth-child(4){    transform: translateY(-85px);}
+  .square .box p {
+    font-size: 1rem;
+    line-height: 1.1rem;
+    font-weight: 300;
+    opacity: 1;
+    transition: 300ms opacity ease-out 400ms;
+    color: #181818;
+  }
+  .square .box h3 {
+    font-weight: 900;
+  }
+  .square .box h3 {
+    font-size: 4rem;
+    line-height: 3.8rem;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ec2027;
+    font-weight: 100;
+    position: relative;
+    overflow: hidden;
+  }
+  .square .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .square{
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-color: #f6f6f6;
+  }
   .bloc--chiffres .fact--item:nth-child(1) {
     transition-delay: 100ms !important;
   }
