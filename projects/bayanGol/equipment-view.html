@@ -42,26 +42,20 @@
     </div>
     <div class="tab-content">
       <div id="home" data-tab-content class="active">
-        <div class="container">
-          <div class="vc_column-inner ">
+        <div class="vc_column-inner ">
             <div class="wpb_wrapper" style="padding:70px 0 0 0;">
               <h2 style="font-size: 30px; color: #161720; text-align: left; font-weight:600; margin-bottom: 0"
                   class="vc_custom_heading mvb0">cobas c 111 анализатор</h2>
               <div style="border-bottom:4px solid #214083; width:87px;"></div>
             </div>
           </div>
-        </div>
         <div class="grid-30 mt-30 mb-30">
           <div class="width-6-12">
-            <figure class="effect-milo">
-              <div class="effect-milo__image">
-                <img id="myImg" src="assets/08gbi.jpg">
+            <div class="vanilla-zoom">
+              <div class="sidebar">
+                <img src="assets/WS-8.1.png" class="small-preview">
               </div>
-            </figure>
-            <div id="myModal" class="modal">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="img01">
-              <div id="caption"></div>
+              <div class="zoomed-image"></div>
             </div>
           </div>
           <div class="width-6-12">
@@ -71,7 +65,7 @@
                   <li class="open">
                     <div class="accordion-click">
                       <h3 class="accordion-title">Танилцуулга</h3>
-                      <a class="description-header" onclick="getDescription(0)">click</a>
+                      <a class="description-header" onclick="getDescription(0)">Хураах</a>
                     </div>
                     <p class="description-text">
                       Өдөрт &nbsp;10- 50 хүртэлх шинжилгээ хийдэг биохимийн лабораторуудад тохиромжтой анализатор бөгөөд
@@ -82,6 +76,93 @@
                     </p>
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-wrapper mt-30">
+            <div class="tab-button-wrapper">
+              <ul>
+                <li>
+                  <a class="tab-button-first" id="tab-button1" href="javascript:void(0)" onclick="loadTab(1)">1000 тунгийн тайлбар</a>
+                </li>
+                <li>
+                  <a class="tab-button-hidden" id="tab-button2" href="javascript:void(0)" onclick="loadTab(2)">5000 тунгийн тайлбар</a>
+                </li>
+                <li>
+                  <a class="tab-button-hidden tab-button-last" id="tab-button3" href="javascript:void(0)" onclick="loadTab(3)">50000 тунгийн тайлбар</a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-body-wrapper">
+              <div class="tab-body" id="tab1">
+                <div class="icontent mt-30"><p><strong>Бүтээгдэхүүний онцлог </strong></p>
+                  <p>Дэлхийд хүлээн зөвшөөрөгдсөн чанар</p>
+                  <ul>
+                    <li>Бүхэл цусанд глюкозон гемоглобин тодорхойлох, hsCRP, D-dimer зэрэг 40 орчим үзүүлэлт үздэг</li>
+                    <li>Дэлхийд хүлээн зөвшөөрөгдсөн чанар</li>
+                  </ul>
+                  <p>Өдөрт &lt;50 шинжилгээ хийдэг лабораторуудад тохиромжтой</p>
+                  <ul>
+                    <li>Нэг цагт 100 хүртэлх тест хийх хүчин чадалтай</li>
+                    <li>Ширээн дээр тавьж ашиглах боломжтой учраас зай талбай хэмнэдэг</li>
+                    <li>Ашиглахад хялбар программ хангамжтай</li>
+                  </ul>
+                  <p><strong>Өндөр хүчин чадалтай</strong></p>
+                  <ul>
+                    <li>Эдэлгээ даах бат бөх загвар</li>
+                    <li>Засвар үйлчилгээг Wizard guide-р хийдэг</li>
+                  </ul>
+                  <p><strong>Сүлжээнд холбогдох боломжтой</strong></p>
+                  <ul>
+                    <li>Лабораторийн дотоод сүлжээнд холбогдох боломжтой</li>
+                    <li>cobas-н платформд түгээмэл ашиглагддаг урвалжийг ашиглах боломжтой</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-body tab-body-hidden" id="tab2">
+                <div class="icontent mt-30"><p><strong>Footprint </strong></p>
+
+                  <p>Small footprint, effortless maneuverability: unlimited versatility.</p>
+
+                  <p><strong>Control Panel </strong></p>
+
+                  <p>Wide monitor, large touch display, intuitive UI: highly adaptable workflow.</p>
+
+                  <p><strong>Body</strong></p>
+
+                  <p>Five active transducer ports and one CW port, quick boot-up time: maximum productivity.</p>
+
+                  <p><strong>Design</strong></p>
+
+                  <p>Multiple cable hooks, wide variety of available accessories: all-encompassing design.</p>
+
+                  <p><strong>Transducers</strong></p>
+
+                  <p>Sixteen transducers, wide-range of clinical applications: endless possibilities.</p>
+
+                  <p><strong>B-Mode </strong></p>
+
+                  <p>High contrast resolution, complete image uniformity: full diagnostic quality.</p>
+
+                  <p><strong>Color</strong></p>
+
+                  <p>High color sensitivity, smooth dynamic flow: stunning clinical detail.</p>
+
+                  <p><strong>Applications</strong></p>
+
+                  <p>Elasticity imaging, continuous automation: transformative workflow.</p>
+                </div>
+              </div>
+              <div class="tab-body tab-body-hidden" id="tab3">
+                <div class="icontent mt-30"><ul>
+                  <li>Шингэнийг өндөр нарийвчлалтайгаар сорох агаарын шилжилт (air-displacement) бүхий пипетка</li>
+                  <li>Жин болон сорох хүчний хувьд ялгаатай: маш хөнгөн жинтэй учраас Eppendorf &nbsp;PhysioCare-н шаардлагыг хангасан бөгөөд хэрэглэгчийн гарт ирэх ачаалал харьцангуй бага</li>
+                  <li>Eppendorf Research plus-н хэрэглэгсэн хошууг хаях хүч нь багадаа 3.6 N байх боломжтой</li>
+                  <li>Пипеткийг хэдхэн секундын дотор тохируулах боломжтой бөгөөд олон төрлийн шингэнийг (Этанол гэх мэт сороход амаргүй шингэн мөн орно) ч илүү нарийвчлалтай сордог. Калибровк хийлгүйгээр үндсэн тохиргоо руу шилждэг.</li>
+                  <li>Пипеткийг бүхэлд нь ариутгах эсвэл өөрийн хэрэгцээ шаардлагаас хамаарч доод хэсгийг зөвхөн ариутгах боломжтой.</li>
+                  <li>Уян хатан байдлаар ашиглах боломжтой бөгөөд нэг сувагтай пипеткийг (single-channel pipette) тогтмол хэмжээтэйгээр сороход эсвэл хувьсах боломжтой 8, 12, 16, 24 сувагтай пипеткүүдээс сонгон ашиглах боломжтой.</li>
+                </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -201,39 +282,6 @@
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="width-1-1 mr-20 ml-20">
-      <div class="wpb_column column_container vc_col-md-12">
-        <div class="w3-bar" style="border-bottom:1px solid #ec2027;">
-          <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'London')" style=" border-radius:5px 5px 0px 0">Онцлог шинж чанарууд</button>
-          <a href="javascript:void(0)"><button class="w3-bar-item w3-button tablink">PDF татах</button></a>
-        </div>
-        <div id="London" class="w3-container city mt-30">
-          <div class="icontent"><p><strong>Бүтээгдэхүүний онцлог </strong></p>
-            <p>Дэлхийд хүлээн зөвшөөрөгдсөн чанар</p>
-            <ul>
-              <li>Бүхэл цусанд глюкозон гемоглобин тодорхойлох, hsCRP, D-dimer зэрэг 40 орчим үзүүлэлт үздэг</li>
-              <li>Дэлхийд хүлээн зөвшөөрөгдсөн чанар</li>
-            </ul>
-            <p>Өдөрт &lt;50 шинжилгээ хийдэг лабораторуудад тохиромжтой</p>
-            <ul>
-              <li>Нэг цагт 100 хүртэлх тест хийх хүчин чадалтай</li>
-              <li>Ширээн дээр тавьж ашиглах боломжтой учраас зай талбай хэмнэдэг</li>
-              <li>Ашиглахад хялбар программ хангамжтай</li>
-            </ul>
-            <p><strong>Өндөр хүчин чадалтай</strong></p>
-            <ul>
-              <li>Эдэлгээ даах бат бөх загвар</li>
-              <li>Засвар үйлчилгээг Wizard guide-р хийдэг</li>
-            </ul>
-            <p><strong>Сүлжээнд холбогдох боломжтой</strong></p>
-            <ul>
-              <li>Лабораторийн дотоод сүлжээнд холбогдох боломжтой</li>
-              <li>cobas-н платформд түгээмэл ашиглагддаг урвалжийг ашиглах боломжтой</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -378,6 +426,135 @@
   }
 </script>
 
+<script>
+  var last_tab = 1;
+
+  function loadTab(tab_number)
+  {
+    if (tab_number === last_tab) return;
+
+    document.getElementById("tab" + last_tab).style.display = "none";
+    document.getElementById("tab" + tab_number).style.display = "block";
+    document.getElementById("tab-button" + last_tab).style.opacity = "0.5";
+    document.getElementById("tab-button" + tab_number).style.opacity = "1.0";
+
+    last_tab = tab_number;
+  }
+</script>
+
+<script>
+  (function () {
+    class vanillaZoom {
+      constructor(element) {
+        this.container = element;
+        this.firstSmallImage = this.container.querySelector('.small-preview');
+        this.zoomedImage = this.container.querySelector('.zoomed-image');
+        this.init();
+        this.changePhoto();
+        this.mouseEnter();
+        this.mouseMove();
+        this.mouseLeave();
+      }
+
+      init() {
+        if (!this.container) {
+          console.error('Нет элемента container');
+        }
+        if (!this.zoomedImage) {
+          console.error('Нет элемента zoomedImage');
+        }
+        if (!this.firstSmallImage) {
+          console.error('Нет элемента firstSmallImage');
+        } else {
+          this.zoomedImage.style.backgroundImage = 'url(' + this.firstSmallImage.src + ')';
+        }
+      }
+
+      changePhoto() {
+        this.container.addEventListener('click', (e) => {
+          const elem = e.target;
+          if (elem.classList.contains('small-preview')) {
+            this.zoomedImage.style.backgroundImage = 'url(' + elem.src + ')';
+          }
+        })
+      }
+
+      mouseEnter() {
+        this.zoomedImage.addEventListener('mouseenter', () => {
+          this.zoomedImage.style.backgroundSize = '250%';
+        })
+      }
+
+      mouseMove() {
+        this.zoomedImage.addEventListener('mousemove', (e) => {
+          let dimension = this.zoomedImage.getBoundingClientRect(),
+                  x = e.clientX - dimension.left,
+                  y = e.clientY - dimension.top,
+                  xPercent = Math.round(100 / (dimension.width / x)),
+                  yPercent = Math.round(100 / (dimension.height / y));
+          this.zoomedImage.style.backgroundPosition = xPercent + '%' + yPercent + '%';
+        })
+      }
+
+
+      mouseLeave() {
+        this.zoomedImage.addEventListener('mouseleave', () => {
+          this.zoomedImage.style.backgroundSize = 'cover';
+          this.zoomedImage.style.backgroundPosition = 'center';
+        })
+      }
+
+
+    }
+
+    let zoom = document.querySelectorAll('.vanilla-zoom');
+
+    zoom.forEach(item => {
+      new vanillaZoom(item);
+    })
+  })();
+</script>
+
+<style>
+  .vanilla-zoom {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+  }
+
+  .vanilla-zoom .sidebar {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vanilla-zoom .sidebar img.small-preview{
+    width: 100%;
+    margin-bottom: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+    border: 2px solid #9b0000;
+    border-radius: 10px;
+  }
+
+  .vanilla-zoom .sidebar img:hover{
+    opacity: 1;
+  }
+
+  .vanilla-zoom .sidebar img.small-preview:last-child{
+    margin-bottom: 0;
+  }
+
+  .vanilla-zoom .zoomed-image {
+    flex: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 5px;
+    width: 100%;
+    height: 500px;
+  }
+</style>
 
 
 <script>
