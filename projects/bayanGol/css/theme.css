@@ -599,7 +599,7 @@ body {
 
 .kv-swiper-pagination .swiper-pagination-bullet-active {
     width: 12.1875vw;
-    background: #c7000b;
+    background: #ec2027;
 }
 
 .mr-home-kv:before {
@@ -2590,7 +2590,7 @@ a{
 /*}*/
 
 .service:hover {
-    background-color: #9b0000;
+    background-color: #ec2027;
 }
 
 .service.index16:hover .img {
