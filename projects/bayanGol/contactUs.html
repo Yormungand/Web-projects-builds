@@ -27,26 +27,30 @@
             <div class="contactUs-wrap mt-30">
                 <h1 class="article-view__name">Холбоо барих</h1>
                 <div class="article-view__detail mb-20">
-                    <div class="article-view-detail">
-                        <div class="article-view-detail__button">
-                            <div class="share-button">
-                                <a href="javascript:void(0)" class="share-button__fb">
-                                    <i class="fab fa-facebook"></i> share
-                                </a>
-                                <a href="javascript:void(0)" class="share-button__tw">
-                                    <i class="fab fa-twitter"></i> tweet
-                                </a>
-                            </div>
-                        </div>
+<!--                    <div class="article-view-detail">-->
+<!--                        <div class="article-view-detail__button">-->
+<!--                            <div class="share-button">-->
+<!--                                <a href="javascript:void(0)" class="share-button__fb">-->
+<!--                                    <i class="fab fa-facebook"></i> share-->
+<!--                                </a>-->
+<!--                                <a href="javascript:void(0)" class="share-button__tw">-->
+<!--                                    <i class="fab fa-twitter"></i> tweet-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <div class="contact-page__social-list">
+                        <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
+                        <a href="javascript:void(0)"><i class="fab fa-facebook"></i></a>
+                        <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="article-view__text">
                     <div class="c-content">
                         <p style="text-align: center;">
-                        <div class="contactUs-wrapper">
+                        <div class="contactUs-wrapper mb-30">
                             <img alt="" height="934" src="assets/bayanGol-zurag.jpg"></p>
                         </div>
-                        <p>BayanGol байршил байрлана</p>
                         <ul>
                             <li><strong>Цагийн хуваарь:</strong> 08:30 - 17:30 цаг</li>
                             <li><strong>Утас:</strong> +976-77337070</li>
@@ -863,6 +867,56 @@
 </script>
 
 <style>
+    .contact-page__social-list {
+        position: relative;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+    .contact-page__social-list a {
+        position: relative;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        text-align: center;
+        color: #2A2A2A;
+        background-color: #eef3f7;
+        border-radius: 50%;
+        font-size: 13px;
+        height: 45px;
+        width: 45px;
+        transform: rotate(0);
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        z-index: 1;
+    }
+    .contact-page__social-list a+a {
+        margin-left: 10px;
+    }
+    .contact-page__social-list a:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        background-color: #eee;
+        border-radius: 50%;
+        transform: scale(0.0);
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
+        z-index: -1;
+    }
+    .contact-page__social-list a:hover {
+        color: #fff;
+        transform: rotate(360deg);
+        background: red;
+    }
+    }
     .c-content ul li {
         display: list-item;
     }

@@ -88,7 +88,7 @@
 }
 
 .dropdown-contain a:hover{
-    color: #242728!important;
+    color: #ec2027!important;
 }
 .dropdown-contain a{
     text-decoration: none;
@@ -137,10 +137,18 @@ header .top-navbar .top-navbar-block{
     border-bottom: 1px solid hsla(0,0%,100%,.3);
 }
 
-header .top-navbar .top-navbar-item:last-child{
-    padding: 0;
-}
+/*header .top-navbar .top-navbar-item:last-child{*/
+/*    padding: 0;*/
+/*}*/
 header .top-navbar .top-navbar-item{
+    position: relative;
+    display: inline-block;
+    font-size: .83333vw;
+    line-height: 1.04167vw;
+    padding: 0 1.04167vw;
+}
+
+.top-navbar-text{
     position: relative;
     display: inline-block;
     font-size: .83333vw;
@@ -219,15 +227,9 @@ header .navbar .nav-logo{
     position: absolute;
     top: 0;
     left: 0;
-    margin-bottom: 0;
-    width: 6.04167vw;
-    height: 3.6vw;
-    padding-top: 1.04167vw;
-    padding-bottom: 1.04167vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
     line-height: 1;
-}
-header .navbar .nav-logo .nav-logo-link {
-    background-image: url(../assets/Bayangol.png);
 }
 header .navbar .nav-logo .nav-logo-link {
     display: block;
@@ -246,13 +248,13 @@ header .navbar .nav-operate{
     z-index: 2;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 5px;
     height: 3.6vw;
     line-height: 1;
-    padding: 1.4vw 0;
+    padding: 1.1vw 0;
 }
 header .navbar .nav-operate .nav-operate-btn.nav-search-btn {
-    margin-right: 2.5vw;
+    /*margin-right: 2.5vw;*/
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PGRlZnM+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBmaWxsPSJub25lIiBkPSJNMSAxaDI0djI0SDF6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEgLTEpIiBjbGlwLXBhdGg9InVybCgjYSkiIHN0eWxlPSJpc29sYXRpb246aXNvbGF0ZSI+PGcgZGF0YS1uYW1lPSJob21lLW5hdi1zZWFyY2hAd2ViIj48cGF0aCBmaWxsPSJub25lIiBkPSJNMyAzaDIwdjIwSDN6Ii8+PGcgZGF0YS1uYW1lPSJob21lLW5hdi1zZWFyY2hAd2ViIiBmaWxsPSIjZmZmIj48cGF0aCBkYXRhLW5hbWU9IuakreWchiAxMSIgZD0iTTExLjk0NyAzLjcyMmE4LjIyMyA4LjIyMyAwIDExLTguMjIzIDguMjIzIDguMjMyIDguMjMyIDAgMDE4LjIyMy04LjIyM3ptMCAxNS4xOGE2Ljk1OCA2Ljk1OCAwIDEwLTYuOTU4LTYuOTU3IDYuOTY1IDYuOTY1IDAgMDA2Ljk1OCA2Ljk1N3oiLz48cGF0aCBkYXRhLW5hbWU9IuebtOe6vyA2NyIgZD0iTTIxLjU0MSAyMi4yMzFhLjcuNyAwIDAxLS40OS0uMmwtMy43ODktMy43MTFhLjY2OS42NjkgMCAwMTAtLjk1OS43LjcgMCAwMS45NzkgMGwzLjc4OSAzLjcxMmEuNjY5LjY2OSAwIDAxMCAuOTU5LjcuNyAwIDAxLS40ODkuMTk5eiIvPjwvZz48L2c+PC9nPjwvc3ZnPg==);
 }
 header .navbar .nav-operate .nav-operate-btn {
@@ -366,7 +368,7 @@ header .navbar .nav-menu .nav-menu-item{
 header .navbar .nav-menu{
     list-style: none;
     font-size: 0;
-    margin-left: 12.1875vw;
+    margin-left: 15.1875vw;
 }
 
 header .navbar .nav-menu .nav-menu-item .nav-menu-first {
@@ -1293,7 +1295,7 @@ fieldset, img {
     left: 0;
     width: 11.45833vw;
     height: 22.60417vw;
-    background: linear-gradient(150deg,#e00b0b,#700606);
+    background: linear-gradient(150deg,#e00b0b,#ec2027);
     border-radius: 6.25vw 0 6.25vw 0;
     overflow: hidden;
 }
@@ -1407,27 +1409,157 @@ mr-home-news .mr-home-news-container .mr-home-news-item .home-news-content .home
 }
 
 .mr-home-news .mr-home-news-container .mr-home-news-item:hover
-.home-news-content .home-content-group .home-content-type,
-.mr-home-news .mr-home-news-container .mr-home-news-item:hover
-.home-news-content .home-content-title .home-content-type {
+.home-news-content .home-content-group .home-content-type{
     color: #fff;
 }
+.mr-home-news .mr-home-news-container .mr-home-news-item:hover .home-news-content .home-content-title {
+    color: #fff;
+}
+
+.mr-home-news .mr-home-news-container .mr-home-news-item:hover
+.home-news-content .home-content-group .date{
+    color: #fff;
+}
+
+.mr-home-news .mr-home-news-container home-news-content:hover .home-content-title
+{
+    color: #fff;
+}
+
+.btn-primary{
+    border-color: #ec2027;
+}
+.list-home-news-img{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 50%;
+    height: 0;
+    background-repeat: no-repeat;
+}
+
+.list-home-news-img img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.home-news-item:hover .home-news-content  .home-content-title{
+    color: #ec2027!important;
+}
+
+.mr-home-news .mr-home-news-container .home-news-item:hover .list-home-news-img img {
+    -webkit-transform: scale(1.05);
+    transform: translate(-50%,-50%) scale(1.1,1.1);
+}
+
+
+/*.mr-home-news .mr-home-news-container .mr-home-news-item:hover*/
+/*.home-news-content {*/
+/*    content: "";*/
+/*    display: block;*/
+/*    background-color: #c4161c;*/
+/*    -webkit-transition: left .5s ease-out;*/
+/*    transition: left .5s ease-out;*/
+/*    opacity: 0;*/
+/*}*/
+
+.mr-home-news .mr-home-news-container .mr-home-news-item:hover .home-news-content .news-content-bg:before {
+    left: 0;
+    opacity: 1;
+}
+
+.mr-home-news .mr-home-news-container .mr-home-news-item .home-news-content .news-content-bg {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
 .article__image{
     position: relative;
     overflow: hidden;
-    padding-bottom: 79.11%;
+    padding-bottom: 75.11%;
     height: 0;
     background-repeat: no-repeat;
 }
 .article__image img{
     position: absolute;
     top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: 1;
+}
+.mr-home-news .mr-home-news-container .mr-home-news-item:hover .home-news-img img {
+    -webkit-transform: scale(1.05);
+    transform: translate(-50%,-50%) scale(1.1,1.1);
+}
+
+.home-news-content{
+    position: static;
+    width: -webkit-calc(100% - 1.5625vw);
+    width: calc(100% - 1.5625vw);
+    min-height: auto;
+    border: none;
+    border-bottom: 1px solid #dcdddd;
+    padding: 1.5625vw 0;
+    margin-left: 1.5625vw;
+}
+
+.mr-home-news .mr-home-news-container .home-news-item .home-news-content .home-content-group {
+    font-size: .72917vw;
+    color: #222;
+}
+
+.mr-home-news .mr-home-news-container .home-news-item .home-news-content .home-content-group .home-content-type {
+    color: #c7000b;
+}
+
+.mr-home-news .mr-home-news-container .news-right-container .mr-home-news-list .home-news-item .home-news-content .home-content-title {
+    max-height: 3.95833vw;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.mr-home-news .mr-home-news-container .home-news-item .home-news-content .home-content-title {
+    margin-top: 0.78125vw;
+    font-size: 1.25vw;
+    font-weight: 500;
+    color: #242728;
+}
+.mr-home-news .mr-home-news-container .home-news-item .home-news-content .home-content-group, .mr-home-news .mr-home-news-container .home-news-item .home-news-content .home-content-title {
+    position: relative;
+    z-index: 3;
+}
+
+.mr-home-news__list{
+    width: 100%;
+    height: 715px;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+/*.mr-home-news__list::-webkit-scrollbar {*/
+/*    width: 10px;*/
+/*}*/
+
+.mr-home-news-btn-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
 }
 
 
@@ -1461,9 +1593,9 @@ header .bottom-menubar .top-navbar-block {
     border-bottom: 1px solid hsla(0, 0%, 100%, .3);
 }
 
-header .bottom-menubar .top-navbar-item:last-child {
-    padding: 0;
-}
+/*header .bottom-menubar .top-navbar-item:last-child {*/
+/*    padding: 0;*/
+/*}*/
 
 header .bottom-menubar .top-navbar-item {
     position: relative;
@@ -1510,6 +1642,7 @@ header .menubar {
 header .menubar {
     flex: 0 0 100%;
     max-width: 100%;
+    order: 2;
 }
 
 li, ol, ul {
@@ -1526,10 +1659,8 @@ header .menubar .nav-logo {
     top: 0;
     left: 0;
     margin-bottom: 0;
-    width: 7vw;
-    height: 3.6vw;
-    padding-top: 1.04167vw;
-    padding-bottom: 1.04167vw;
+    padding-top: 0.4167vw;
+    padding-bottom: 0.4167vw;
     line-height: 1;
 }
 
@@ -1557,7 +1688,7 @@ header .menubar .nav-operate {
     right: 0;
     height: 3.6vw;
     line-height: 1;
-    padding: 1.4vw 0;
+    padding: 1.1vw 0;
 }
 
 header .menubar .nav-operate .nav-operate-btn.nav-search-btn {
@@ -1688,7 +1819,7 @@ header .menubar .nav-menu .nav-menu-item {
 header .menubar .nav-menu {
     list-style: none;
     font-size: 0;
-    margin-left: 12.1875vw;
+    margin-left: 15.1875vw;
 }
 
 header .menubar .nav-menu .nav-menu-item .nav-menu-first {
@@ -1901,21 +2032,23 @@ a.btn-grey {
 #covidtext{
     color: #646464;
     font-size: 14px;
+    padding: 50px;
 }
 a.covid {
     font-size: 17px !important;
     text-transform: uppercase;
+    font-weight: 600;
 }
 .covid {
     color: white;
-    background-color: #ec2027;
+    background-color: #095cbd;
     border: 1px solid transparent;
     border-radius: 10px;
     margin: 5px 10px 5px 10px;
     padding: 6px 23px 6px 23px;
 }
 #bilder {
-    background-color: #002e63;
+    background-color: #095cbd;
     padding-bottom: 0px;
     padding-top: 2px;
     padding-left: 15px;
@@ -1932,7 +2065,7 @@ a.covid {
 }
 #popup {
     position: relative;
-    top: 16%;
+    top: 8%;
     width: 90%;
     max-width: 950px;
     margin: auto;
@@ -2042,17 +2175,17 @@ header
  }
 
 .related_post .arrow.button-prev {
-    left: auto;
+    left: 0;
     right: 80px;
 }
 .related_post .arrow.swiper-button-disabled {
     opacity: .4;
 }
 .related_post .arrow {
-    top: 21px;
+    top: 61%;
     width: 42px;
     position: absolute;
-    right: 30px;
+    right: -16px;
     z-index: 999;
     -webkit-transition: all .25s ease;
     -moz-transition: all .25s ease;
@@ -2122,13 +2255,14 @@ header
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
-.nav-logo__bayanGol-link img{
-    width: 140px;
-    height: 40px;
-}
+/*.nav-logo__bayanGol-link img{*/
+/*    width: 140px;*/
+/*    height: 40px;*/
+/*}*/
 
 .home_c a{
-    color: #ec2027;
+    color: #9b0000;
+    font-size: 18px;
 }
 .breadcrumb_c svg{
     font-size: 10px;
@@ -2161,7 +2295,7 @@ header .navbar {
 }
 .nav-logo img{
     max-width: 180px;
-    height: 43px;
+    height: 54px;
 }
 .botNavbar-border{
     border-bottom: 1px solid #eee;
@@ -2265,8 +2399,8 @@ header .navbar {
 
 .tab.active {
     background-color: #e9e9e9;
-    color: #ec2027;
-    border-right: 2px solid #ec2027;
+    color: #214083;
+    border-right: 2px solid #214083;
 }
 
 /*.tab:hover {*/
@@ -2347,6 +2481,7 @@ header .navbar {
 
 .tabs li{
     padding: 15px;
+    border: 1px solid #e1e4e4;
 }
 
 svg:not(:root).svg-inline--fa {
@@ -2375,9 +2510,11 @@ svg:not(:root).svg-inline--fa {
     border: none;
     outline: none;
     cursor: pointer;
+    font-width: 600;
+    font-size: 16px;
     padding: 14px 16px;
     transition: 0.3s;
-    border-bottom: 1px solid #9b0000;
+    border-bottom: 1px solid #ec2027;
 }
 
 .tab button:hover {
@@ -2385,7 +2522,7 @@ svg:not(:root).svg-inline--fa {
 }
 
 .tab button.active {
-    background-color: #9b0000;
+    background-color: #ec2027;
     color: #fff!important;
 }
 
@@ -2551,7 +2688,8 @@ a{
     text-align: center;
     text-transform: uppercase;
     margin: 20px 0;
-    color: #9b0000;
+    font-weight: 600;
+    color: #ec2027;
     font-size: 20px;
 }
 
@@ -2670,7 +2808,7 @@ div.tab-button-wrapper li {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    background-color: #9b0000;
+    background-color: #ec2027;
 }
 
 div.tab-button-wrapper li a{
@@ -2726,7 +2864,7 @@ div.tab-body-hidden {
 }
 
 .work-categories li a.active {
-    background-color: #9b0000;
+    background-color: #ec2027;
     color: #fff;
 }
 .work-categories li a {
@@ -2754,3 +2892,43 @@ div.tab-body-hidden {
 .work-categories li:hover::before {
     box-shadow: 0 2px 5px 2px rgb(0 0 0 / 25%);
 }
+
+
+header:hover .bottom-menubar .top-navbar-block, header .top-navbar.show .top-navbar-block, header .top-navbar.visible .top-navbar-block {
+    background-color: #c7000b;
+}
+
+header:hover .bottom-menubar  .top-navbar-item .top-navbar-text{
+    color: #fff;
+}
+header:hover .bottom-menubar .top-navbar-item:after{
+    background-color: #fff;
+}
+
+.pop__title{
+    padding-top: 50px;
+    padding-left: 56px;
+}
+
+.pop__button{
+    padding-top: 29px;
+    padding-right: 35px;
+}
+
+
+ .nav-logo__bayanGol-link:hover img{
+     transform: scale(1.1,1.1);
+ }
+
+ .nav-logo:hover img{
+     transform: scale(1.1,1.1);
+ }
+
+ .president-wrap .text-style{
+     text-align: end;
+ }
+
+ .pos-change{
+     text-align: end!important;
+     margin-bottom: 10px;
+ }

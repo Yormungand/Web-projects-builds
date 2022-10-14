@@ -23,12 +23,26 @@
 <header style="position: relative;">
 </header>
 <main>
-    <div class="providers">
-        <img src="assets/about-us1.jpg">
-    </div>
-    <div class="providers__title">
-        <h1>Манай хамт олон</h1>
-    </div>
+    <section class="back-color">
+        <div class="container position-relative">
+            <div class="home_c">
+                <a href="index.html" class="homeback"><i class="fa fa-arrow-circle-left " style="font-size: 20px!important;"></i></a>
+                <div class="breadcrumb_c">Эхлэл <i class="fas fa-chevron-left"></i> Мэргэжилийн баг</div>
+            </div>
+        </div>
+    </section>
+     <div class="container">
+         <div class="providers__title mt-30">
+             <h1>Манай хамт олон</h1>
+         </div>
+        <div style="height: 730px;border-radius: 10px;">
+            <img src="assets/about-us1.jpg" class="mobile uk-cover" width="100%" style="height: 700px; width: 100%">
+        </div>
+     </div>
+<!--    <div class="providers">-->
+<!--        <img src="assets/about-us1.jpg">-->
+<!--    </div>-->
+
     <div class="small-container">
         <div class="grid-30">
             <div class="width-7-12">
@@ -178,12 +192,12 @@
                         <div class="grid-20">
                             <div class="width-5-12">
                                 <div class="overview-image">
-                                    <img src="assets/Санхүү%20эрхэлсэн%20захирал%20Э.jpg">
+                                    <img src="assets/Санхүү%20эрхэлсэн%20захирал%20Э.%20Алтанзул.jpg">
                                 </div>
                             </div>
                             <div class="width-7-12">
                                 <div class="overview-profile">
-                                    <h3>Санхүү эрхэлсэн захирал Э</h3>
+                                    <h3>Санхүү эрхэлсэн захирал Э.Алтанзул</h3>
                                     <div class="overview-profile__desc lineClamp5">
                                         <p>
                                             Засгийн газар эрүүл мэндийн салбарт бодитой хөрөнгө оруулалтыг хийж буй.
@@ -396,34 +410,24 @@
 
 <script>
     /** @code header */
-    fetch('include/header.html').then(data => {
-        return data.text()
-    }).then(data => {
-        document.querySelector("header").innerHTML = data
-    })
+    fetch('include/header.html').then(data=>{return data.text()}).then(data=>{document.querySelector("header").innerHTML = data})
     /** @code footer */
-    fetch('include/footer.html').then(data => {
-        return data.text()
-    }).then(data => {
-        document.querySelector("footer").innerHTML = data
-    })
-
+    fetch('include/footer.html').then(data=>{return data.text()}).then(data=>{document.querySelector("footer").innerHTML = data})
     function seeMore(el) {
         let p = el.parentElement.querySelector("p")
-        if (el.classList.contains("active")) {
+        if (el.classList.contains("active")){
             el.classList.remove("active");
             p.style.maxHeight = '260px';
-            setTimeout(() => {
+            setTimeout(()=>{
                 p.style = "max-height: 260px";
             }, 500)
         } else {
             el.classList.add("active")
             p.style = "-webkit-line-clamp:unset";
-            p.style.maxHeight = el.parentElement.querySelector("p").scrollHeight + 'px'
+            p.style.maxHeight = el.parentElement.querySelector("p").scrollHeight+'px'
         }
     }
 </script>
-
 
 <script>
     document.addEventListener("DOMContentLoaded", e => {
@@ -511,44 +515,6 @@
         } else
             player.loadVideoById(videoId);
     }
-
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", e => {
-        const navTop = document.getElementById("topNavbar");
-        const navBot = document.getElementById("botNavbar");
-        const headerNav = document.getElementById("header");
-        // const modalElm = document.getElementById("active");
-        // const modalElm2 = document.getElementById("show");
-        document.getElementById('header').addEventListener('mouseover', ev => {
-            navTop.classList.add('active');
-            navBot.classList.add('show');
-        })
-        document.getElementById('header').addEventListener('mouseleave', ev => {
-            navTop.classList.remove('active');
-            navBot.classList.remove('show');
-        })
-        let lastScrollTop = 0;
-        document.addEventListener('scroll', ev => {
-            var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-            if (st > lastScrollTop) {
-                // downscroll code
-            } else if (window.pageYOffset === 0) {
-                headerNav.classList.remove('active-fixed');
-                navTop.style.display = "block";
-            } else {
-                headerNav.classList.add('active-fixed');
-                navTop.style.display = "none";
-            }
-            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-        })
-    })
-
-
-    /*btnOpenModal.addEventListener("hover", function () {
-        redModal.classList.add("show");
-    });*/
-
 
 </script>
 
@@ -756,10 +722,6 @@
         border-bottom: 1px solid hsla(0, 0%, 100%, .3);
     }
 
-    header .bottom-menubar .top-navbar-item:last-child {
-        padding: 0;
-    }
-
     header .bottom-menubar .top-navbar-item {
         position: relative;
         display: inline-block;
@@ -796,17 +758,6 @@
         display: none;
     }
 
-    header .menubar {
-        position: relative;
-        order: 0;
-        background-color: transparent;
-    }
-
-    header .menubar {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
     li, ol, ul {
         list-style: none;
     }
@@ -817,22 +768,22 @@
         margin-left: 12.1875vw;
     }
 
-    header .menubar .nav-logo {
-        z-index: 2;
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-bottom: 0;
-        width: 9.04167vw;
-        height: 3.6vw;
-        padding-top: 1.04167vw;
-        padding-bottom: 1.04167vw;
-        line-height: 1;
-    }
+    /*header .menubar .nav-logo {*/
+    /*    z-index: 2;*/
+    /*    position: absolute;*/
+    /*    top: 0;*/
+    /*    left: 0;*/
+    /*    margin-bottom: 0;*/
+    /*    width: 9.04167vw;*/
+    /*    height: 3.6vw;*/
+    /*    padding-top: 1.04167vw;*/
+    /*    padding-bottom: 1.04167vw;*/
+    /*    line-height: 1;*/
+    /*}*/
 
-    header .menubar .nav-logo .nav-logo-link {
-        background-image: url(assets/Bayangol.png);
-    }
+    /*header .menubar .nav-logo .nav-logo-link {*/
+    /*    background-image: url(assets/Bayangol.png);*/
+    /*}*/
 
     header .menubar .nav-logo .nav-logo-link {
         display: block;

@@ -9,19 +9,15 @@
                 <a href="index.html" class="nav-menu-link nav-menu-first">Нүүр хуудас</a>
               </li>
               <li class="nav-menu-item">
-                <a href="../about-us.html" class="nav-menu-link nav-menu-first">Бидний тухай</a>
+                <a href="../about-us.html" class="nav-menu-link nav-menu-first">Бидний тухай<i class="fa fa-caret-down"></i></a>
                 <div class="dropdown-contain">
                   <a href="javascript:void(0)" class="drop-menu">Товч танилцуулга</a>
                   <a href="time-line.html" class="drop-menu">Түүхэн замнал</a>
+                  <a href="zahiral.html" class="drop-menu">Захирлын мэндчилгээ</a>
                 </div>
               </li>
               <li class="nav-menu-item">
-                <a href="service.html" class="nav-menu-link nav-menu-first">Үйлчилгээ<i class="fa fa-caret-down"></i></a>
-                <div class="dropdown-contain">
-                  <a href="javascript:void(0)" class="drop-menu">Engineer service</a>
-                  <a href="javascript:void(0)" class="drop-menu">Customer training</a>
-                  <a href="javascript:void(0)" class="drop-menu">ISO</a>
-                </div>
+                <a href="service.html" class="nav-menu-link nav-menu-first">Үйлчилгээ</a>
               </li>
               <li class="nav-menu-item">
                 <a href="Product.html" class="nav-menu-link nav-menu-first dropbtn">Бүтээгдэхүүн<i class="fa fa-caret-down"></i></a>
@@ -33,7 +29,7 @@
                 </div>
               </li>
               <li class="nav-menu-item">
-                <a href="our-providers.html" class="nav-menu-link nav-menu-first">Our provider</a>
+                <a href="our-providers.html" class="nav-menu-link nav-menu-first">Мэргэжлийн баг</a>
               </li>
               <li class="nav-menu-item">
                 <a href="contactUs.html" class="nav-menu-link nav-menu-first">Холбоо барих</a>
@@ -47,14 +43,14 @@
                 <a href="javascript:void(0);" class="nav-operate-btn nav-search-btn" id="navSearchBtn">search</a>
                 <a href="javascript:void(0);" class="nav-operate-btn nav-search-btn nav-search-btn-mob" id="navSearchMobBtn">search</a>
                 <input id="navSearch" class="nav-search-input" type="search" data-url="/en/search-result">
-                <i class="nav-operate-btn nav-logined-btn hidden" id="navLoginedBtn">
-                  <div class="nav-logined-block">
-                    <a href="/en/auth/user-account" class="nav-logined-block-ele text-red">My
-                      Account</a>
-                    <a href="javascript:clickLogoutBtn();" id="navLogoutBtn" data-url="/system/sling/logout.html?resource=/en" class="nav-logined-block-ele">Sign
-                      Out</a>
-                  </div>
-                </i>
+<!--                <i class="nav-operate-btn nav-logined-btn hidden" id="navLoginedBtn">-->
+<!--                  <div class="nav-logined-block">-->
+<!--                    <a href="/en/auth/user-account" class="nav-logined-block-ele text-red">My-->
+<!--                      Account</a>-->
+<!--                    <a href="javascript:clickLogoutBtn();" id="navLogoutBtn" data-url="/system/sling/logout.html?resource=/en" class="nav-logined-block-ele">Sign-->
+<!--                      Out</a>-->
+<!--                  </div>-->
+<!--                </i>-->
                 <a href="javascript:void(0);" class="nav-operate-btn navbar-toggle">Menu</a>
               </div>
             </div>
@@ -84,36 +80,5 @@
         </div>
       </div>
     </nav>
-  </div>
+</div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", e=>{
-    const navTop = document.getElementById("topNavbar");
-    const navBot = document.getElementById("botNavbar");
-    const headerNav = document.getElementById("header");
-    // const modalElm = document.getElementById("active");
-    // const modalElm2 = document.getElementById("show");
-    document.getElementById('header').addEventListener('mouseover', ev => {
-      navTop.classList.add('active');
-      navBot.classList.add('show');
-    })
-    document.getElementById('header').addEventListener('mouseleave', ev => {
-      navTop.classList.remove('active');
-      navBot.classList.remove('show');
-    })
-    let lastScrollTop = 0;
-    document.addEventListener('scroll', ev=>{
-      var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-      if (st > lastScrollTop){
-        // downscroll code
-      } else if (window.pageYOffset === 0) {
-        headerNav.classList.remove('active-fixed');
-        navTop.style.display = "block";
-      } else {
-        headerNav.classList.add('active-fixed');
-        navTop.style.display = "none";
-      }
-      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-    })
-  })
-</script>
