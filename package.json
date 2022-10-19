@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "and": "0.0.3",
     "atropos": "^1.0.2",
     "autonumeric": "^4.6.0",
     "axios": "^0.24.0",
@@ -48,6 +49,7 @@
     "fullpage.js": "^3.1.2",
     "gulp-cli": "^2.3.0",
     "highlight.js": "^11.5.1",
+    "install": "^0.13.0",
     "npx": "^10.2.2",
     "perfect-scrollbar": "^1.5.5",
     "plyr": "^3.7.2",
@@ -55,7 +57,8 @@
     "scrollmagic": "^2.0.8",
     "three": "^0.134.0",
     "typeface-abel": "^1.1.13",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "yarn": "^1.22.19"
   },
   "browserslist": [
     "last 1 version",
