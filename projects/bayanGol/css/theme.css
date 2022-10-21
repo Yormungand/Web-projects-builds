@@ -3053,3 +3053,13 @@ p{
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
+.effect-milo__image:hover{
+    overflow: hidden;
+    transform: rotate(0.0001deg);
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.effect-milo__image:hover img {
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)
+}
