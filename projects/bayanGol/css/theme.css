@@ -3058,7 +3058,7 @@ p{
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     /* transition: opacity 0.35s, transform 0.35s; */
     -webkit-transform: translate3d(-30px,0,0) scale(1.12);
-    transform: translate3d(-30px,0,0) scale(1.12) translate(50%, -50%);;
+    transform: translate3d(-30px,0,0) scale(1.12) translate(50%, -50%);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
