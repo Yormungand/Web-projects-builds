@@ -1181,6 +1181,10 @@ img {
     padding-bottom: 1.5625vw;
 }
 
+.mr-home-news__list:hover {
+    -webkit-mask-position: left top;
+}
+
 .ani-overflow-text {
     display: block;
     overflow: hidden;
@@ -1344,7 +1348,7 @@ fieldset, img {
     -webkit-flex: 0 0 -webkit-calc(100% - 53.28125vw);
     flex: 0 0 calc(100% - 45.28125vw);
     max-width: -webkit-calc(100% - 53.28125vw);
-    max-width: calc(100% - 53.28125vw);
+    max-width: calc(100% - 50.28125vw);
     height: 40vw;
 }
 
@@ -3060,6 +3064,5 @@ p{
     transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.effect-milo__image:hover img {
-    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)
+.effect-milo__image:hover img {transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)
 }
