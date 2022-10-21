@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+    <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/4.12/video.js"></script>
   </head>
 </head>
 <body>
@@ -60,8 +62,25 @@
     <div id="London" class="tabcontent">
       <div class="grid-40">
         <div class="width-6-12">
-          <div class="tab-content__image">
-            <img src="assets/zurag25.jpg">
+          <div class="swiper service-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="tab-content__image">
+                  <img src="assets/zurag25.jpg">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="tab-content__image">
+                  <img src="assets/zurag25.jpg">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="tab-content__image">
+                  <img src="assets/zurag25.jpg">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
         <div class="width-6-12">
@@ -83,24 +102,46 @@
         </div>
       </div>
     </div>
-
     <div id="Paris" class="tabcontent">
-      <div class="video__title">
-        Mini Clia-C2000 анализатор
+<!--      <div class="video__title">-->
+<!--        Mini Clia-C2000 анализатор-->
+<!--      </div>-->
+<!--      <div class="grid-30">-->
+<!--        <div class="width-6-12">-->
+<!--            <video width="600" height="300" controls>-->
+<!--              <source src="assets/C2000%20introduction.mp4" type="video/mp4">-->
+<!--              <source src="assets/C2000%20introduction.mp4" type="video/ogg">-->
+<!--              Your browser does not support the video tag.-->
+<!--            </video>-->
+<!--        </div>-->
+<!--        <div class="width-6-12">-->
+<!--        </div>-->
+<!--      </div>-->
+      <!-- Hidden video div -->
+      <div style="display:none;" id="video1">
+        <video class="lg-video-object lg-html5" controls preload="none">
+          <source src="videos/video1.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
       </div>
-      <div class="grid-30">
-        <div class="width-6-12">
-            <video width="600" height="300" controls>
-              <source src="assets/C2000%20introduction.mp4" type="video/mp4">
-              <source src="assets/C2000%20introduction.mp4" type="video/ogg">
-              Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="width-6-12">
-        </div>
+      <div style="display:none;" id="video2">
+        <video class="lg-video-object lg-html5" controls preload="none">
+          <source src="videos/video2.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
       </div>
-    </div>
 
+      <!-- data-src should not be provided when you use html5 videos -->
+      <ul id="html5-videos">
+        <li data-poster="video-poster1.jpg" data-sub-html="video caption1" data-html="#video1" >
+          <img src="assets/about-us1.jpg" />
+        </li>
+        <li data-poster="video-poster2.jpg" data-sub-html="video caption2" data-html="#video2" >
+          <img src="assets/about-us2.jpg" />
+        </li>
+        ...
+      </ul>
+    </div>
     <div id="Tokyo" class="tabcontent">
       <div class="grid-30">
         <div class="width-6-12">
@@ -131,6 +172,75 @@
 </footer>
 </body>
 </html>
+<style>
+  .video-wrapper{
+    width: 1100px;
+    height: 480px;
+    display: flex;
+    background: rgb(238, 236, 236);
+  }
+
+  .video-wrapper .videos{
+    width: 20%;
+    padding: 10px 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .video-wrapper .videos iframe{
+    width: 95%;
+    height: 100px;
+    margin: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .video-wrapper .videos video:nth-child(1){
+    margin-top: 0;
+  }
+
+  .video-wrapper .videos video:hover,
+  .video-wrapper .videos .active{
+    transform: scale(1.06);
+    border: 3px solid blue;
+  }
+
+  .video-wrapper .main-video{
+    width: 80%;
+    padding: 10px;
+  }
+
+  .video-wrapper .main-video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px solid blue;
+  }
+</style>
+
+<script>
+  lightGallery(document.getElementById('video-gallery'), {
+    videojs: true
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  new Swiper(".service-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoplay: {
+      delay: 3500,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
 
 <script>
   /** @code header */
@@ -152,7 +262,6 @@
     }
   }
 </script>
-
 
 <style>
   .video__title{
@@ -223,124 +332,6 @@
   }
 </style>
 
-<script>
-  document.addEventListener("DOMContentLoaded", e=>{
-
-  })
-  let tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/iframe_api";
-  let firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  class VideoIntroduction {
-    constructor(url, id, videoTarget) {
-      this.url = url;
-      this.id = id;
-      this.videoTarget = videoTarget;
-      this.show();
-    }
-    show(){
-      document.getElementById(this.id).querySelector('.block-video__target').style.display = 'block';
-      this.parse_url(this.url);
-    }
-    parse_url(){
-      let uri = this.url;
-      let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
-      let match = uri.match(regExp);
-      if (match && match[7].length == 11)
-        this.url = match[7];
-      // setTrailer(match[7])
-      this.load();
-      return (match && match[7].length == 11) ? match[7] : false;
-    }
-    load(){
-      new YT.Player(this.videoTarget, {
-        height: '100%',
-        width: '100%',
-        videoId: this.url,
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        },
-        playerVars: {
-          autoplay: 0,
-          controls: 1,
-          rel: 0,
-          fs: 1,
-        },
-      })
-    }
-  }
-
-  let player;
-  function onYouTubeIframeAPIReady(videoId) {
-
-  }
-  onPlayerReady = function (event) {
-    if (event){
-      // event.target.mute();
-      // event.target.playVideo();
-      event.target.setVolume(100);
-    }
-  }
-  var done = false;
-  function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PLAYING && !done) {
-      // When playing
-    } else if (event.data == YT.PlayerState.PAUSED && done) {
-      // When paused
-    }
-  }
-  function playThis(el, videoId) {
-    console.log(el)
-    if (player.getPlayerState() === 1) {
-      if (el.getAttribute('data-video') === player.getVideoData()['video_id'])
-        return null
-      else
-        player.loadVideoById(videoId);
-    } else
-      player.loadVideoById(videoId);
-  }
-
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", e => {
-    const navTop = document.getElementById("topNavbar");
-    const navBot = document.getElementById("botNavbar");
-    const headerNav = document.getElementById("header");
-    // const modalElm = document.getElementById("active");
-    // const modalElm2 = document.getElementById("show");
-    document.getElementById('header').addEventListener('mouseover', ev => {
-      navTop.classList.add('active');
-      navBot.classList.add('show');
-    })
-    document.getElementById('header').addEventListener('mouseleave', ev => {
-      navTop.classList.remove('active');
-      navBot.classList.remove('show');
-    })
-    let lastScrollTop = 0;
-    document.addEventListener('scroll', ev => {
-      var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-      if (st > lastScrollTop) {
-        // downscroll code
-      } else if (window.pageYOffset === 0) {
-        headerNav.classList.remove('active-fixed');
-        navTop.style.display = "block";
-      } else {
-        headerNav.classList.add('active-fixed');
-        navTop.style.display = "none";
-      }
-      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-    })
-  })
-
-
-  /*btnOpenModal.addEventListener("hover", function () {
-      redModal.classList.add("show");
-  });*/
-
-
-</script>
 
 <script>
   const tabs = document.querySelectorAll('[data-tab-target]')
@@ -361,25 +352,6 @@
   })
 </script>
 
-<script>
-  function getDescription(i) {
-    if (txt[i].style.display == 'block') {
-      txt[i].style.display = 'none';
-    } else {
-      txt[i].style.display = 'block';
-    }
-  }
-  let kopje = document.getElementsByTagName('h3');
-  console.log(kopje);
-
-  let txt = document.getElementsByClassName('description-text');
-  console.log(txt);
-
-  for (i = 0; i<kopje.length; i++) {
-    txt[i].style.display = 'block';
-  }
-
-</script>
 
 <style>
   .accordion-title{
@@ -434,7 +406,6 @@
     background-color: #ec2027!important;
   }
 </style>
-
 
 <script>
   function openCity(evt, cityName) {

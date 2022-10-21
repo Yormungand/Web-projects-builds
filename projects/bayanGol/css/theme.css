@@ -53,10 +53,7 @@
     position: absolute;
     z-index: 1;
     cursor:pointer;
-    -webkit-animation-name: animationFade;
-    animation-name: animationFade;
     -webkit-animation-duration: 1s;
-    animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35);
@@ -473,6 +470,11 @@ body{
     color: #242728;
 }
 
+.home-news-title{
+    font-size: 36px;
+    font-weight: 600;
+}
+
 .mr-home-kv .mr-home-swiper .home-kv-summary .home-kv-desc {
     margin-top: 1.5625vw;
     font-size: 1.14583vw;
@@ -505,7 +507,7 @@ body{
 .btn {
     display: inline-block;
     font-weight: 400;
-    color: #212529;
+    color: #fff;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
@@ -1195,7 +1197,7 @@ img {
     top: 0;
     left: 0;
     width: 0;
-    height: 0.52083vw;
+    height: 0.32083vw;
     background-color: #c7000b;
     -webkit-transition: width .5s ease-out .8s;
     transition: width .5s ease-out .8s;
@@ -1328,7 +1330,7 @@ fieldset, img {
 
 .mr-home-news .mr-home-news-container .mr-home-news-item .home-news-content .home-content-title {
     margin-top: 0.78125vw;
-    font-size: 1.25vw;
+    font-size: 16px;
     font-weight: 500;
     color: #242728;
 }
@@ -1340,7 +1342,7 @@ fieldset, img {
 .mr-home-news .mr-home-news-container .mr-home-news-btm .mr-home-news-right {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 -webkit-calc(100% - 53.28125vw);
-    flex: 0 0 calc(100% - 53.28125vw);
+    flex: 0 0 calc(100% - 45.28125vw);
     max-width: -webkit-calc(100% - 53.28125vw);
     max-width: calc(100% - 53.28125vw);
     height: 40vw;
@@ -1916,7 +1918,7 @@ header .menubar .no-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 7px 5px;
+    padding: 5px 5px;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -2232,7 +2234,6 @@ header
     transition: all .25s ease;
 }
 .related-posts-title {
-    text-transform: capitalize;
     font-size: 28px;
     position: absolute;
     margin: 0!important;
@@ -2682,15 +2683,16 @@ a{
 }
 .service{
     position: relative;
-    height: 330px;
+    height: 300px;
     overflow: hidden;
     background-color: #f0f0f0;
     padding: 20px;
 }
 
 .service.index16 .img{
-    background: url(../assets/eq1.png);
+    background: url(../assets/ventilator2.png);
     background-size: cover;
+    margin-top: 36px;
 }
 
 .service .img{
@@ -2705,7 +2707,7 @@ a{
     text-transform: uppercase;
     margin: 20px 0;
     font-weight: 600;
-    color: #c7000b;
+    color: #363636;
     font-size: 20px;
 }
 
@@ -2730,6 +2732,7 @@ a{
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     text-align: left;
+    margin-top: 40px;
 }
 
 /*.service a.more:after {*/
@@ -2748,7 +2751,7 @@ a{
 }
 
 .service.index16:hover .img {
-    background: url(../assets/repair.png)0 -90px;
+    background: url(../assets/ventilator.png)0 -90px;
     height: 90px;
     width: 90px;
     background-size: cover;
@@ -2759,12 +2762,13 @@ a{
 
 
 .service.index236 .img{
-    background: url(../assets/liquid2.png);
+    background: url(../assets/reag2.png);
     background-size: cover;
+    margin-top: 36px;
 }
 
 .service.index236:hover .img {
-    background: url(../assets/liquid.png)0 -90px;
+    background: url(../assets/reag1.png)0 -90px;
     height: 90px;
     width: 90px;
     background-size: cover;
@@ -2772,12 +2776,13 @@ a{
 
 
 .service.index237 .img{
-    background: url(../assets/laboratory.png);
+    background: url(../assets/pills1.png);
     background-size: cover;
+    margin-top: 36px;
 }
 
 .service.index237:hover .img {
-    background: url(../assets/laboratory2.png)0 -90px;
+    background: url(../assets/pills2.png)0 -90px;
     height: 90px;
     width: 90px;
     background-size: cover;
@@ -2785,12 +2790,13 @@ a{
 
 
 .service.index238 .img{
-    background: url(../assets/cosmetics.png);
+    background: url(../assets/hand2.png);
     background-size: cover;
+    margin-top: 36px;
 }
 
 .service.index238:hover .img {
-    background: url(../assets/cosmetics2.png)0 -90px;
+    background: url(../assets/hand1.png)0 -90px;
     height: 90px;
     width: 90px;
     background-size: cover;
@@ -2933,15 +2939,6 @@ header:hover .bottom-menubar .top-navbar-item:after{
     padding-right: 35px;
 }
 
-
- .nav-logo__bayanGol-link:hover img{
-     transform: scale(1.1,1.1);
- }
-
- .nav-logo:hover img{
-     transform: scale(1.1,1.1);
- }
-
  .president-wrap .text-style{
      text-align: end;
  }
@@ -3037,4 +3034,7 @@ p{
 
 .description-text{
     text-indent: 30px;
+}
+.button-color{
+    color: #363636;
 }
