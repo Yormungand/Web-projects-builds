@@ -515,12 +515,108 @@
             </div>
         </div>
     </div>
+<!--    <div id="modal-intro-image" class="uk-flex-top modal uk-open" uk-modal="" style="display: block;">-->
+<!--        <div class="uk-modal-dialog modal">-->
+<!--            <a href="javascript:void(0)" class="uk-modal-close-outside uk-icon uk-close" type="button" uk-close="">-->
+<!--                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"-->
+<!--                     data-svg="close-icon">-->
+<!--                    <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>-->
+<!--                    <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>-->
+<!--                </svg>-->
+<!--            </a>-->
+<!--            <div class="p-10" id="covidtext">-->
+<!--                <div>-->
+<!--                    <img src="https://back.emonos.mn/media/banner/hurgelt_banner_1.jpg">-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <p style="line-height: 1.5;" class="lineClamp3 mt-20">-->
+<!--                        Витамин Д хүүхдийн рахит буюу сульдаа өвчнөөс сэргийлэх супер хамгаалагч.-->
+<!--                        <br>-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--                <div class="btnCenter">-->
+<!--                    <a class="mt-30 btn-rounded btn-bordered btn-grey" href="biology-view.html">Хуудас руу очих</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 </main>
 <div class="colorfull-row mt-60"></div>
 <footer id="footer" class="light">
 </footer>
 </body>
 </html>
+
+<!--<style>-->
+<!--    .uk-modal.uk-open {-->
+<!--        opacity: 1;-->
+<!--    }-->
+<!--    .uk-flex-top {-->
+<!--        align-items: flex-start;-->
+<!--    }-->
+<!--    @media (min-width: 960px){-->
+<!--        .uk-modal {-->
+<!--            padding-left: 40px;-->
+<!--            padding-right: 40px;-->
+<!--        }-->
+<!--    }-->
+<!--    @media (min-width: 640px){-->
+<!--        .uk-modal {-->
+<!--            padding: 50px 30px;-->
+<!--        }-->
+<!--        .uk-modal {-->
+<!--            display: none;-->
+<!--            position: fixed;-->
+<!--            top: 0;-->
+<!--            right: 0;-->
+<!--            bottom: 0;-->
+<!--            left: 0;-->
+<!--            z-index: 1010;-->
+<!--            overflow-y: auto;-->
+<!--            -webkit-overflow-scrolling: touch;-->
+<!--            padding: 15px 15px;-->
+<!--            background: rgba(0, 0, 0, .6);-->
+<!--            opacity: 0;-->
+<!--            transition: opacity .15s linear;-->
+<!--        }-->
+<!--    }-->
+<!--    .uk-open>.uk-modal-dialog {-->
+<!--        opacity: 1;-->
+<!--        transform: translateY(0);-->
+<!--    }-->
+<!--    .uk-modal-dialog {-->
+<!--        position: relative;-->
+<!--        box-sizing: border-box;-->
+<!--        margin: 0 auto;-->
+<!--        width: 450px;-->
+<!--        max-width: calc(100% - 0.01px)!important;-->
+<!--        background: #fff;-->
+<!--        top: 23%;-->
+<!--        opacity: 0;-->
+<!--        transform: translateY(-100px);-->
+<!--        transition: .3s linear;-->
+<!--        transition-property: opacity,transform;-->
+<!--    }-->
+<!--    button.uk-icon:not(:disabled) {-->
+<!--        cursor: pointer;-->
+<!--    }-->
+<!--    .modal .uk-close {-->
+<!--        width: 32px;-->
+<!--        height: 32px;-->
+<!--        border-radius: 50%;-->
+<!--        background: #f1f5fd;-->
+<!--        position: absolute;-->
+<!--        top: 24px;-->
+<!--        right: 24px;-->
+<!--        display: flex;-->
+<!--        align-items: center;-->
+<!--        justify-content: center;-->
+<!--        border: none;-->
+<!--        -webkit-transition: all .3s ease-in-out;-->
+<!--        transition: all .3s ease-in-out;-->
+<!--        padding: 0;-->
+<!--    }-->
+<!--</style>-->
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -568,18 +664,16 @@
         document.getElementById('ac-wrapper').style.display = "none";
     }
 
-
-    // $(document).ready(function () {
-    //     UIkit.modal('#modal-intro-image').show();
-    // });
     // $(window).on('load',function(){
-    //     if (!sessionStorage.getItem('ac-wrapper')){
-    //         sessionStorage.setItem('ac-wrapper', 'true');
+    //     if (!sessionStorage.getItem('shown-modal')){
+    //         UIkit.modal('#modal-intro-image').show();
+    //         sessionStorage.setItem('shown-modal', 'true');
     //         console.log('shown')
     //     } else {
     //         console.log('already shown')
     //     }
     // });
+
 
 </script>
 

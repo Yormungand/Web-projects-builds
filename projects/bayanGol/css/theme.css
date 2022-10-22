@@ -3069,5 +3069,90 @@ p{
     transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.effect-milo__image:hover img {transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)
+.effect-milo__image:hover img {
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)
+}
+.effect-milo__image img{
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1)
+}
+
+/**
+Service Хуудасны css
+ */
+
+
+ #mainContent {
+     display: flex;
+     width: 100%;
+     margin: 10px auto;
+ }
+#tutVidTitle {
+    font-family: 'arial narrow', sans-serif;
+    font-weight: 100;
+    background: #363636;
+    color: #fff;
+    padding: 5px;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+#videoSizer {
+    flex: 2;
+    width: 100%;
+}
+#videoWrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+#videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+}
+#videoList {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background: #cccccc;
+    margin: 0 5px;
+    align-items: center;
+}
+#videoList a {
+    text-decoration: none;
+    font-family: 'arial narrow', sans-serif;
+    color: #363636;
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+    background: #ffffff;
+    margin: 4px;
+    width: 100%;
+    transition: .4s;
+    border: 1px white solid;
+}
+#videoList a:hover, #videoList a:active {
+    color: #fff;
+    background: #c7000b;
+    border: 1px #c7000b solid;
+    text-shadow: .5px .5px black;
+}
+input:checked ~ a {
+    color: #fff;
+    background: #cccccc;
+    border: 1px black solid;
+    text-shadow: .5px .5px black;
+}
+
+@media screen and (max-width: 800px) {
+    #mainContent {
+        flex-direction: column;
+    }
+    #videoList {
+        padding-top: 20px;
+        margin: 5px 0;
+    }
 }
