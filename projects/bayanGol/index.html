@@ -547,76 +547,11 @@
 </body>
 </html>
 
-<!--<style>-->
-<!--    .uk-modal.uk-open {-->
-<!--        opacity: 1;-->
-<!--    }-->
-<!--    .uk-flex-top {-->
-<!--        align-items: flex-start;-->
-<!--    }-->
-<!--    @media (min-width: 960px){-->
-<!--        .uk-modal {-->
-<!--            padding-left: 40px;-->
-<!--            padding-right: 40px;-->
-<!--        }-->
-<!--    }-->
-<!--    @media (min-width: 640px){-->
-<!--        .uk-modal {-->
-<!--            padding: 50px 30px;-->
-<!--        }-->
-<!--        .uk-modal {-->
-<!--            display: none;-->
-<!--            position: fixed;-->
-<!--            top: 0;-->
-<!--            right: 0;-->
-<!--            bottom: 0;-->
-<!--            left: 0;-->
-<!--            z-index: 1010;-->
-<!--            overflow-y: auto;-->
-<!--            -webkit-overflow-scrolling: touch;-->
-<!--            padding: 15px 15px;-->
-<!--            background: rgba(0, 0, 0, .6);-->
-<!--            opacity: 0;-->
-<!--            transition: opacity .15s linear;-->
-<!--        }-->
-<!--    }-->
-<!--    .uk-open>.uk-modal-dialog {-->
-<!--        opacity: 1;-->
-<!--        transform: translateY(0);-->
-<!--    }-->
-<!--    .uk-modal-dialog {-->
-<!--        position: relative;-->
-<!--        box-sizing: border-box;-->
-<!--        margin: 0 auto;-->
-<!--        width: 450px;-->
-<!--        max-width: calc(100% - 0.01px)!important;-->
-<!--        background: #fff;-->
-<!--        top: 23%;-->
-<!--        opacity: 0;-->
-<!--        transform: translateY(-100px);-->
-<!--        transition: .3s linear;-->
-<!--        transition-property: opacity,transform;-->
-<!--    }-->
-<!--    button.uk-icon:not(:disabled) {-->
-<!--        cursor: pointer;-->
-<!--    }-->
-<!--    .modal .uk-close {-->
-<!--        width: 32px;-->
-<!--        height: 32px;-->
-<!--        border-radius: 50%;-->
-<!--        background: #f1f5fd;-->
-<!--        position: absolute;-->
-<!--        top: 24px;-->
-<!--        right: 24px;-->
-<!--        display: flex;-->
-<!--        align-items: center;-->
-<!--        justify-content: center;-->
-<!--        border: none;-->
-<!--        -webkit-transition: all .3s ease-in-out;-->
-<!--        transition: all .3s ease-in-out;-->
-<!--        padding: 0;-->
-<!--    }-->
-<!--</style>-->
+
+<script>
+    /** @code footer */
+    fetch('include/footer.html').then(data=>{return data.text()}).then(data=>{document.querySelector("footer").innerHTML = data})
+</script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -636,65 +571,17 @@
     });
 </script>
 
-<script>
-    /** @code footer */
-    fetch('include/footer.html').then(data=>{return data.text()}).then(data=>{document.querySelector("footer").innerHTML = data})
-    function seeMore(el) {
-        let p = el.parentElement.querySelector("p")
-        if (el.classList.contains("active")){
-            el.classList.remove("active");
-            p.style.maxHeight = '260px';
-            setTimeout(()=>{
-                p.style = "max-height: 260px";
-            }, 500)
-        } else {
-            el.classList.add("active")
-            p.style = "-webkit-line-clamp:unset";
-            p.style.maxHeight = el.parentElement.querySelector("p").scrollHeight+'px'
-        }
-    }
-</script>
-
-
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
 
 <script>
     function PopUp() {
         document.getElementById('ac-wrapper').style.display = "none";
     }
-
-    // $(window).on('load',function(){
-    //     if (!sessionStorage.getItem('shown-modal')){
-    //         UIkit.modal('#modal-intro-image').show();
-    //         sessionStorage.setItem('shown-modal', 'true');
-    //         console.log('shown')
-    //     } else {
-    //         console.log('already shown')
-    //     }
-    // });
-
-
-</script>
-
-
-<script>
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
+    // if (document.readyState === 'loading') {
+    //     document.addEventListener('DOMContentLoaded', PopUp);
+    // } else {
+    //     PopUp();
+    // }
 </script>
 
 
@@ -709,8 +596,6 @@
         },
     });
 </script>
-
-
 
 <script>
     new Swiper(".footerSwiper", {
