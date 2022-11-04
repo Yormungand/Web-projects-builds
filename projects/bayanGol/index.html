@@ -206,6 +206,23 @@
         <div class="container">
             <div class="grid-30">
                 <div class="width-3-12">
+                    <div class="purpose">
+                        <div class="purpose-item">
+                            <div class="purpose-img">
+                                <img src="//resource4.sodonsolution.org/school_73/image/2022/05/17/722n6j5ty7yjwq3z/Үнэт зүйлс.png">
+                                <img src="//resource4.sodonsolution.org/school_73/image/2022/05/17/dwzup5nhd5t9zsjn/Үнэт зүйлс.png">
+                            </div>
+                            <div class="purpose-name">
+                                Тоног төхөөрөмж
+                            </div>
+                            <a href="equipment-view.html" class="more">
+                                Зочлох
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="width-3-12">
                     <div class="service index16">
                         <a href="javascript:void(0)" class="mt-30">
                             <div class="img"></div>
@@ -510,6 +527,104 @@
 </html>
 
 
+<style>
+    .purpose-item:hover .more {
+        color: #fff;
+    }
+    .purpose-item a.more {
+        display: block;
+        padding: 0 20px;
+        color: #c7000b;
+        font-size: 10px;
+        text-transform: uppercase;
+        text-align: left;
+        margin-top: 80px;
+    }
+    .purpose .purpose-img {
+        height: 123px;
+        width: 120px;
+        margin: 0px auto;
+        background-size: cover;
+        background-repeat: repeat-y;
+        background-position: center center;
+    }
+    .purpose-img {
+        overflow: hidden;
+    }
+    .purpose-img {
+        text-align: center;
+    }
+    .purpose-item .purpose-img img {
+        background-size: cover;
+    }
+    .purpose-img img {
+        transition: transform .5s;
+    }
+    .purpose-img img {
+        height: 120px;
+        width: 120px;
+        margin: 0 auto;
+        background-repeat: repeat-y;
+        background-position: center;
+    }
+    .purpose:hover .purpose-item .purpose-desc{
+        color: #fff;
+    }
+    .purpose:hover .purpose-item .purpose-desc p{
+        color: #fff;
+    }
+    .purpose:hover{
+        background-color: #c7000b;
+    }
+    .purpose{
+        position: relative;
+        overflow: hidden;
+        padding: 20px;
+        height: 300px;
+        background-color: #f0f0f0;
+    }
+    .purpose:hover .purpose-img img:last-child, .purpose:hover .purpose-img img:first-child {
+        transform: translateY(-100%);
+    }
+    .purpose-item .purpose-img img {
+        background-size: cover;
+    }
+    .purpose-img img {
+        transition: transform .5s;
+    }
+    .purpose:hover .purpose-name {
+        color: #fff;
+    }
+
+    .purpose-name {
+        margin: 20px 0px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #363636;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .purpose:hover .purpose-desc {
+        color: #fff;
+    }
+
+    .purpose:hover .purpose-desc {
+        color: #fff;
+    }
+    .purpose-desc {
+        text-align: center;
+        height: 50px;
+        overflow: hidden;
+        font-weight: 300;
+        margin-bottom: 20px;
+        padding: 0;
+        color: #322e2f;
+        font-family: "Roboto", sans-Serif;
+        font-size: 13px;
+        line-height: 16px;
+    }
+</style>
+
 <script>
     /** @code footer */
     fetch('include/footer.html').then(data=>{return data.text()}).then(data=>{document.querySelector("footer").innerHTML = data})
@@ -539,12 +654,6 @@
     function PopUp() {
         document.getElementById('ac-wrapper').style.display = "none";
     }
-
-    window.addEventListener("beforeunload", (event) => {
-        // works, same as returning from window.onbeforeunload
-        event.returnValue = PopUp;
-    });
-
 </script>
 
 
