@@ -26,7 +26,7 @@
 <main>
   <div class="container">
     <div class="wpb_wrapper" style="padding:40px 0 0 0;">
-      <h2 style="font-size: 30px; color: #161720; text-align: left; font-weight: 600; margin-bottom: 0;" class="vc_custom_heading mvb0">Туршлага</h2>
+      <h2 style="font-size: 30px; color: #161720; text-align: left; font-weight: 600; margin-bottom: 0; text-indent: 20px" class="vc_custom_heading mvb0">Туршлага</h2>
       <div style="border-bottom: 2px solid #c7000b; width:87px;"></div>
     </div>
   </div>
@@ -35,7 +35,7 @@
       <div class="icontent mb-30 mb-30">
         <div class="mt-20"></div>
         <div class="mt-10"></div>
-        <p style="text-align:justify; text-indent: 20px" class="mt-30">
+        <p style="text-align:justify" class="mt-30">
           Бид одоогийн байдлаар улсын болон хувийн эмнэлгүүдэд хамгийн сүүлийн үеийн дэвшилтэт технологи бүхий
           ОУ чанарын шаардлага хангасан 1000 / Тоог тодорхой болгоод бичих, таамгаар бичсэн шүү/ гаруй эмнэлгийн
           тоног төхөөрөмжийг суурилуулан түүний сэлбэг хэрэгсэл, урвалж оношлуураар тасралтгүй ханган нийлүүлж,
@@ -45,6 +45,26 @@
           сайн туршлага” сургалтыг жил бүр тогтмол зохион байгуулж мэргэжил нэгтнүүдтэйгээ туршлага солилцон
           хамтран ажиллаж байна.
         </p>
+        <!--                  <p style="text-align:justify"><b>Нийлүүлэлт ба үйлчилгээний хамрах хүрээ</b></p>-->
+        <!--                  <p style="text-align:justify">Бид улсын эмнэлэг, аймгийн эмнэлэг болон хувиын эмнэлгүүдэд хамгийн-->
+        <!--                    сүүлийн үеийн дэвшилтэт технологийн 600 гаруй эмнэлгийн тоног төхөөрөмжийг суурилуулсан. Үүнд:</p>-->
+        <!--                  <ul>-->
+        <!--                    <li style="text-align: justify;">Клиник хими, иммунологи, гематологи, шээсний шинжилгээ, цус-->
+        <!--                      бүлэгнэлт, PCR, эдийн оношлогоо, молекул оношлогооны тоног төхөөрөмжүүд болон тэдгээрийн-->
+        <!--                      урвалжууд;-->
+        <!--                    </li>-->
+        <!--                    <li style="text-align: justify;">Дүрс оношлогооны тоног төхөөрөмжүүд;</li>-->
+        <!--                    <li style="text-align: justify;">Лабораторын бүх төрлийн тоног төхөөрөмжүүд;</li>-->
+        <!--                    <li style="text-align: justify;">Эрчимт эмчилгээ болон мэс заслын тоног төхөөрөмж;</li>-->
+        <!--                    <li style="text-align: justify;">HBV, HCV-ийн эмчилгээнд зориулсан эмнүүд;</li>-->
+        <!--                    <li style="text-align: justify;">Чихрийн шижин, холестерин, глюкоз, гемоглобин тодорхойлох-->
+        <!--                      түргэвчилсэн оношлуур;-->
+        <!--                    </li>-->
+        <!--                    <li style="text-align: justify;">Гоо сайхны тариур, имплантууд;</li>-->
+        <!--                    <li style="text-align: justify;">Лабораторын тавилга;</li>-->
+        <!--                  </ul>-->
+        <!--                  <p style="text-align:justify">&nbsp;</p>-->
+        <!--                  <p style="text-align:justify">&nbsp;</p>-->
       </div>
     </div>
   </div>
@@ -132,6 +152,179 @@
   fetch('include/header.html').then(data=>{return data.text()}).then(data=>{document.querySelector("header").innerHTML = data})
   /** @code footer */
   fetch('include/footer.html').then(data=>{return data.text()}).then(data=>{document.querySelector("footer").innerHTML = data})
+  function seeMore(el) {
+    let p = el.parentElement.querySelector("p")
+    if (el.classList.contains("active")){
+      el.classList.remove("active");
+      p.style.maxHeight = '260px';
+      setTimeout(()=>{
+        p.style = "max-height: 260px";
+      }, 500)
+    } else {
+      el.classList.add("active")
+      p.style = "-webkit-line-clamp:unset";
+      p.style.maxHeight = el.parentElement.querySelector("p").scrollHeight+'px'
+    }
+  }
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", e=>{
+
+  })
+  let tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  let firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  class VideoIntroduction {
+    constructor(url, id, videoTarget) {
+      this.url = url;
+      this.id = id;
+      this.videoTarget = videoTarget;
+      this.show();
+    }
+    show(){
+      document.getElementById(this.id).querySelector('.block-video__target').style.display = 'block';
+      this.parse_url(this.url);
+    }
+    parse_url(){
+      let uri = this.url;
+      let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+      let match = uri.match(regExp);
+      if (match && match[7].length == 11)
+        this.url = match[7];
+      // setTrailer(match[7])
+      this.load();
+      return (match && match[7].length == 11) ? match[7] : false;
+    }
+    load(){
+      new YT.Player(this.videoTarget, {
+        height: '100%',
+        width: '100%',
+        videoId: this.url,
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        },
+        playerVars: {
+          autoplay: 0,
+          controls: 1,
+          rel: 0,
+          fs: 1,
+        },
+      })
+    }
+  }
+
+  let player;
+  function onYouTubeIframeAPIReady(videoId) {
+
+  }
+  onPlayerReady = function (event) {
+    if (event){
+      // event.target.mute();
+      // event.target.playVideo();
+      event.target.setVolume(100);
+    }
+  }
+  var done = false;
+  function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !done) {
+      // When playing
+    } else if (event.data == YT.PlayerState.PAUSED && done) {
+      // When paused
+    }
+  }
+  function playThis(el, videoId) {
+    console.log(el)
+    if (player.getPlayerState() === 1) {
+      if (el.getAttribute('data-video') === player.getVideoData()['video_id'])
+        return null
+      else
+        player.loadVideoById(videoId);
+    } else
+      player.loadVideoById(videoId);
+  }
+
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", e => {
+    const navTop = document.getElementById("topNavbar");
+    const navBot = document.getElementById("botNavbar");
+    const headerNav = document.getElementById("header");
+    // const modalElm = document.getElementById("active");
+    // const modalElm2 = document.getElementById("show");
+    document.getElementById('header').addEventListener('mouseover', ev => {
+      navTop.classList.add('active');
+      navBot.classList.add('show');
+    })
+    document.getElementById('header').addEventListener('mouseleave', ev => {
+      navTop.classList.remove('active');
+      navBot.classList.remove('show');
+    })
+    let lastScrollTop = 0;
+    document.addEventListener('scroll', ev => {
+      var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+      if (st > lastScrollTop) {
+        // downscroll code
+      } else if (window.pageYOffset === 0) {
+        headerNav.classList.remove('active-fixed');
+        navTop.style.display = "block";
+      } else {
+        headerNav.classList.add('active-fixed');
+        navTop.style.display = "none";
+      }
+      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    })
+  })
+
+
+  /*btnOpenModal.addEventListener("hover", function () {
+      redModal.classList.add("show");
+  });*/
+
+
+</script>
+
+<script>
+  const tabs = document.querySelectorAll('[data-tab-target]')
+  const tabContents = document.querySelectorAll('[data-tab-content]')
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = document.querySelector(tab.dataset.tabTarget)
+      tabContents.forEach(tabContent => {
+        tabContent.classList.remove('active')
+      })
+      tabs.forEach(tab => {
+        tab.classList.remove('active')
+      })
+      tab.classList.add('active')
+      target.classList.add('active')
+    })
+  })
+</script>
+
+<script>
+  function getDescription(i) {
+    if (txt[i].style.display == 'block') {
+      txt[i].style.display = 'none';
+    } else {
+      txt[i].style.display = 'block';
+    }
+  }
+  let kopje = document.getElementsByTagName('h3');
+  console.log(kopje);
+
+  let txt = document.getElementsByClassName('description-text');
+  console.log(txt);
+
+  for (i = 0; i<kopje.length; i++) {
+    txt[i].style.display = 'block';
+  }
+
 </script>
 
 <script>
@@ -169,4 +362,235 @@
   })();
 </script>
 
+<style>
+  .intro {
+    background: #f45b69;
+    padding: 100px 0;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+
+  /* TIMELINE
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  /*.timeline ul {*/
+  /*  padding: 50px 0;*/
+  /*}*/
+
+  .timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: #eee;
+  }
+
+  .timeline ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+    z-index: 1;
+  }
+
+  .timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 15px;
+    background: rgba(255,255,255,0.4);
+    box-shadow: 2px 2px 8px 0 rgb(0 0 0 / 10%);
+    border-radius: 6px
+  }
+
+  .timeline ul li div::before {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  .timeline ul li:nth-child(odd) div {
+    left: 45px;
+  }
+
+  .timeline ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #c7000b transparent transparent;
+  }
+
+  .timeline ul li:nth-child(even) div {
+    left: -439px;
+  }
+
+  .timeline ul li:nth-child(even) div::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent #c7000b;
+  }
+
+  time {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+
+  /* EFFECTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  .timeline ul li::after {
+    transition: background 0.5s ease-in-out;
+  }
+
+  .timeline ul li.in-view::after {
+    display: inline-block;
+    min-width: 16px;
+    min-height: 16px;
+    padding: 0px;
+    background: #eee;
+    box-shadow: 0 0 0 1px #c7000b;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  .timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .timeline ul li:nth-child(odd) div {
+    transform: translate3d(200px, 0, 0);
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .timeline ul li:nth-child(even) div {
+    transform: translate3d(-200px, 0, 0);
+  }
+
+  .timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+    background-color: #eee;
+    font-size: 14px;
+    line-height: 26px;
+    color: #363636;
+  }
+
+
+  /* GENERAL MEDIA QUERIES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  @media screen and (max-width: 900px) {
+    .timeline ul li div {
+      width: 250px;
+    }
+    .timeline ul li:nth-child(even) div {
+      left: -289px;
+      /*250+45-6*/
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .timeline ul li {
+      margin-left: 20px;
+    }
+    .timeline ul li div {
+      width: calc(100vw - 91px);
+    }
+    .timeline ul li:nth-child(even) div {
+      left: 45px;
+    }
+    .timeline ul li:nth-child(even) div::before {
+      left: -15px;
+      border-width: 8px 16px 8px 0;
+      border-color: transparent #f45b69 transparent transparent;
+    }
+  }
+
+
+  /* EXTRA/CLIP PATH STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .timeline-clippy ul li::after {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+  }
+
+  .timeline-rhombus ul li::after {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+
+  .timeline-rhombus ul li div::before {
+    bottom: 12px;
+  }
+
+  .timeline-star ul li::after {
+    clip-path: polygon(
+            50% 0%,
+            61% 35%,
+            98% 35%,
+            68% 57%,
+            79% 91%,
+            50% 70%,
+            21% 91%,
+            32% 57%,
+            2% 35%,
+            39% 35%
+    );
+  }
+
+  .timeline-heptagon ul li::after {
+    clip-path: polygon(
+            50% 0%,
+            90% 20%,
+            100% 60%,
+            75% 100%,
+            25% 100%,
+            0% 60%,
+            10% 20%
+    );
+  }
+
+  .timeline-infinite ul li::after {
+    animation: scaleAnimation 2s infinite;
+  }
+
+  @keyframes scaleAnimation {
+    0% {
+      transform: translateX(-50%) scale(1);
+    }
+    50% {
+      transform: translateX(-50%) scale(1.25);
+    }
+    100% {
+      transform: translateX(-50%) scale(1);
+    }
+  }
+
+</style>
 
