@@ -36,6 +36,7 @@
     "uikit": "3.0.0-rc.19"
   },
   "dependencies": {
+    "@fancyapps/ui": "^4.0.31",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "and": "0.0.3",
     "atropos": "^1.0.2",
