@@ -1,0 +1,66 @@
+.progress-wrap {
+  z-index: 99999999999;
+}
+.blog-crv .item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.block-sec .testim-box .slick-dots li button {
+  display: block;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider .social-icon a {
+  margin: 0 3px;
+}
+.navbar .navbar-nav .nav-link,
+.video .vid .vid-butn .icon,
+.video-wrapper .vid .vid-butn .icon {
+  cursor: pointer;
+}
+.block-sec .vid-area {
+  z-index: 99;
+}
+.div-tooltip-tit,
+.div-tooltip-sub {
+  display: block;
+  padding: 0;
+}
+section.testimonials {
+  overflow: hidden;
+}
+.contact-page .pages-header {
+  overflow: hidden;
+}
+body.hideX #preloader {
+  display: none !important;
+  z-index: -1111111;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+body.hideX .pace {
+  display: none !important;
+  background-color: transparent;
+}
+.vid-butn {
+  cursor: pointer;
+}
+#preloader {
+  background-color: #252531;
+  top: 0;
+  left: 0;
+}
+.map iframe {
+  border: 0;
+}
+.blackFilterColor .filtering span {
+  color: #111;
+}
+.nbo-link a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
