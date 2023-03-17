@@ -134,10 +134,8 @@ section {padding: 10px}
 .article-latest .bd .right {padding: 10px;}
 .article-latest .bd .right .title a{color: #d7d7d7;font-weight: 600}
 .article-latest .bd .right .desc a{text-transform: uppercase;padding: 5px; font-size: 10px;  background: #FC3C2D;font-weight: 500;}
+
 .sub-title {padding-top: 10px; overflow-y: scroll;box-sizing: content-box; height: 800px;}
-.sub-title li {display: flex; padding-top: 30px;padding-bottom: 10px;}
-.sub-title .left {font-size: 24px; color: #0dcaf0;}
-.sub-title .left .fa{font-weight: 900}
 .sub-title .right {padding-left: 10px;font-size: 14px; font-weight: 700; font-family: "PT Sans",Helvetica,Arial,sans-serif;}
 
 .photoArticles{position: relative;overflow: hidden;}
@@ -188,7 +186,7 @@ section {padding: 10px}
 
 .footer{justify-content: space-between;}
 
-.footer .logo img{width: 60% ; height: 80px;}
+.footer .logo img{width: 70% ; height: 80px;}
 .footer .copyright{font-size: 10px;padding-top: 10px;color: white;}
 .footer .wrapper{display: flex;padding: 30px;}
 .footer .advertise .title{padding-right: 20px ;color: white;}
