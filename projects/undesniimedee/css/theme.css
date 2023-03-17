@@ -12,9 +12,10 @@ section {padding: 10px}
 
 /* for header layout*/
 .header{display: flex; background-color: white;}
-.main{border-bottom: 10px solid white; }
+.main{}
 .main-bottom{display: flex;margin-top: 30px;}
-.footer{margin-top: 30px; background-color: #3e3e37 }
+.footer{margin-top: 30px; background-color: #232f42;
+}
 /* end header layout*/
 
 /* for header components*/
@@ -34,10 +35,11 @@ section {padding: 10px}
 .article-feature-main .desc a{color: black;}
 .article-feature-main .date {margin-top: 10px;}
 .article-feature-main .date span{font-size: 12px; color: black;}
-.article-feature-main .img img{width: 100%; height: 100%;border-radius: 10px;}
+.article-feature-main .img{height: 400px;}
+.article-feature-main .img img{width: 100%; height: 100% ;border-radius: 10px;}
 
 
-.article-feature-sub{display: flex;}
+.article-feature-sub{display: flex;margin-top: 5px;}
 .feature-sub .img{}
 .feature-sub .img img{height: 200px; width: 100%;object-fit: cover;border-radius: 10px;}
 .feature-sub .title{margin-top: 10px}
@@ -121,7 +123,7 @@ section {padding: 10px}
 .article-suggest .sub .title a{font-weight: 700; font-size: 16px;}
 
 .article-suggest .articles{}
-.article-suggest .articles li{padding-top: 20px;padding-left: 20px;position: relative;}
+.article-suggest .articles li{;padding-left: 20px;position: relative;}
 .article-suggest .articles .title {font-weight: 700;}
 .article-suggest .articles .title a::before{position: absolute;content: '';background: #FC3C2D;display: inline-block;width: 5px;height: 5px;left: 5px;top: 25px;}
 
@@ -135,8 +137,12 @@ section {padding: 10px}
 .article-latest .bd .right .title a{color: #d7d7d7;font-weight: 600}
 .article-latest .bd .right .desc a{text-transform: uppercase;padding: 5px; font-size: 10px;  background: #FC3C2D;font-weight: 500;}
 
-.sub-title {padding-top: 10px; overflow-y: scroll;box-sizing: content-box; height: 800px;}
-.sub-title .right {padding-left: 10px;font-size: 14px; font-weight: 700; font-family: "PT Sans",Helvetica,Arial,sans-serif;}
+.sub-title { margin-top: 20px; overflow-y: scroll;box-sizing: content-box; height: 800px;}
+.sub-title li{display: flex; padding-top: 10px;}
+.sub-title .img{}
+.sub-title .img img{width: 100%;height: 100%; overflow: hidden; object-fit: cover;object-position: top}
+.sub-title .title{padding-left: 10px;}
+.sub-title .title a{font-size: 12px; font-weight: 600; font-family: "PT Sans",Helvetica,Arial,sans-serif;}
 
 .photoArticles{position: relative;overflow: hidden;}
 .photo-btn-slide-prev{    position: absolute;
@@ -176,7 +182,7 @@ section {padding: 10px}
 
 .post-lists{display: flex;margin-top: 50px;gap: 20px;}
 
-.post-list {padding-left: 20px; background-color:#3e3e37 ;}
+.post-list {padding-left: 20px; background-color: #232f42 ;}
 .post-list .title {padding: 20px;}
 .post-list .title a{ text-transform: uppercase; font-size: 27px; font-weight: 700; color: white}
 .post-list .desc {padding: 20px; border-bottom: 1px solid #353535;font-size: 14px; font-weight: 700; color: white; height: 70px;}
