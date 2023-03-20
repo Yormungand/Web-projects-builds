@@ -174,8 +174,8 @@ section {padding: 10px}
     z-index: 1;}
 
 .article-slides {display: flex; margin-top: 20px;}
-.article-slide .img {}
-.article-slide .img img{width: 100%;}
+.article-slide .img {background-color: black;}
+.article-slide .img img{width: 100%; opacity: 0.6}
 .article-slide .title{position: relative;}
 .article-slide .title a{position: absolute;text-transform: uppercase; padding: 10px ;top: 10px; font-size: 18px;  font-weight: 400; color: white;}
 
