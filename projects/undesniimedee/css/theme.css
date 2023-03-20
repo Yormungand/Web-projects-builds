@@ -14,8 +14,7 @@ section {padding: 10px}
 .header{display: flex; background-color: white;}
 .main{}
 .main-bottom{display: flex;margin-top: 30px;}
-.footer{margin-top: 30px; background-color: #232f42;
-}
+.footer{margin-top: 30px; background-color: #232f42;}
 /* end header layout*/
 
 /* for header components*/
@@ -24,6 +23,7 @@ section {padding: 10px}
 .menu-header li a, .menu-header li a:visited{text-transform: uppercase; padding: 20px; font-size: 12px; font-weight: 600; color: black;}
 .menu-header li a:hover{transition: 0.3s all; border-bottom: 4px solid #FC3C2D ; }
 /* end header components*/
+
 /* for main components*/
 .article-feature-main {display: flex;padding-top: 30px;}
 .article-feature-main .hd{ background: linear-gradient(90deg,#f4f4f4 7%,hsla(0,0%,100%,.220348) 17%);padding: 10px;border-radius: 10px;}
@@ -55,7 +55,7 @@ section {padding: 10px}
 .published-article .title a{font-weight: 500;}
 
 .mySwiper{height: auto;}
-/*.mySwiper .swiper-slide {height: auto}*/
+/* for .mySwiper .swiper-slide {height: auto}*/
 .swiper-button-next, .swiper-button-prev{color: black !important;}
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
     right: 60px;
@@ -83,17 +83,21 @@ section {padding: 10px}
     font-size: 16px;
     font-weight: bold;
 }
+/* end .mySwiper .swiper-slide {height: auto}*/
 
-.article-sections{display: flex;}
-.article-sections-hd {text-transform: uppercase;}
-.article-section .img img{width: 100%}
+
+/*.article-sections{display: flex;} */
+
+.article-section-hd a{text-transform: uppercase;}
+.article-section .img{position: relative; overflow: hidden;width: 100%;height: 250px;}
+.article-section .img img{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);width: 100%;height: auto}
 .article-section .title{padding-top: 20px; }
 .article-section .title a{font-size: 28px; font-weight: 700;}
 .article-section .desc a{ max-width: 36em;margin-top: 0.6em;margin-bottom: 0.6em;color: rgba(0, 0, 0, 0.6) ; font-size: 1rem;line-height: 1.6;}
 .article-section .date{font-size: 12px; color: #808080;}
 
-
-.article-sub-section .img img{width: 100%}
+.article-sub-section .img{height: 150px;}
+.article-sub-section .img img{height: 100%;  width: 100%}
 .article-sub-section .title {padding-top: 10px;}
 .article-sub-section .title a{font-weight: 600; }
 .article-sub-section .date{padding-left: 20px;}
@@ -102,12 +106,11 @@ section {padding: 10px}
 
 
 
-.article-suggests {display: flex;}
-
+.article-suggest{margin-top: 40px;}
 .article-suggest .hd a{text-transform: uppercase; font-size: 1.1rem;line-height: 1.2;font-weight: 300;letter-spacing: 0.08em;}
-
 .article-suggest .bd{position: relative;}
-.article-suggest .bd .img img{ width: 100%; margin-top: 10px;}
+.article-suggest .bd .img{position: relative; overflow: hidden;width: 100%;height: 220px;}
+.article-suggest .bd .img img{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);width: 100%;height: auto}
 .article-suggest .bd .title a{position: absolute; margin-left: 20px; top: 20px;display: inline-block;text-transform: uppercase; padding: 5px 8px;font-size: 10px;font-weight: 500;  color: #fff!important;line-height: 1;background: #FC3C2D;border: none;}
 
 
@@ -127,8 +130,9 @@ section {padding: 10px}
 .article-suggest .articles .title {font-weight: 700;}
 .article-suggest .articles .title a::before{position: absolute;content: '';background: #FC3C2D;display: inline-block;width: 5px;height: 5px;left: 5px;top: 25px;}
 
-.article-latest {margin-top: 20px;position: relative;}
-.article-latest .hd{text-transform: uppercase;}
+.article-latest {position: relative;padding-left: 20px;}
+.article-latest .hd{ text-transform: uppercase;}
+.article-latest .img{margin-top: 20px;}
 .article-latest .img img{width: 100%;}
 .article-latest .bd {display: flex;position: absolute; bottom: 10px;align-items: center; }
 .article-latest .bd .left { padding-left: 10px; font-size: 26px;color: white;}
@@ -137,42 +141,45 @@ section {padding: 10px}
 .article-latest .bd .right .title a{color: #d7d7d7;font-weight: 600}
 .article-latest .bd .right .desc a{text-transform: uppercase;padding: 5px; font-size: 10px;  background: #FC3C2D;font-weight: 500;}
 
-.sub-title { margin-top: 20px; overflow-y: scroll;box-sizing: content-box; height: 800px;}
-.sub-title li{display: flex; padding-top: 10px;}
-.sub-title .img{}
-.sub-title .img img{width: 100%;height: 100%; overflow: hidden; object-fit: cover;object-position: top}
-.sub-title .title{padding-left: 10px;}
-.sub-title .title a{font-size: 12px; font-weight: 600; font-family: "PT Sans",Helvetica,Arial,sans-serif;}
+.sub-title { margin: 20px 0 0 20px; overflow-y: scroll;box-sizing: content-box; height: 600px;}
+.sub-title li{display:flex; width: 100%;overflow: hidden;padding: 5px 0;list-style: none;}
+.sub-title .img{position: relative; overflow: hidden;width: 100%;height: 90px;}
+.sub-title .img img{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);width: 100%;height: auto;}
+.sub-title .title{padding: 0 0 5px 5px; }
+.sub-title .title a{display: block;overflow: hidden ;height: 60px;font-size: 14px;color: #363636; }
+.sub-title .date{padding-left: 5px;}
 
-.photoArticles{position: relative;overflow: hidden;}
-.photo-btn-slide-prev{    position: absolute;
-    left: 0;
-    top: 0;
+.article-slide{position: relative;overflow: hidden;}
+.photo-btn-slide-prev{position: absolute;
+    left: 50px;
+    top: 80px;
     color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background: #fff;
     z-index: 1;}
-.photo-btn-slide-next{    position: absolute;
-    left: 40px;
-    top: 0;
+.photo-btn-slide-next{position: absolute;
+    left: 100px;
+    top: 80px;
     color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
-    background: #ddd;
+    width: 40px;
+    height: 40px;
+    background: #fff;
     z-index: 1;}
-.article-slides{display: flex;margin-top: 20px;}
+
+.article-slides {display: flex; margin-top: 20px;}
+.article-slide .img {}
 .article-slide .img img{width: 100%;}
 .article-slide .title{position: relative;}
 .article-slide .title a{position: absolute;text-transform: uppercase; padding: 10px ;top: 10px; font-size: 18px;  font-weight: 400; color: white;}
 
-.article-slide-1{display: flex;}
+.article-slide-1{display: flex; overflow: hidden}
 .article-slide-1 .article .img{}
 .article-slide-1 .article .img img{width: 100%; overflow: hidden; object-fit: cover;height: 120px;}
 .article-slide-1 .article .title {text-align: center; padding: 10px 20px; font-weight: 700;}
