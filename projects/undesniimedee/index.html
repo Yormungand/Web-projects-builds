@@ -209,7 +209,7 @@
                     <div class="article-section-hd">
                         <a>Улс төр</a>
                     </div>
-                    <div class="article-section width-8-12">
+                    <div class="article-section width-8-12@s width-1-1">
                         <div class="img">
                             <img src="images/art4.jpg">
                         </div>
@@ -226,7 +226,7 @@
                             <span>2023/03/15 10:44</span>
                         </div>
                     </div>
-                    <div class="article-sub-section width-4-12">
+                    <div class="article-sub-section width-4-12@s width-1-1">
                         <div class="sub-section">
                             <div class="img">
                                 <img src="images/art2.jpeg">
@@ -273,7 +273,7 @@
                     </div>
                 </div>
                 <div class="grid-20">
-                    <div class="article-suggest width-6-12">
+                    <div class="article-suggest width-6-12@s width-1-1">
                         <div class="hd">
                             <a href="javascript:void(0)">Эдийн засаг</a>
                         </div>
@@ -322,7 +322,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="article-suggest width-6-12">
+                    <div class="article-suggest width-6-12@s width-1-1">
                         <div class="hd">
                             <a href="javascript:void(0)">Нийгэм</a>
                         </div>
@@ -550,12 +550,12 @@
 </div>
 <div class="container">
     <div class="article-slides grid-20">
-        <div class="article-slide width-3-12@m" id="photoSwipe-control">
+        <div class="article-slide width-3-12@s width-1-1" id="photoSwipe-control">
             <div class="title">
                 <a href="javascript:void(0)">Фото мэдээ</a>
             </div>
             <div class="img">
-                <img src="images/art1.jpg">
+                <img src="images/art3.jpg">
             </div>
             <div class="photo-btn-slide-prev">
                 <i class="fa fa-arrow-left"></i>
@@ -564,7 +564,7 @@
                 <i class="fa fa-arrow-right"></i>
             </div>
         </div>
-        <div class="article-slide-1 width-9-12">
+        <div class="article-slide-1 width-9-12@s width-1-1">
             <div class="swiper swiper-container" id="photoSwipe">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -634,6 +634,13 @@
                                 nextEl: '#photoSwipe-control .photo-btn-slide-next',
                                 prevEl: '#photoSwipe-control .photo-btn-slide-prev',
                             },
+                            responsive:
+                                {
+                                    breakpoint:992,
+                                    settings: {
+                                        slidesPerView: 2,
+                                    }
+                                },
                         });
                     })
                 </script>
@@ -641,7 +648,7 @@
         </div>
     </div>
     <div class="post-lists">
-        <div class="post-list width-4-12">
+        <div class="post-list">
             <div class="title">
                 <a>Дэлхий дахинд</a>
             </div>
@@ -665,7 +672,7 @@
                 <a href="javascript:void(0)">Бусад</a>
             </div>
         </div>
-        <div class="post-list width-4-12">
+        <div class="post-list">
             <div class="title">
                 <a>Соёл урлаг</a>
             </div>
@@ -689,7 +696,7 @@
                 <a href="javascript:void(0)">Бусад</a>
             </div>
         </div>
-        <div class="post-list width-4-12">
+        <div class="post-list">
             <div class="title">
                 <a>Спорт</a>
             </div>
